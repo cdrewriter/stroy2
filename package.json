@@ -1,0 +1,21 @@
+{
+  "name": "stroy2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "repository": "https://github.com/cdrewriter/stroys2",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@keystonejs/adapter-mongoose": "^10.0.0",
+    "@keystonejs/app-admin-ui": "^7.3.8",
+    "@keystonejs/app-graphql": "^6.1.3",
+    "@keystonejs/app-static": "^5.1.3",
+    "@keystonejs/keystone": "^17.0.0",
+    "connect-mongo": "^3.2.0",
+    "react": "^16.13.1"
+  }
+}
