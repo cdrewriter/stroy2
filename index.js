@@ -10,6 +10,7 @@ const MongoStore = require('connect-mongo')(expressSession);
 
 
 const keystone = new Keystone({
+  name: 'StroyExpert',
   adapter: new MongooseAdapter({ mongoUri: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority' }),
   sessionStore: new MongoStore({
     url: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority',
@@ -24,3 +25,31 @@ const keystone = new Keystone({
 
 const { userIsAdmin } = require('./utils/access');
 const { staticRoute, staticPath, distDir } = require('./config');
+
+
+
+module.exports = {
+    keystone,
+    apps: [
+      new GraphQLApp({
+        apiPath: '/admin/api',
+        graphiqlPath: '/admin/graphiql',
+        apollo: { playground: true, introspection: true },
+      }),
+      new StaticApp({
+        path: staticRoute,
+        src: staticPath,
+      }),
+      new AdminUIApp({
+        adminPath: '/admin',
+        authStrategy,
+        enableDefaultRoute: false,
+        isAccessAllowed: userIsAdmin,
+      }),
+      new NextApp({
+        dir: './',
+      }),
+    ],
+    distDir,
+  };
+  
