@@ -25,8 +25,24 @@ const keystone = new Keystone({
 
 const { userIsAdmin } = require('./utils/access');
 const { staticRoute, staticPath, distDir } = require('./config');
+const {
+    User,
+    Post,
+    Main,
+    PostCategory
+  } = require('./schema');
+
+keystone.createList('User', User);
+keystone.createList('PostCategory', PostCategory);
+keystone.createList('Post', Post);
+keystone.createList('Main', Main);
 
 
+const authStrategy = keystone.createAuthStrategy({
+    type: PasswordAuthStrategy,
+    list: 'User',
+  });
+  
 
 module.exports = {
     keystone,

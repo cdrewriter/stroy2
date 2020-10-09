@@ -1,0 +1,31 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.bg-hero-pattern {
+  @apply bg-white ;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+
+.heading {
+  background: #cccccc;
+  font-size: 5.8rem;
+  min-height: 22rem;
+  
+  letter-spacing: -0.1rem;
+  /* color: black; */
+  padding: 3.5rem 5.5rem;
+  margin: auto;
+  margin-bottom: -2rem;
+  margin-left: 4rem;
+  /* margin: auto; */
+  display: flex;
+  font-weight: 900;
+  text-transform: uppercase;
+}

@@ -1,0 +1,123 @@
+@import './index.css';
+
+$color__main: #707070;
+$color__gray: #CECECE;
+$oranges: #FCA311;
+$color__primary: #14213D;
+
+html{
+    font-size: 0.83333333333333vw;    
+}
+body {
+    color: $color__main;
+    font-size: 1rem;
+}
+.section__title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: $color__primary;
+    z-index: 2;
+}
+.section__textShaddow {
+    color: #CECECE38;  
+    font-size: 6rem;
+    display: block;
+    margin-top: -10rem;
+    margin-left: -4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.logo {
+   
+    display: inline-flex;
+    align-items: center;
+    .name {
+       
+        font-size: 1.5rem;      
+        color: black;
+        font-weight: 700;
+       
+    }
+    hr {
+        flex: 1;
+     
+        height: 3rem;
+        margin: 1rem;
+       
+        border-left: 2px solid #cecece;
+       
+    }
+    .slogan {
+        max-width: min-content;
+        line-height: 1;
+        font-size: 0.875rem;
+    }
+}
+.humburger {
+    margin: 0 2rem 0 0;
+}
+nav {
+    a {
+        font-size: 1.25rem;
+    }
+}
+.block__outer {
+    margin: auto;
+}
+.heading__subtitle {
+    background: $oranges;
+    margin-bottom: auto;
+    margin-top: -6rem;
+    padding: 2rem;
+   z-index: 2;
+    font-size: 2rem;
+    line-height: 1.5;
+    /* margin: auto; */
+    padding: 2rem 4rem;
+    margin-left: 12vw;
+    display: flex;
+    font-weight: 400; 
+    &::after {
+        content: '';
+        display: block;
+        width: 7.75rem;
+        position: absolute;
+        height: 7.75rem;
+        bottom: -3.5rem;
+        z-index: 0;
+        border-right: 0.5rem #CECECE solid;
+        border-bottom: 0.5rem #CECECE solid;
+        right: -3.5rem;
+    }  
+}
+.heading {
+    background-color: #ccccccc4;
+    &:before {
+        content: "";
+        display: block;
+        width: 7.75rem;
+        position: absolute;
+        height: 7.75rem;
+        top: -3.5rem;
+        z-index: 0;
+        border-left: 0.5rem $oranges solid;
+        border-top: 0.5rem $oranges solid;
+        left: -3.5rem;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 4rem;
+        position: absolute;
+        height: 4rem;
+        bottom: -1.75rem;
+        z-index: 0;
+        border-left: 0.25rem $color__gray solid;
+        border-bottom: 0.25rem $color__gray solid;
+        left: -1.75rem;
+    }  
+    
+    .leading-normal {      
+        color: $color__primary;
+    }
+}
