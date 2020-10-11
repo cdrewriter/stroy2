@@ -12,6 +12,9 @@ body {
     color: $color__main;
     font-size: 1rem;
 }
+.full-height {
+    height: calc(100vh - 12rem);
+}
 .section__title {
     font-size: 5rem;
     font-weight: 900;
@@ -26,6 +29,141 @@ body {
     margin-left: -4rem;
     font-weight: 900;
     text-transform: uppercase;
+}
+.title {
+    color: $color__primary;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+.block__desc {
+    p {
+        margin: 4rem;
+        font-size: 1.5rem;
+    }
+}
+.feauteres {
+    padding: 0 4rem;
+    dt {
+        font-size: 5rem;
+        font-weight: 700;
+        color: $color__primary;
+        span {
+            font-size: 1rem;
+            color: $color__main;
+        }
+    }
+    dd {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $color__main;
+        border-left: 0.25rem solid $oranges;
+    padding-left: 1rem;
+    
+    }
+}
+.icons {
+    display: flex;
+    
+    svg {
+        margin: 1rem;
+    }
+}
+.form {
+    min-width: 70%;
+    margin-right: auto;
+    /* height: 4rem; */
+    padding: 0.25rem;
+    background-color:rgba(206,206,206,0.25)
+    input {
+       color: $color__main;
+    }
+    ::-webkit-input-placeholder { /* Chrome */
+        color: $color__main;
+        transition: opacity 250ms ease-in-out;
+      }
+      :focus::-webkit-input-placeholder {
+        opacity: 0.5;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: $color__main;
+        transition: opacity 250ms ease-in-out;
+      }
+      :focus:-ms-input-placeholder {
+        opacity: 0.5;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: $color__main;
+        opacity: 1;
+        transition: opacity 250ms ease-in-out;
+      }
+      :focus::-moz-placeholder {
+        opacity: 0.5;
+      }
+      :-moz-placeholder { /* Firefox 4 - 18 */
+        color: $color__main;
+        opacity: 1;
+        transition: opacity 250ms ease-in-out;
+      }
+      :focus:-moz-placeholder {
+        opacity: 0.5;
+      }
+}
+.bg-teal-500 {
+    background-color: $oranges;
+    border-color: $oranges;
+}
+.bg-feedback-pattern {
+    max-height: 40rem;
+    .section__title {
+        font-size: 2.25rem;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.25;
+    }
+    .section__textShaddow {
+    color: $color__gray;
+  
+    opacity: 0.84;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+    }    
+}
+.smallbuild {
+    .section__title {
+        font-size: 4rem;
+        color: $color__primary;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 1.25;
+    }
+    .section__textShaddow {
+    color: $oranges;
+  
+    opacity: 0.84;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+    }    
+}
+
+.titlebox {
+
+}
+.phone {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: right;
+    span {
+        font-size: 1.5rem;
+    }
+}
+.feedback {
+
 }
 .logo {
    

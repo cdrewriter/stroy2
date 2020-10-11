@@ -5,7 +5,7 @@ import styles from './Section.module.scss';
 
 const Section = ({ className, children, ...props }) => {
   return (
-    <div className={`${styles.section} ${className ? ` ${className}` : ''}`} {...props}>
+    <div className={`${className ? ` ${className}` : ''}`} {...props}>
       {children}
     </div>
   );

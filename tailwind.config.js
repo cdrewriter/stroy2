@@ -16,7 +16,10 @@ module.exports = {
     container: {},
     extend: {
       backgroundImage: (theme) => ({
-        "hero-pattern": "url('https://res.cloudinary.com/dpiuthi6q/image/upload/v1602171163/stroy2/img/slider_maaevf.png')",       
+        
+        'hero-pattern': "url('https://res.cloudinary.com/dpiuthi6q/image/upload/v1602171163/stroy2/img/slider_maaevf.png')",
+'feedback-pattern': "url('https://res.cloudinary.com/dpiuthi6q/image/upload/v1602290991/Group_102_yxtgmw.png')",
+       
       }),
     },
   },

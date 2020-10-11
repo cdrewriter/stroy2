@@ -41,6 +41,8 @@
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-flip-numbers": "^3.0.5",
+    "react-number-counter": "^1.0.8",
     "sass": "^1.27.0",
     "tailwindcss": "^1.8.12"
   }

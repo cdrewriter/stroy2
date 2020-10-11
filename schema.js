@@ -18,6 +18,7 @@ const { CloudinaryImage } = require('@keystonejs/fields-cloudinary-image');
 const { distDir, staticRoute, staticPath } = require('./config');
 const dev = process.env.NODE_ENV === 'development';
 
+
 const avatarFileAdapter = new LocalFileAdapter({
   src: `${staticPath}/avatars`,
   path: `${staticRoute}/avatars`,
@@ -27,7 +28,7 @@ const cloudadapter = new CloudinaryAdapter({
   cloudName: 'dpiuthi6q',
   apiKey: '195655714938893',
   apiSecret: 'ciavXR0Z0wCiXkhFRAeOAyDewYM',
-  folder: 'stroy2',
+  folder: 'my-keystone-app',
 });
 
 const postImageFileAdapter = new LocalFileAdapter({
@@ -73,7 +74,38 @@ const Main = {
     labelResolver: (item) => item.title,
   };
 
+const About = {
+    fields: {
+      title: { type: Text,  isRequired: true },
+      title__text: { type: Text },
+      description: {type: Wysiwyg},
+      docs: {
+        type: CloudinaryImage,
+        adapter: cloudadapter,
+      },
+      photos: {
+        type: KeystoneCloudinaryGallery,
+        adapter: cloudadapter,
+      },
+      image: { type: CloudinaryImage, adapter: cloudadapter },
+      },
+      labelResolver: (item) => item.title,
+    };
 
+    const SmallBuild = {
+      fields: {
+        title: { type: Text,  isRequired: true },
+        title__text: { type: Text },
+        description: {type: Wysiwyg},
+        docs: {
+          type: CloudinaryImage,
+          adapter: cloudadapter,
+        },
+        image: { type: CloudinaryImage, adapter: cloudadapter },
+        },
+        labelResolver: (item) => item.title,
+      };
+  
 const Post = {
   fields: {
     title: { type: Text, isRequired: true },
@@ -161,7 +193,9 @@ const Contact = {
 
 module.exports = {
   User,
+  About,
   Post,
+  SmallBuild,
   Main,
   PostCategory,
   Contact, 

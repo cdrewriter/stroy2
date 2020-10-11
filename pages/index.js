@@ -1,6 +1,10 @@
 import Head from "next/head";
 import Section from "../components/Section/Section";
 import { useGraphQL } from "graphql-react";
+import MainSection from "../components/Section/Main";
+import AboutSection from "../components/Section/About";
+import FeedbackSection from "../components/Section/Feedback";
+import SmallBuildSection from "../components/Section/SmallBuild";
 
 const Main = () => {
   const result = useGraphQL({
@@ -11,12 +15,41 @@ const Main = () => {
     },
     operation: {
       query: /* GraphQL */ `
-        query {
-          Main(where: { id: "5f7ef4dbd3ec864484349860" }) {
-            title
-            title__text
+      query {
+        Main(where: { id: "5f7ef4dbd3ec864484349860" }) {
+          title
+          title__text
+        }
+        About(where: { id: "5f80cb377a316844809ecec2" }) {
+          title
+          title__text
+          description
+          photos {
+            images {
+              image {
+                publicUrl
+              }
+            }
+          }
+          image {
+            publicUrl
           }
         }
+        SmallBuild(where: { id: "5f81b62e6e425c535ca01916" }) {
+          id
+          title
+          title__text
+          description
+          photos {
+            images {
+              image {
+                publicUrl
+              }
+            }
+          } 
+        }
+      }
+      
       `,
     },
     loadOnMount: true,
@@ -25,59 +58,16 @@ const Main = () => {
   });
   const { loading, cacheValue } = result;
   if (cacheValue && cacheValue.data) {
-    const { Main } = cacheValue.data;
-    const priceItems = [];
-    {
-      /* if (allItemCarCategories && allItemCarCategories.length) {
-      for (let i = 0; i < allItemCarCategories.length; ++i) {
-        priceItems.push(
-          <>
-            <BgCard key={i} post={allItemCarCategories[i]} />
-          </>
-        );
-      }
-    }*/
-    }
-
+    const { Main, About, SmallBuild } = cacheValue.data;
     return (
       <>
         <Head>
           <title>Appssss</title>
-        </Head>      
-        <Section className="bd md:pl-24 md:pr-24 pl-8 pr-8 mb-24 h-screen">
-          <div className="h-full lg:mx-auto bg-local ">
-            <div className="p-4 h-full shadow bg-hero-pattern">
-              <div className="container h-full  mx-auto block__custom flex flex-col">
-                <div className="block__outer">
-                  <div className="z-12 heading relative shadow-2xl">
-                    <h1 className="leading-normal">{Main.title}</h1>
-                  </div>
-                  <div className="bd z-16 heading__subtitle relative w-14 shadow-xl">
-                    <p className="text-white">{Main.title__text}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Section>
-        <Section className="bd md:pl-24 md:pr-24 pl-8 pr-8 mb-24 h-screen">
-          <div className="h-full lg:mx-auto bg-local ">
-            <div className="p-4 h-full shadow-2xl bg-white">
-              <div className="container h-full  mx-auto block__custom flex flex-col">
-                <h2 className="section__title">Строэксперт</h2>
-                <span className="section__textShaddow">О компании</span>
-                <div className="block__outer">
-                  <div className="z-12 heading relative shadow-2xl">
-                    <h1 className="leading-normal">{Main.title}</h1>
-                  </div>
-                  <div className="bd z-16 heading__subtitle relative w-14 shadow-xl">
-                    <p className="text-white">{Main.title__text}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Section>
+        </Head>
+        <MainSection key="main" title={Main.title} titleText={Main.title__text}/>
+        <AboutSection key="about" about={About} />
+        <FeedbackSection key="feedback" />
+        <SmallBuildSection key="smallbuild" smallbuild={SmallBuild} />        
       </>
     );
   }

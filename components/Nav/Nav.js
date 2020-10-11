@@ -14,8 +14,8 @@ function Dropdown() {
           onClick={() => setIsOpen(!isOpen)}
           className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
           id="main-menu"
-          ariaLabel="Main menu"
-          ariaHaspopup="true"
+          aria-label="Main menu"
+          aria-haspopup="true"
         >
           <svg
             className="h-6 w-6"
@@ -52,7 +52,7 @@ function Dropdown() {
                 className="rounded-lg bg-white shadow-xs overflow-hidden"
                 role="menu"
                 ariaOrientation="vertical"
-                ariaLabelledby="main-menu"
+                aria-labelledby="main-menu"
               >
                 -
                 <div className="px-5 pt-4 flex items-center justify-between">
@@ -68,7 +68,7 @@ function Dropdown() {
                       type="button"
                       onClick={() => setIsOpen(false)}
                       className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                      ariaLabel="Close menu"
+                      aria-label="Close menu"
                     >
                       <svg
                         className="h-6 w-6"
@@ -174,20 +174,20 @@ export default function Nav() {
               </a>
              </div>
             <div className="nav__icons">
-              <button class="m-auto animate-bounce hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+              <button className="m-auto animate-bounce hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                 <svg
                   stroke="currentColor"
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   fillRule="none"
                   viewBox="0 0 20 20"
                 >
                   <path d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z" />
                 </svg>
               </button>
-              <button class="m-auto hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+              <button className="m-auto hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
   
                   <svg  stroke="currentColor"
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   fillRule="none"
                   viewBox="0 0 20 20"><path d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z"/></svg>
                   

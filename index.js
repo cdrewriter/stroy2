@@ -29,6 +29,8 @@ const {
     User,
     Post,
     Main,
+    About,
+    SmallBuild,
     PostCategory
   } = require('./schema');
 
@@ -36,7 +38,8 @@ keystone.createList('User', User);
 keystone.createList('PostCategory', PostCategory);
 keystone.createList('Post', Post);
 keystone.createList('Main', Main);
-
+keystone.createList('About', About);
+keystone.createList('SmallBuild', SmallBuild);
 
 const authStrategy = keystone.createAuthStrategy({
     type: PasswordAuthStrategy,
