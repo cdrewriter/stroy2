@@ -1,6 +1,6 @@
 import Section from "./Section";
 
-export default function SmallBuildSection({ smallbuild }) {
+export default function ConstructionSection({ smallbuild }) {
   const { data } = smallbuild;
   const img = smallbuild.image;
   {

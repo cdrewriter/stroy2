@@ -39,7 +39,7 @@ export default function FeedbackSection() {
                     </div>
                   </div>
                   <div className="box w-2/5 flex-end">
-                    <form class="mb-6 w-full inline-block form border-2 rounded border-white-300 py-2">
+                    <form className="mb-6 w-full inline-block form border-2 rounded border-white-300 py-2">
                       <div className="flex items-center flex-end">
                         <input
                           className="appearance-none w-full m-auto bg-transparent input border-none  mr-3 py-1 px-2 leading-tight focus:outline-none"
@@ -63,9 +63,9 @@ export default function FeedbackSection() {
                             <text
                               transform="translate(0 21)"
                               fill="#14213d"
-                              font-size="24"
-                              font-family="FontAwesome5Pro-Light, 'Font Awesome 5 Pro'"
-                              font-weight="300"
+                              fontSize="24"
+                              fontFamily="FontAwesome5Pro-Light, 'Font Awesome 5 Pro'"
+                              fontWeight="300"
                             >
                               <tspan x="0" y="0">
                                 envelope

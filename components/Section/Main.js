@@ -1,7 +1,9 @@
 import Section from "./Section";
 
 export default function MainSection({title, titleText}) {
-  
+  function inHtml() {
+    return <div dangerouslySetInnerHTML={{ __html: `${titleText}` }} />;
+  }
     return (
         <Section
         key="mainscr"
@@ -15,7 +17,7 @@ export default function MainSection({title, titleText}) {
                   <h1 className="leading-normal">{title}</h1>
                 </div>
                 <div className="bd z-16 heading__subtitle relative w-14 shadow-xl">
-                  <p className="text-white">{titleText}</p>
+                  <p className="text-white">{inHtml()}</p>
                 </div>
               </div>
             </div>

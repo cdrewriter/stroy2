@@ -5,6 +5,8 @@ import MainSection from "../components/Section/Main";
 import AboutSection from "../components/Section/About";
 import FeedbackSection from "../components/Section/Feedback";
 import SmallBuildSection from "../components/Section/SmallBuild";
+import Carous from "../components/Carousel/Carousel";
+import ConstructionSection from "../components/Section/Construction";
 
 const Main = () => {
   const result = useGraphQL({
@@ -40,13 +42,17 @@ const Main = () => {
           title
           title__text
           description
-          photos {
-            images {
-              image {
-                publicUrl
-              }
-            }
-          } 
+          image {
+            publicUrl
+          }
+        }
+        allBuildObjects(first: 5) {
+          id
+          title
+          description
+          image {
+            publicUrl
+          }
         }
       }
       
@@ -58,16 +64,18 @@ const Main = () => {
   });
   const { loading, cacheValue } = result;
   if (cacheValue && cacheValue.data) {
-    const { Main, About, SmallBuild } = cacheValue.data;
+    const { Main, About, SmallBuild, allBuildObjects } = cacheValue.data;
     return (
       <>
         <Head>
           <title>Appssss</title>
         </Head>
-        <MainSection key="main" title={Main.title} titleText={Main.title__text}/>
-        <AboutSection key="about" about={About} />
-        <FeedbackSection key="feedback" />
-        <SmallBuildSection key="smallbuild" smallbuild={SmallBuild} />        
+        {/*<MainSection title={Main.title} titleText={Main.title__text}/>
+        <AboutSection about={About} />
+        <FeedbackSection />
+    <SmallBuildSection  smallbuild={SmallBuild} />*/}
+        <Carous  data={allBuildObjects}/>     
+        <ConstructionSection data={ConstructionSection}/> 
       </>
     );
   }

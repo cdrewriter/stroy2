@@ -1,0 +1,47 @@
+/*
+.carous {
+  margin: 12rem;
+  grid-area: c;
+}
+.slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title title title title title"    
+    "specs specs specs specs specs"  
+}
+
+.slick-list { 
+  grid-area: title; 
+}
+.slick-slider {
+  position: relative;
+  }
+
+.block__arrows {
+    display: flex;
+}
+.counters {
+  display: p;
+}
+.sliderblock {
+  display: grid;
+}
+.slick-prev {
+  grid-area: specs;
+  left: calc(50% - 4rem);
+}
+.slick-next {
+  grid-area: specs;
+  right: calc(50% - 4rem);
+}*/
+
+.arrowsright {
+  margin: 2rem;
+}
+.arrowsleft 
+{
+  margin: 2rem;
+}
