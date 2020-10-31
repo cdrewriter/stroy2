@@ -66,14 +66,14 @@ export default class SlideChangeHooks extends Component {
     if (data && data.length) {
       for (let i = 0; i < data.length; ++i) {        
         buildObjects.push(
-          <div>
+          
           <CardObject
             key={data[i].id}
             title={data[i].title}
             description={data[i].description}
             image={data[i].image.publicUrl}
           />
-          </div>
+         
         );
       }
     }

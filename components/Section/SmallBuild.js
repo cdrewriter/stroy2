@@ -28,7 +28,7 @@ export default function SmallBuildSection({ smallbuild }) {
       <div className="lg:mx-auto bg-local relative  bggray30">
         <div className="py-16 shadow-2xl bg-white">
           <div className="container h-full mx-auto block__custom mt-12 ">
-            <box className="grid grid-cols-3 gap-4 ">
+            <div className="grid grid-cols-3 gap-4 ">
               <div className="box col-span-2 ugol_b_left_top">
                 <span className="section__textShaddow">
                   {smallbuild.title__text}
@@ -96,7 +96,7 @@ export default function SmallBuildSection({ smallbuild }) {
               <div className="image z-10 col-span-1 grid items-center">
                 <img src={img.publicUrl} className="shadow-3xl"/>
               </div>
-            </box>
+            </div>
           </div>
         </div>
       </div>

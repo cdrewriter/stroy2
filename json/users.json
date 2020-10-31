@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "5eeca34e1cad5f1d24577a81"
+  },
+  "name": "Demo User",
+  "email": "user@keystonejs.com",
+  "isAdmin": false,
+  "password": "$2b$10$hAAxXtHjGeE4VxsKNsEsHOStawzP5a.nS/CSoyw8G4AvMg1Pzh.9K",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5eeca34e1cad5f1d24577a80"
+  },
+  "name": "Admin User",
+  "email": "admin@keystonejs.com",
+  "isAdmin": true,
+  "password": "$2b$10$aDv51iwxPNHkvXpD5jqPq.yysl8ViW94b/3MCXaBJOhA7Xdz30ZvO",
+  "__v": 0
+}]

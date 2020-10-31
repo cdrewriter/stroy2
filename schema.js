@@ -1,3 +1,5 @@
+
+require('dotenv').config();
 const {
   File,
   Text,
@@ -6,20 +8,19 @@ const {
   Select,
   Password,
   Checkbox,
-  DateTime,
-  Integer,
-} = require("@keystonejs/fields");
+  DateTime 
+} = require('@keystonejs/fields');
 
-const { Wysiwyg } = require("@keystonejs/fields-wysiwyg-tinymce");
-const { userIsAdmin, userIsAdminOrOwner } = require("./utils/access");
+const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
+const { userIsAdmin, userIsAdminOrOwner } = require('./utils/access');
 const {
   LocalFileAdapter,
   CloudinaryAdapter,
-} = require("@keystonejs/file-adapters");
-const KeystoneCloudinaryGallery = require("@globobeet/keystone-cloudinary-gallery-field");
-const { CloudinaryImage } = require("@keystonejs/fields-cloudinary-image");
-const { distDir, staticRoute, staticPath } = require("./config");
-const dev = process.env.NODE_ENV === "development";
+} = require('@keystonejs/file-adapters');
+const KeystoneCloudinaryGallery = require('@globobeet/keystone-cloudinary-gallery-field');
+const { CloudinaryImage } = require('@keystonejs/fields-cloudinary-image');
+const { distDir, staticRoute, staticPath } = require('./config');
+const dev = process.env.NODE_ENV === 'development';
 
 const avatarFileAdapter = new LocalFileAdapter({
   src: `${staticPath}/avatars`,
@@ -27,20 +28,15 @@ const avatarFileAdapter = new LocalFileAdapter({
 });
 
 const cloudadapter = new CloudinaryAdapter({
-  cloudName: "dpiuthi6q",
-  apiKey: "195655714938893",
-  apiSecret: "ciavXR0Z0wCiXkhFRAeOAyDewYM",
-  folder: "my-keystone-app",
+  cloudName: 'dpiuthi6q',
+  apiKey: '195655714938893',
+  apiSecret: 'ciavXR0Z0wCiXkhFRAeOAyDewYM',
+  folder: 'my-keystone-app',
 });
 
 const postImageFileAdapter = new LocalFileAdapter({
-  src: `${dev ? "" : `${distDir}/`}${staticPath}/uploads`,
+  src: `${dev ? '' : `${distDir}/`}${staticPath}/uploads`,
   path: `${staticRoute}/uploads`,
-});
-
-const fileAdapter = new LocalFileAdapter({
-  src: `${dev ? "" : `${distDir}/`}${staticPath}/files`,
-  path: `${staticRoute}/files`,
 });
 
 const User = {
@@ -70,7 +66,7 @@ const User = {
 const Main = {
   fields: {
     title: { type: Text, isRequired: true },
-    title__text: { type: Wysiwyg },
+    subtext: { type: Wysiwyg },
   },
   labelResolver: (item) => item.title,
 };
@@ -121,13 +117,14 @@ const BuildObject = {
 
 const Construction = {
   fields: {
-    title: { type: Text, isRequired: true },
-    title__text: { type: Text },
+    title: { type: Text },
+    url: { type: Slug, from: 'title' },
+    subtext: { type: Text },
     description: { type: Wysiwyg },
     items: {
       type: Relationship,
-      ref: 'ConstructionItem.items',
-      many: true, 
+      ref: 'ConstructionItem.category',
+      many: true,     
     },
     images: {
       type: CloudinaryImage,
@@ -140,49 +137,102 @@ const Construction = {
 
 const ConstructionItem = {
   fields: {
-    title: { type: Text, isRequired: true },
-    title__text: { type: Text },
-    description: { type: Wysiwyg },
-    items: {
+    name: { type: Text },
+    subtext: { type: Text },
+    description: { type: Wysiwyg }, 
+    category: {
       type: Relationship,
       ref: 'Construction.items',
-      many: true, 
-    },
+      many: true,     
+    },  
     images: {
       type: CloudinaryImage,
       adapter: cloudadapter,
+    },   
+    image: { type: CloudinaryImage, adapter: cloudadapter },
+  },
+  labelResolver: (item) => item.name,
+};
+
+const ConstructionPortfolio = {
+  fields: {
+    title: { type: Text, isRequired: true },
+    title__text: { type: Text },
+    description: { type: Wysiwyg },
+    images: {
+      type: KeystoneCloudinaryGallery,
+      adapter: cloudadapter,
+    },
+    publishedDate: {
+      type: DateTime,
+      format: 'DD/MM/YYYY',
+      yearRangeFrom: 2018,
+      yearRangeTo: 'default',
+      yearPickerType: 'auto',
     },
     image: { type: CloudinaryImage, adapter: cloudadapter },
   },
   labelResolver: (item) => item.title,
 };
-
+const UslugiPage = {
+  fields: {
+    title: { type: Text },
+    url: { type: Slug, from: 'title', },
+    description: { type: Text, isMultiline: true },   
+  },
+  labelResolver: (item) => item.title,
+};
+const Uslugi = {
+  fields: { 
+    name: { type: Text },  
+    postCategories: {
+      type: Relationship,
+      ref: 'UslugiPage',
+      many: true,    
+    },   
+    description: {
+      type: Text,
+      isMultiline: true,    
+    },
+    content: {
+      type: Wysiwyg,
+    },    
+    image: { type: CloudinaryImage, adapter: cloudadapter },
+    images: {
+      type: KeystoneCloudinaryGallery,
+      adapter: cloudadapter,
+    }
+  },
+  labelResolver: (item) => item.name,
+};
 const Post = {
   fields: {
     title: { type: Text, isRequired: true },
-    slug: { type: Slug, from: "title", isUnique: true },
+    slug: { type: Slug, from: 'title', isUnique: true, adminConfig: {
+      isReadOnly: true, //slug can be created automatically and you may want to show this as read only
+    }, },
     author: {
       type: Relationship,
-      ref: "User",
+      ref: 'User',
       isRequired: true,
     },
     postCategories: {
       type: Relationship,
-      ref: "PostCategory",
+      ref: 'PostCategory',
       many: true,
       isRequired: true,
     },
     status: {
       type: Select,
-      defaultValue: "draft",
+      defaultValue: 'draft',
       options: [
-        { label: "Draft", value: "draft" },
-        { label: "Published", value: "published" },
+        { label: 'Draft', value: 'draft' },
+        { label: 'Published', value: 'published' },
       ],
     },
     publishedDate: {
       type: DateTime,
-      format: "DD/MM/YYYY",
+      format: 'DD/MM/YYYY',
     },
     image: {
       type: File,
@@ -214,8 +264,8 @@ const Post = {
   },
   adminConfig: {
     defaultPageSize: 20,
-    defaultColumns: "title, status, author",
-    defaultSort: "title",
+    defaultColumns: 'title, status, author',
+    defaultSort: 'title',
   },
   labelResolver: (item) => item.title,
 };
@@ -223,7 +273,7 @@ const Post = {
 const PostCategory = {
   fields: {
     name: { type: Text, isRequired: true },
-    slug: { type: Slug, from: "name", isUnique: true },
+    slug: { type: Slug, from: 'name', isUnique: true },
     description: { type: Text, isMultiline: true },
   },
 };
@@ -252,5 +302,8 @@ module.exports = {
   Contact,
   BuildObject,
   Construction,
-  ConstructionItem
+  ConstructionItem,
+  ConstructionPortfolio,
+  UslugiPage,
+  Uslugi
 };

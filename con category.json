@@ -1,0 +1,176 @@
+[{
+  "_id": {
+    "$oid": "5f8c0158ca7ab246804d6888"
+  },
+  "title": "ТОРГОВЫЕ ЦЕНТРЫ",
+  "image": {
+    "id": {
+      "$oid": "5f8c0289ca7ab246804d688b"
+    },
+    "filename": "tradecenter.jpg",
+    "originalFilename": "tradecenter.jpg",
+    "mimetype": "image/jpeg",
+    "encoding": "7bit",
+    "_meta": {
+      "asset_id": "fff186ce15da50f6d1993f02d403cd3c",
+      "public_id": "my-keystone-app/5f8c0289ca7ab246804d688b",
+      "version": 1603011210,
+      "version_id": "ced9ec005e27abbf5eccf5227ee80ce1",
+      "signature": "c957e4ed869902859ad6ea5dfa88b7e272c41a50",
+      "width": 688,
+      "height": 609,
+      "format": "jpg",
+      "resource_type": "image",
+      "created_at": "2020-10-18T08:53:30Z",
+      "tags": [],
+      "bytes": 324812,
+      "type": "upload",
+      "etag": "1a9addcdd5719f3906af116df1800c3a",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1603011210/my-keystone-app/5f8c0289ca7ab246804d688b.jpg",
+      "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1603011210/my-keystone-app/5f8c0289ca7ab246804d688b.jpg",
+      "original_filename": "file"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f8c02d2ca7ab246804d688d"
+  },
+  "title": "Склады",
+  "image": {
+    "id": {
+      "$oid": "5f8c02d0ca7ab246804d688c"
+    },
+    "filename": "pic-3.jpg",
+    "originalFilename": "pic-3.jpg",
+    "mimetype": "image/jpeg",
+    "encoding": "7bit",
+    "_meta": {
+      "asset_id": "dca9acde667826406aa754ce8641e0a3",
+      "public_id": "my-keystone-app/5f8c02d0ca7ab246804d688c",
+      "version": 1603011281,
+      "version_id": "a04a748c9d1abf672bacd53e228ca659",
+      "signature": "2a282974d006ddbe485376bccaffec8dafbdef94",
+      "width": 330,
+      "height": 301,
+      "format": "jpg",
+      "resource_type": "image",
+      "created_at": "2020-10-18T08:54:41Z",
+      "tags": [],
+      "bytes": 84896,
+      "type": "upload",
+      "etag": "3672bb2659f11b2e466519c21f790005",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1603011281/my-keystone-app/5f8c02d0ca7ab246804d688c.jpg",
+      "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1603011281/my-keystone-app/5f8c02d0ca7ab246804d688c.jpg",
+      "original_filename": "file"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f8c02e6ca7ab246804d688f"
+  },
+  "title": "Автомойки",
+  "image": {
+    "id": {
+      "$oid": "5f8c02e5ca7ab246804d688e"
+    },
+    "filename": "pic-1.jpg",
+    "originalFilename": "pic-1.jpg",
+    "mimetype": "image/jpeg",
+    "encoding": "7bit",
+    "_meta": {
+      "asset_id": "e4414a75cdd4a983c21b8566de4d429f",
+      "public_id": "my-keystone-app/5f8c02e5ca7ab246804d688e",
+      "version": 1603011302,
+      "version_id": "f916ef14f620b1b0d9279efbd86223a4",
+      "signature": "8c337b11b0d9f380ef2bcb5b4f6ffa3975684af5",
+      "width": 330,
+      "height": 273,
+      "format": "jpg",
+      "resource_type": "image",
+      "created_at": "2020-10-18T08:55:02Z",
+      "tags": [],
+      "bytes": 64367,
+      "type": "upload",
+      "etag": "ed13a7299aae0965f9dea83c09034ad3",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1603011302/my-keystone-app/5f8c02e5ca7ab246804d688e.jpg",
+      "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1603011302/my-keystone-app/5f8c02e5ca7ab246804d688e.jpg",
+      "original_filename": "file"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f8c02fdca7ab246804d6891"
+  },
+  "title": "Автосервисы",
+  "image": {
+    "id": {
+      "$oid": "5f8c02fcca7ab246804d6890"
+    },
+    "filename": "pic-2.jpg",
+    "originalFilename": "pic-2.jpg",
+    "mimetype": "image/jpeg",
+    "encoding": "7bit",
+    "_meta": {
+      "asset_id": "469998713a5ff3a046676f519e20d31a",
+      "public_id": "my-keystone-app/5f8c02fcca7ab246804d6890",
+      "version": 1603011325,
+      "version_id": "05d90792c1263b02dd3516cb94510a32",
+      "signature": "6d39714c3dd32833afcc279c294380b00a2860a8",
+      "width": 332,
+      "height": 301,
+      "format": "jpg",
+      "resource_type": "image",
+      "created_at": "2020-10-18T08:55:25Z",
+      "tags": [],
+      "bytes": 92362,
+      "type": "upload",
+      "etag": "5e13dd98eb6f7fb2a8171e17fc1de360",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1603011325/my-keystone-app/5f8c02fcca7ab246804d6890.jpg",
+      "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1603011325/my-keystone-app/5f8c02fcca7ab246804d6890.jpg",
+      "original_filename": "file"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f8c0318ca7ab246804d6893"
+  },
+  "title": "Промышленные  здания",
+  "image": {
+    "id": {
+      "$oid": "5f8c0317ca7ab246804d6892"
+    },
+    "filename": "pic.jpg",
+    "originalFilename": "pic.jpg",
+    "mimetype": "image/jpeg",
+    "encoding": "7bit",
+    "_meta": {
+      "asset_id": "2cccca90380889fe21c14f18db12ad15",
+      "public_id": "my-keystone-app/5f8c0317ca7ab246804d6892",
+      "version": 1603011352,
+      "version_id": "bf79f6104078e01a49a3b41e402bc611",
+      "signature": "d133f27fc64d1b8de6c1e411a402d1a404187523",
+      "width": 332,
+      "height": 276,
+      "format": "jpg",
+      "resource_type": "image",
+      "created_at": "2020-10-18T08:55:52Z",
+      "tags": [],
+      "bytes": 78088,
+      "type": "upload",
+      "etag": "289fe82212f08e72db22488ecfeefe2e",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1603011352/my-keystone-app/5f8c0317ca7ab246804d6892.jpg",
+      "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1603011352/my-keystone-app/5f8c0317ca7ab246804d6892.jpg",
+      "original_filename": "file"
+    }
+  },
+  "__v": 0
+}]

@@ -11,9 +11,9 @@ export default function AboutSection({ about }) {
       const { image } = photos.images[i];
       //console.log(image.publicUrl);
       priceItems.push(
-        <>
+       
           <img key={i} src={image.publicUrl} />
-        </>
+       
       );
     }
   }

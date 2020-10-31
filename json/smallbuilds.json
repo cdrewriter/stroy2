@@ -1,0 +1,74 @@
+[{
+  "_id": {
+    "$oid": "5f81b62e6e425c535ca01916"
+  },
+  "title": "СТРОИТЕЛЬСТВО",
+  "title__text": "ЧАСТНОЕ / МАЛОЭТАЖНОЕ ",
+  "description": "<p>Мы проектируем, строим, затем производим внутреннюю и наружную отделку. Подключаем коммуникации.</p>\n<p>Разрабатываем индивидуальные проекты, предлагаем типовые варианты, а так же вносим изменения по желанию заказчика.</p>\n<p>Оказываем содействие в подборе материалов и выборе поставщиков.С 2012 года проектируем и возводим дома, небольшие дачи и коттеджи.</p>\n<p>Стоимость строительства дома зависит от сложности конструктивных решений и комплектации.</p>",
+  "photos": {
+    "images": [
+      {
+        "caption": "",
+        "image": {
+          "id": {
+            "$oid": "5f81b62c6e425c535ca01915"
+          },
+          "filename": "28.jpg",
+          "originalFilename": "28.jpg",
+          "mimetype": "image/jpeg",
+          "encoding": "7bit",
+          "_meta": {
+            "asset_id": "32ef48b5f83d27665414278eea3c8ce1",
+            "public_id": "my-keystone-app/5f81b62c6e425c535ca01915",
+            "version": 1602336302,
+            "version_id": "5f034b9fa049fcdb6305b90c64f5a02b",
+            "signature": "06a28e67b72c97abb81cffa19ae4ec263dec4ec7",
+            "width": 706,
+            "height": 368,
+            "format": "jpg",
+            "resource_type": "image",
+            "created_at": "2020-10-10T13:25:02Z",
+            "tags": [],
+            "bytes": 199581,
+            "type": "upload",
+            "etag": "17d109c68eff1c94a7b901961349e916",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1602336302/my-keystone-app/5f81b62c6e425c535ca01915.jpg",
+            "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1602336302/my-keystone-app/5f81b62c6e425c535ca01915.jpg",
+            "original_filename": "file"
+          }
+        }
+      }
+    ]
+  },
+  "__v": 0,
+  "image": {
+    "id": {
+      "$oid": "5f830be50f766a3f34d47fe5"
+    },
+    "filename": "28.jpg",
+    "originalFilename": "28.jpg",
+    "mimetype": "image/jpeg",
+    "encoding": "7bit",
+    "_meta": {
+      "asset_id": "d22bbe41790f67c5a8be0d540904008f",
+      "public_id": "my-keystone-app/5f830be50f766a3f34d47fe5",
+      "version": 1602423783,
+      "version_id": "0c598fb929adec03148a03c2a8495a9f",
+      "signature": "44bae29f77eb25741f55cf6b4f2a0d6b86c3063f",
+      "width": 706,
+      "height": 368,
+      "format": "jpg",
+      "resource_type": "image",
+      "created_at": "2020-10-11T13:43:03Z",
+      "tags": [],
+      "bytes": 199581,
+      "type": "upload",
+      "etag": "17d109c68eff1c94a7b901961349e916",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1602423783/my-keystone-app/5f830be50f766a3f34d47fe5.jpg",
+      "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1602423783/my-keystone-app/5f830be50f766a3f34d47fe5.jpg",
+      "original_filename": "file"
+    }
+  }
+}]

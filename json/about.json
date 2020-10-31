@@ -1,0 +1,135 @@
+[{
+  "_id": {
+    "$oid": "5f80cb377a316844809ecec2"
+  },
+  "title": "СтройЭксперт",
+  "title__text": "О компании",
+  "description": "<p>Компания начала свою деятельность в области строительства с 2012 года. Совместными усилиями нашего коллектива, за это время, мы спроектировали, а затем создали из стали и бетона объекты строительства, которыми мы можем по праву гордиться.&nbsp;</p>",
+  "docs": {
+    "id": {
+      "$oid": "5f80cb357a316844809ecec0"
+    },
+    "filename": "Group 99.png",
+    "originalFilename": "Group 99.png",
+    "mimetype": "image/png",
+    "encoding": "7bit",
+    "_meta": {
+      "asset_id": "1ecf4c905eefe811fa4472604663a028",
+      "public_id": "my-keystone-app/5f80cb357a316844809ecec0",
+      "version": 1602276151,
+      "version_id": "f957cdbacb32812a1db4ca4fe835389b",
+      "signature": "872fe1bd73bb09437c2bc19ea41bb8c526988faf",
+      "width": 152,
+      "height": 197,
+      "format": "png",
+      "resource_type": "image",
+      "created_at": "2020-10-09T20:42:31Z",
+      "tags": [],
+      "bytes": 52416,
+      "type": "upload",
+      "etag": "08fe3770c5b77d373f4227442eb96c2f",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1602276151/my-keystone-app/5f80cb357a316844809ecec0.png",
+      "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1602276151/my-keystone-app/5f80cb357a316844809ecec0.png",
+      "original_filename": "file"
+    }
+  },
+  "image": {
+    "id": {
+      "$oid": "5f80cb357a316844809ecec1"
+    },
+    "filename": "Group 99.png",
+    "originalFilename": "Group 99.png",
+    "mimetype": "image/png",
+    "encoding": "7bit",
+    "_meta": {
+      "asset_id": "819ba18b6e64ef5ad36cd651a84ccc0f",
+      "public_id": "my-keystone-app/5f80cb357a316844809ecec1",
+      "version": 1602276151,
+      "version_id": "f957cdbacb32812a1db4ca4fe835389b",
+      "signature": "4dbef730cb477a03ee5b4985b8bc325c9d7851c5",
+      "width": 152,
+      "height": 197,
+      "format": "png",
+      "resource_type": "image",
+      "created_at": "2020-10-09T20:42:31Z",
+      "tags": [],
+      "bytes": 52416,
+      "type": "upload",
+      "etag": "08fe3770c5b77d373f4227442eb96c2f",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1602276151/my-keystone-app/5f80cb357a316844809ecec1.png",
+      "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1602276151/my-keystone-app/5f80cb357a316844809ecec1.png",
+      "original_filename": "file"
+    }
+  },
+  "__v": 0,
+  "photos": {
+    "images": [
+      {
+        "caption": "",
+        "image": {
+          "id": {
+            "$oid": "5f80db063b221049144145a3"
+          },
+          "filename": "Group 99.png",
+          "originalFilename": "Group 99.png",
+          "mimetype": "image/png",
+          "encoding": "7bit",
+          "_meta": {
+            "asset_id": "2079e8324196f6328caf80741951bbf9",
+            "public_id": "my-keystone-app/5f80db063b221049144145a3",
+            "version": 1602280199,
+            "version_id": "781c432f661b57c4c8c0220a0b8f8959",
+            "signature": "c322e2b65905df3b0e424f91ae18d6058de21d70",
+            "width": 152,
+            "height": 197,
+            "format": "png",
+            "resource_type": "image",
+            "created_at": "2020-10-09T21:49:59Z",
+            "tags": [],
+            "bytes": 52416,
+            "type": "upload",
+            "etag": "08fe3770c5b77d373f4227442eb96c2f",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1602280199/my-keystone-app/5f80db063b221049144145a3.png",
+            "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1602280199/my-keystone-app/5f80db063b221049144145a3.png",
+            "original_filename": "file"
+          }
+        }
+      },
+      {
+        "caption": "",
+        "image": {
+          "id": {
+            "$oid": "5f80db063b221049144145a4"
+          },
+          "filename": "Group 99 — копия.png",
+          "originalFilename": "Group 99 — копия.png",
+          "mimetype": "image/png",
+          "encoding": "7bit",
+          "_meta": {
+            "asset_id": "8eb132141e718fc184c871298150fd56",
+            "public_id": "my-keystone-app/5f80db063b221049144145a4",
+            "version": 1602280199,
+            "version_id": "781c432f661b57c4c8c0220a0b8f8959",
+            "signature": "07cc21d739a96e18d8131e4e45e0f73cfbe4b290",
+            "width": 152,
+            "height": 197,
+            "format": "png",
+            "resource_type": "image",
+            "created_at": "2020-10-09T21:49:59Z",
+            "tags": [],
+            "bytes": 52416,
+            "type": "upload",
+            "etag": "08fe3770c5b77d373f4227442eb96c2f",
+            "placeholder": false,
+            "url": "http://res.cloudinary.com/dpiuthi6q/image/upload/v1602280199/my-keystone-app/5f80db063b221049144145a4.png",
+            "secure_url": "https://res.cloudinary.com/dpiuthi6q/image/upload/v1602280199/my-keystone-app/5f80db063b221049144145a4.png",
+            "original_filename": "file"
+          }
+        }
+      }
+    ]
+  }
+}]
