@@ -7,12 +7,8 @@ const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 const { NextApp } = require('@keystonejs/app-next');
 const expressSession = require('express-session');
 const MongoStore = require('connect-mongo')(expressSession);
-const { createItem } = require('@keystonejs/server-side-graphql-client');
-BD =  createItem({     
-  listKey: 'BuildObject',
-  item: { title: 'Test' },
-  returnFields: `id title`,
-})
+
+
 const keystone = new Keystone({
   name: 'StroyExpert',
   adapter: new MongooseAdapter({ mongoUri: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority' }),
@@ -38,8 +34,7 @@ const {
     BuildObject,
     SmallBuild,
     Construction,
-    ConstructionItem,
-    Page,
+    ConstructionItem,    
     UslugiPage,
     Uslugi,
     ConstructionPortfolio,
@@ -59,29 +54,12 @@ keystone.createList('ConstructionPortfolio', ConstructionPortfolio);
 keystone.createList('UslugiPage', UslugiPage);
 keystone.createList('Uslugi', Uslugi);
 
-keystone.createList('Page', Page);
 
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
   list: 'User',
 })
 
-const getBuildObjects = async () => {
-
-    const allBuildObjects = await getItems({ keystone, listKey: 'BuildObject', returnFields: 'title' });
-    const someUsers = await getItems({
-      keystone,
-      listKey: 'BuildObject',
-      returnFields: 'id title',
-      where: { title: '10 подъездный дом по улице Макеева 11' },
-    });
-    
-    console.log(allBuildObjects); // [{ name: 'user1' }, { name: 'user2' }];
-    console.log(someUsers); // [{ name: 'user1' }];
-  };
-
-
-  
 module.exports = {
   
     keystone,
@@ -107,4 +85,3 @@ module.exports = {
     ],
     distDir,
   };
-  getBuildObjects();
