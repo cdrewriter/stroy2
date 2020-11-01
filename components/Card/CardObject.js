@@ -1,5 +1,5 @@
 import react from "react";
-import styles from './Cardobject.module.css';
+import styles from './CardObject.module.css';
 
 export default function BuildObjects({ title, image, description }) {
 
