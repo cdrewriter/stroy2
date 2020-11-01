@@ -2,7 +2,7 @@ import Section from "./Section";
 
 export default function PortfolioSection({ data, items }) {
   //const { data } = datas;
-  console.log(items);
+  //console.log(items);
   // const img = datas.image;  {
 
   const constructItems = [];

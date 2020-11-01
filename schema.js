@@ -277,6 +277,28 @@ const PostCategory = {
     description: { type: Text, isMultiline: true },
   },
 };
+const Page = {
+  fields: {
+    name: { type: Text },
+    content: { type: Text },
+    copy: { type: Relationship, ref: 'Page' },
+  },
+  hooks: {
+    resolveInput: async ({ resolvedData }) => {
+      // Whenever copy field is set fetch the related data
+      const pageToCopy = resolvedData.copy
+        ? await getItem({
+            keystone,
+            listKey: 'Page',
+            itemId: resolvedData.copy,
+            returnFields: 'name, content',
+          })
+        : {};
+      // resolve data from the copied item and unset the relationship
+      return { ...resolvedData, ...pageToCopy, copy: undefined };
+    },
+  },
+};
 
 const Contact = {
   fields: {
@@ -305,5 +327,6 @@ module.exports = {
   ConstructionItem,
   ConstructionPortfolio,
   UslugiPage,
-  Uslugi
+  Uslugi,
+  Page
 };

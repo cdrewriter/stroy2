@@ -5,7 +5,7 @@ export default function UslugiSection({ datas, items }) {
   const { data } = datas;
   const { photos } = datas;
   const priceItems = [];
-  console.log(items)
+  //console.log(items)
   if (items && items.length) {
     for (let i = 0; i < items.length; ++i) {
       //const { image } = photos.images[i];
