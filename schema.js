@@ -177,14 +177,15 @@ const ConstructionPortfolio = {
 const UslugiPage = {
   fields: {
     title: { type: Text },
-    url: { type: Slug, from: 'title', },
+    url: { type: Slug, from: 'title', isUnique: true},
     description: { type: Text, isMultiline: true },   
   },
   labelResolver: (item) => item.title,
 };
 const Uslugi = {
   fields: { 
-    name: { type: Text },  
+    name: { type: Text },
+    url: { type: Slug, from: 'name', isUnique: true},
     postCategories: {
       type: Relationship,
       ref: 'UslugiPage',

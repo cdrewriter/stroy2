@@ -12,9 +12,7 @@ import UslugiSection from "../components/Section/UslugiPage";
 const Main = () => {
   const result = useGraphQL({
     fetchOptionsOverride(options) {
-      options.url = `${
-        process.browser ? "" : "http://localhost:3000"
-      }/admin/api`;
+      options.url = `${process.browser ? "" : "http://localhost:3000"}/admin/api`;
     },
     operation: {
       query: /* GraphQL */ `
@@ -30,7 +28,7 @@ const Main = () => {
           photos {
             images {
               image {
-                publicUrl
+                publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
               }
             }
           }
@@ -44,7 +42,7 @@ const Main = () => {
           title__text
           description
           image {
-            publicUrl
+            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
           }
         }
         allBuildObjects(first: 5) {
@@ -52,7 +50,7 @@ const Main = () => {
           title
           description
           image {
-            publicUrl
+            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
           }
         }
 
@@ -62,28 +60,29 @@ const Main = () => {
           subtext
           description
           image {
-            publicUrl
+            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
           }
         }
         allConstructionItems {
           id
           name
           image {
-            publicUrl
+            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
           }
         }
         allConstructionPortfolios(first: 4) {
           title
+          id
           description
           title__text
           image {
-            publicUrl
+            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
           }
           publishedDate
           images {
             images {
               image {
-                publicUrl
+                publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
               }
             }
           }
@@ -106,7 +105,7 @@ const Main = () => {
           description
           content
           image {
-            publicUrl
+            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
           }
         }
       }
@@ -134,13 +133,15 @@ const Main = () => {
         <Head>
           <title>Appssss</title>
         </Head>
-        <MainSection title={Main.title} titleText={Main.subtext} />
+        {/*<MainSection title={Main.title} titleText={Main.subtext} />
         <AboutSection about={About} />
         <FeedbackSection />
         <SmallBuildSection smallbuild={SmallBuild} />
-        <Carous data={allBuildObjects} />
-    <ConstructionSection data={Construction} items={allConstructionItems} />
+    <Carous data={allBuildObjects} />*/}
+        <div className="shadow-2xl  pb-24">
+        <ConstructionSection data={Construction} items={allConstructionItems} />
         <PortfolioSection items={allConstructionPortfolios} />
+        </div>
         <UslugiSection datas={UslugiPage} items={allUslugis} />
      </>
     );

@@ -1,0 +1,16 @@
+.item {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid grey;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    border-radius: 4px;
+    position: relative;
+    &::after {
+        content: '>';
+        position: absolute;
+        right: 1rem;
+    }
+}

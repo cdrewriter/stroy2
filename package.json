@@ -27,7 +27,6 @@
     "@keystonejs/fields-wysiwyg-tinymce": "^5.3.6",
     "@keystonejs/file-adapters": "^7.0.3",
     "@keystonejs/keystone": "^14.0.0",
-    "autoprefixer": "^10.0.1",
     "connect-mongo": "^3.2.0",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
@@ -37,6 +36,7 @@
     "next": "^9.5.4",
     "next-graphql-react": "^8.0.2",
     "nextjs": "^0.0.3",
+    "nextjs-breadcrumbs": "^0.9.9",
     "nextjs-fonts": "^0.22.0",
     "postcss-cli": "^8.0.0",
     "postcss-import": "^12.0.1",
@@ -46,11 +46,10 @@
     "react-flip-numbers": "^3.0.5",
     "react-number-counter": "^1.0.8",
     "react-slick": "^0.27.11",
-    "sass": "^1.27.0",
     "tailwindcss": "^1.8.12"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
+    "babel-eslint": "^10.1.0",   
     "cross-env": "^7.0.2",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
@@ -58,6 +57,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
+    "sass": "^1.27.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.1"
   }

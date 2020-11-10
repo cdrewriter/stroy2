@@ -36,3 +36,11 @@
 .arrows {
     margin: 2rem;
   }
+
+
+    .imgobject { 
+        display: block;
+        height: 700px;
+        object-fit: cover;
+    }
+    

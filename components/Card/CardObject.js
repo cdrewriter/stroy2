@@ -5,8 +5,8 @@ export default function BuildObjects({ title, image, description }) {
 
   return (    
       <div className={("cardobject " + styles.cardobject )}>
-        <div className={("cardobject__img " + styles.imgobject)}>
-          <img src={image} />
+        <div className={("cardobject__img ")}>
+          <img src={image} className={styles.imgobject}/>
         </div>
         <div className={("cardobject__title " + styles.title)}>
           <h3>{title}</h3>

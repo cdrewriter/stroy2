@@ -1,5 +1,5 @@
 import Section from "./Section";
-import Flip from "../Flip/Flip";
+import style from "./UslugiPage.module.scss";
 
 export default function UslugiSection({ datas, items }) {
   const { data } = datas;
@@ -11,7 +11,7 @@ export default function UslugiSection({ datas, items }) {
       //const { image } = photos.images[i];
       //console.log(image.publicUrl);
       priceItems.push(
-        <div key={items[i].id}>
+        <div className={style.uslugi__item} key={items[i].id}>
           <img key={i} src={items[i].image} />
           <h3>{items[i].name}</h3>
           <p>
@@ -20,14 +20,14 @@ export default function UslugiSection({ datas, items }) {
           <p>
           {items[i].postCategories.name}
           </p>
+          <a href="#" >Далее</a>
 
           </div>
       );
     }
   }
   return (
-    <Section
-      key="about"
+    <Section    
       className="bd my-12 full-height"
     >
       <div className="lg:mx-auto bg-local ">
@@ -36,17 +36,13 @@ export default function UslugiSection({ datas, items }) {
             <div className="grid  gap-4">
               <div className="box  grid items-stretch col-span-2">
                 <div className="block__title">
-                  <h2 className="section__title">{datas.title}</h2>
-                  <span className="section__textShaddow">
-                    {datas.subtext}
-                  </span>
+                  <h2 className="section__title">{datas.title}</h2>                  
                 </div>
                 <div className="block__desc">
                   <p>{datas.description}</p>
                 </div>
-                <div className="block__docs">
-                  <h4 className="title">Документы</h4>
-                  <div className="flex">{priceItems}</div>
+                <div className="block__docs">                  
+                  <div className="flex flex-col">{priceItems}</div>
                 </div>
               </div>
               

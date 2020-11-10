@@ -13,11 +13,19 @@ body {
     color: $color__main;
     font-size: 1rem;
 }
+h1 {
+    font-size: 4rem;
+    font-weight: 700;   
+    color: white;
+}
 h3 {
     font-weight: 700;
-    color: black
+    color: black;
+    margin-bottom: 1rem;
 }
-
+p {
+    margin: 0 0 0.5rem;
+}
 .btn {
     padding: 0.75rem 3rem;
     border: 1px solid;
@@ -266,6 +274,7 @@ h3 {
     margin-left: 7rem;
     padding: 1rem;
     display: block;
+    border: 7px solid #DDDDDD;
     /* box-sizing: border-box; */
    
     .items {
@@ -534,4 +543,7 @@ nav {
   .arrowsleft 
   {
     margin: 2rem;
+  }
+  .section-top {
+      
   }

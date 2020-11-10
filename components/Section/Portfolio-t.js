@@ -1,29 +1,65 @@
 import Section from "./Section";
+import { useGraphQL } from "graphql-react";
+export default function PortfolioSection() {
+  const result = useGraphQL({
+    fetchOptionsOverride(options) {
+      options.url = `${process.browser ? "" : "http://localhost:3000"}/admin/api`;
+    },
+    operation: {
+      query: /* GraphQL */ `
+      query {
+        
+        allConstructionPortfolios(first: 4) {
+          title
+          id
+          description
+          title__text
+          image {
+            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+          }
+          publishedDate
+          images {
+            images {
+              image {
+                publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+              }
+            }
+          }
+        }
+        
+      }
+      `,
+    },
+    loadOnMount: true,
+    loadOnReload: true,
+    loadOnReset: true,
+  });
+  const { loading, cacheValue } = result;
+  if (cacheValue && cacheValue.data) {
+    const {
 
-export default function PortfolioSection({ data, items }) {
-  //const { data } = datas;
-  //console.log(items);
-  // const img = datas.image;  {
+      allConstructionPortfolios,
 
+    } = cacheValue.data;   
   const constructItems = [];
   //console.log(items.length)
-  if (items && items.length) {
-    for (let i = 0; i < items.length; ++i) {
-      const image = items[i].image;
+  if (allConstructionPortfolios && allConstructionPortfolios.length) {
+    for (let i = 0; i < allConstructionPortfolios.length; ++i) {
+      const image = allConstructionPortfolios[i].image;
       const options = { year: "numeric", month: "long" };
-      const odate = new Date(items[i].publishedDate).toLocaleDateString(
+      const odate = new Date(allConstructionPortfolios[i].publishedDate).toLocaleDateString(
         undefined,
         options
       );
       // console.log(items[i].image);
       constructItems.push(
-        <div className="item" key={items[i].id}>
+        <div className="item" key={allConstructionPortfolios[i].id}>
       
             <img className="image" src={image.publicUrlTransformed} />
          
           <div className="heading__portfolio">
             <span>{odate}</span>
-            <h3>{items[i].title}</h3>
+            <h3>{allConstructionPortfolios[i].title}</h3>
           </div>
         </div>
       );
@@ -62,5 +98,7 @@ export default function PortfolioSection({ data, items }) {
       </div>
       
     </Section>
-  );
+    );
+  }
+  return loading ? "Загружается" : "";
 }

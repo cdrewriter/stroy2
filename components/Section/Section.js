@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Section.module.scss';
+import style from './Section.module.scss';
 
-const Section = ({ className, children, ...props }) => {
+const Section = ({ className, children, background , ...props }) => {
   return (
-    <div className={`${className ? ` ${className}` : ''}`} {...props}>
+    <div style={{backgroundBlendMode: 'hard-light', backgroundImage: `linear-gradient(288deg, rgb(0, 0, 0) 0%, rgb(20, 33, 61) 100%), url(${background})`}} className={`${style.section} ${className ? ` ${className}` : ''}`} {...props}>
       {children}
     </div>
   );

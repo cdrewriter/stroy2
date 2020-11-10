@@ -1,0 +1,10 @@
+.breadcrumbs {
+    color: #cecece;
+    display: flex;
+    /* grid-auto-columns: 300px; */
+    /* grid-auto-flow: column; */
+    
+    li {
+        padding-right: 4rem;
+    }
+}
