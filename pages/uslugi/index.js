@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useRouter } from "next/router";
 import { useGraphQL } from "graphql-react";
-import UslugiDetail from "../../components/fullpage/fullpage";
+import Layout from "../../templates/layoutinner";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Section from "../../components/Section/Section";
 import Container from '../../components/Container/Container';
-import SectionUslugi from "../../components/sections/SectionUslugi";
-import Aside from "../../components/Aside/Aside";
+//import SectionUslugi from "../../components/sections/SectionUslugi";
+
 
 const UslugiPage = () => {
   const { query } = useRouter();
@@ -48,18 +48,18 @@ const UslugiPage = () => {
       return "Not found";
     }
   
-  
+    //console.log(slug);
     return (
-      <>
+      <Layout catitems={allUslugis}>
         <Section className="asidesection">
           <Container>
             <Breadcrumbs page={allUslugis} />
           <h1>Все категории</h1>
           </Container>
         </Section>
-        <Aside catitems={allUslugis} />
+        
        
-      </>
+      </Layout>
     );
   }
 

@@ -1,19 +1,20 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 
-//import { Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 //import { postPropTypes } from '../../types';
 
 //import './PostDetail.scss';
 
-const UslugiDetail = ({ post }) => {
-  const { slug, id, image, title, description, content } = post;
+const FullPage = ({ post }) => {
+  console.log(post)
+  const { id, url, name, description, content, image } = post;
   return (
     <article className="post-detail">
       <div className="post-detail__thumbnail">
-        {/*<Image src={image.publicUrl} alt={`Image of ${title}`} fluid />*/}
+        <Image src={image.publicUrlTransformed} alt={`Image of ${title}`} fluid />
       </div>
-      <h3 className="post-detail__title">{title}</h3>
+      <h3 className="post-detail__title">{name}{image.publicUrl}</h3>
 
       <div className="post-detail__description">
         <strong>{description}</strong>
@@ -33,4 +34,4 @@ const UslugiDetail = ({ post }) => {
   post: PropTypes.shape(postPropTypes).isRequired,
 };
 */
-export default UslugiDetail;
+export default FullPage;

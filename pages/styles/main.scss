@@ -7,7 +7,8 @@ $color__primary: #14213D;
 $color_gray_bg: #AEAEAE;
 
 html{
-    font-size: 0.83333333333333vw;    
+    font-size: 0.83333333333333vw;
+    font-size: 16px;
 }
 body {
     color: $color__main;
@@ -44,7 +45,7 @@ p {
     font-weight: 900;
     color: $color__primary;
     z-index: 2;
-    margin-left: 3rem;
+    //margin-left: 3rem;
 }
 .section__textShaddow {
     color: #CECECE38;  
@@ -91,6 +92,7 @@ p {
         color: $color__main;
         border-left: 0.25rem solid $oranges;
     padding-left: 1rem;
+      margin-bottom: 1rem;
     
     }
 }
@@ -163,17 +165,28 @@ p {
     margin: 0;
     }    
 }
+.bggray30::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30vw;
+  height: 100%;
+  background: $color_gray_bg;
+}
+.bggray31::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background: $color_gray_bg;
+}
 .smallbuild {
-    .bggray30::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 30vw;
-        height: 100%;
-        background: $color_gray_bg;
-    }
+
     .specs {
         svg {
             margin-right: 1rem;
@@ -387,9 +400,11 @@ p {
     margin: 0 2rem 0 0;
 }
 nav {
+  .logo {
     a {
-        font-size: 1.25rem;
+      font-size: 1.25rem;
     }
+  }
 }
 .block__outer {
     margin: auto;
@@ -400,8 +415,8 @@ nav {
     margin-top: -6rem;
     padding: 2rem;
    z-index: 2;
-    font-size: 2rem;
-    line-height: 1.5;
+  font-size: 2.5rem;
+  line-height: 1;
     /* margin: auto; */
     padding: 2rem 4rem;
     margin-left: 12vw;
@@ -479,11 +494,13 @@ nav {
     
     .leading-normal {      
         color: $color__primary;
+      font-weight: 900;
+      font-size: 96px;
     }
 }
 .carous {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    //margin-top: 3rem;
+    //margin-bottom: 3rem;
 }
 
 
@@ -508,7 +525,7 @@ nav {
   }
   .slick-active.slick-center.slick-current .cardobject {
     display: grid;
-    grid-template-columns: 500px calc(100% - 500px);
+    grid-template: 1fr 3fr 1fr/ 1fr 1fr;
     -webkit-transition: width 12s 10s linear;
     -moz-transition: width 12s 10s linear;
     -o-transition: width 12s 10s linear;
@@ -520,30 +537,44 @@ nav {
     grid-column: 2/3;
     grid-row: 1/2;
     display: flex;
-    margin: 0 2rem;
+    margin: 5rem 5rem 2rem;
     font-size: 2rem;
     line-height: 1;
+
 }
 .slick-active.slick-center.slick-current .cardobject__img {
     grid-column: 1 / 2;
-    grid-row: 1 / 3;
+  grid-row: 1/4;
     opacity: 1;
 }
 .slick-active.slick-center.slick-current .cardobject__desc {
     grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: 8rem;
+  grid-row: 2/3;
     display: block;
-    padding: 0 2rem;
+    margin: 0 5rem;
 }
-
+.card_properties {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 10%;
+  background: #fff;
+  align-items: center;
+  flex-flow: row-reverse nowrap;
+  margin-bottom: 22px;
+}
 .arrowsright {
-    margin: 2rem;
+  margin: auto 1rem;
   }
   .arrowsleft 
   {
-    margin: 2rem;
+    margin: auto 1rem;
   }
   .section-top {
       
   }
+.build-img:before {
+  content: '';
+  background-image: url('/img/house1.png');
+
+}

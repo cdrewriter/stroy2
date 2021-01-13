@@ -12,12 +12,12 @@ body {
 .heading {
   background: #cccccc;
   font-size: 5.8rem;
-  min-height: 22rem;
+  min-height: 20rem;
   
   letter-spacing: -0.1rem;
   /* color: black; */
   padding: 3.5rem 5.5rem;
-  margin: auto;
+  margin-right: 4rem;
   margin-bottom: -2rem;
   margin-left: 4rem;
   /* margin: auto; */
@@ -72,12 +72,14 @@ body {
   font-weight: bold;
   color: #cecece;
 }
-
+.slick-slide img {
+  width: 100%;
+}
 .block__arrows {
   display: flex;
   flex: 1;
   justify-content: flex-end;
-  align-self: flex-end;
+  /*align-self: flex-end;*/
 }
 /*
 .slick-track {

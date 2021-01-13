@@ -1,16 +1,19 @@
 import react from "react";
 import styles from "./Aside.module.scss";
+import Link from 'next/link';
 
 const Item = ({ name, id, url }) => {
   return (
     <div className={styles.item} key={id}>
-      <a href={`/uslugi/${url}`}>{name}</a>
+      <Link href={`/uslugi/${url}`} id={id}>
+      <a>{name}</a>
+      </Link>
     </div>
   );
 };
 
 function Aside({ catitems }) {
-  console.log(catitems.length);
+  //console.log(catitems.length);
   const asideItems = [];
 
   if (catitems && catitems.length) {
@@ -27,6 +30,6 @@ function Aside({ catitems }) {
   }
 return 'Loading...'
  
-}
+};
 
 export default Aside;

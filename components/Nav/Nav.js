@@ -137,17 +137,17 @@ function Dropdown() {
 export default function Nav() {
   return (
     <div className="mx-auto">
-      <div className="relative z-10 pb-8 lg:w-full">
-        <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 lg:w-full">
+        <div className="relative px-8 sm:px-6 lg:px-8">
           <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
-            <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+            <div className="flex items-center">
               <div className="flex items-center justify-between">
               <Dropdown />  
                 <Logo />
                
               </div>
             </div>
-            <div className="hidden md:flex lg:w-full md:pl-24 md:pr-24 pl-8 pr-8 flex-1">
+            <div className="md:flex lg:w-full md:pl-24 md:pr-24 pl-24 pr-8 flex-1">
               <a
                 href="/build"
                 className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"

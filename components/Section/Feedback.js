@@ -6,9 +6,9 @@ export default function FeedbackSection() {
     return (
       <Section key="feedback" className="feddback">
           <div className=" lg:mx-auto bg-local ">
-            <div className="p-4  bg-feedback-pattern">
+            <div className="bg-feedback-pattern">
               <div className="container mx-auto block__custom">
-                <div className="flex flex-col flex-wrap justify-between md:flex-row my-12">
+                <div className="flex  py-16  flex-row flex-wrap 2xl:items-center justify-between md:flex-row">
                   <div className="box w-1/4">
                     <div className="titlebox mb-12">
                       <span className="section__textShaddow">

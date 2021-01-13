@@ -1,6 +1,6 @@
 import App from "next/app";
 //import '../css/tailwind.css'
-import Layout from "../templates/layout";
+
 import { GraphQLProvider } from "graphql-react";
 import { withGraphQLApp } from "next-graphql-react";
 import Head from "next/head";
@@ -11,7 +11,7 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, graphql } = this.props;
     return (
-      <Layout>
+ 
         <GraphQLProvider graphql={graphql}>
           <Head>
             <title>My page</title>
@@ -27,7 +27,7 @@ class MyApp extends App {
 
           <Component {...pageProps} />
         </GraphQLProvider>
-      </Layout>
+     
     );
   }
 }

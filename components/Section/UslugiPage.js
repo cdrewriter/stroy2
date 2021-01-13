@@ -3,19 +3,19 @@ import style from "./UslugiPage.module.scss";
 
 export default function UslugiSection({ datas, items }) {
   const { data } = datas;
-  const { photos } = datas;
+  const { photos } = items;
   const priceItems = [];
-  //console.log(items)
+
   if (items && items.length) {
     for (let i = 0; i < items.length; ++i) {
-      //const { image } = photos.images[i];
-      //console.log(image.publicUrl);
+      //const { image } = items[i].photos;
+      console.log(items[i].image);
       priceItems.push(
-        <div className={style.uslugi__item} key={items[i].id}>
-          <img key={i} src={items[i].image} />
+        <div key={i}  className={style.uslugi__item} key={items[i].id}>
+          <img src={items[i].image.publicUrlTransformed} />
           <h3>{items[i].name}</h3>
           <p>
-          {items[i].description}
+            {items[i].description}
           </p>
           <p>
           {items[i].postCategories.name}
@@ -33,7 +33,7 @@ export default function UslugiSection({ datas, items }) {
       <div className="lg:mx-auto bg-local ">
         <div className="py-16 shadow-2xl bg-white">
           <div className="container mx-auto block__custom mt-12">
-            <div className="grid  gap-4">
+            <div className="grid  gap-4 build-img">
               <div className="box  grid items-stretch col-span-2">
                 <div className="block__title">
                   <h2 className="section__title">{datas.title}</h2>                  

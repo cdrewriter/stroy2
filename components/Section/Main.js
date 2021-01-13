@@ -6,8 +6,7 @@ export default function MainSection({title, titleText}) {
   }
     return (
         <Section
-        key="mainscr"
-        className="bd md:pl-24 md:pr-12 pl-8 pr-8 mb-24 h-screen full-height"
+        className="bd md:pr-12 pl-24 pr-24 mb-24 h-screen full-height"
       >
         <div className="h-full lg:mx-auto bg-local ">
           <div className="p-4 h-full shadow bg-hero-pattern">

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import styles from "./Carousel.module.css";
 import CardObject from "../Card/CardObject";
+import Section from "../Section/Section";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -71,22 +72,24 @@ export default class SlideChangeHooks extends Component {
             key={data[i].id}
             title={data[i].title}
             description={data[i].description}
-            image={data[i].image.publicUrl}
+            image={data[i].image.publicUrlTransformed}
           />
          
         );
       }
     }
     const settings = {
-      dots: true,
+      dots: false,
       className: "center",
       centerMode: true,
       infinite: true,
       speed: 2000,
-      slidesToShow: 3,     
-      arrows: false,     
-      dots: false,
-      infinite: true,     
+
+      //variableWidth: true,
+      slidesToShow: 1,
+      arrows: false,
+
+
       //nextArrow: <SampleNextArrow />,
       //prevArrow: <SamplePrevArrow />,
       beforeChange: (current, next) => this.setState({ activeSlide: next }),
@@ -94,8 +97,10 @@ export default class SlideChangeHooks extends Component {
     };
 
     return (
-      <div className="carous">
-        <div className="sliderblock">
+      <Section className="carous relative bggray31 shadow-2xl">
+        <div className="bg-local  ">
+          <div className="shadow-2xl relative z-10    bg-white">
+
           <Slider
             ref={(c) => (this.slider = c)}
             className={styles.slider}
@@ -126,8 +131,9 @@ export default class SlideChangeHooks extends Component {
               />
             </div>
           </div>
+          </div>
         </div>
-      </div>
+      </Section>
     );
   }
 }

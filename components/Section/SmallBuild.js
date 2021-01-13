@@ -3,40 +3,41 @@ import Section from "./Section";
 export default function SmallBuildSection({ smallbuild }) {
   const { data } = smallbuild;
   const img = smallbuild.image;
-  {
-    /*const { photos } = smallbuild;
-  const priceItems = [];
-  //console.log(photos)
-  if (photos.images && photos.images.length) {
-    for (let i = 0; i < photos.images.length; ++i) {
-      const { image } = photos.images[i];
-      //console.log(image.publicUrl);
-      priceItems.push(
-        <>
-          <img key={i} src={image.publicUrl} />
-        </>
-      );
-    }
-  }*/
+  // {
+  //   /*const { photos } = smallbuild;
+  // const priceItems = [];
+  // //console.log(photos)
+  // if (photos.images && photos.images.length) {
+  //   for (let i = 0; i < photos.images.length; ++i) {
+  //     const { image } = photos.images[i];
+  //     //console.log(image.publicUrl);
+  //     priceItems.push(
+  //       <>
+  //         <img key={i} src={image.publicUrl} />
+  //       </>
+  //     );
+  //   }
+  // }*/
+  // }
+  function inHtml() {
+    return <div className="block__desc ugol_s_bottom_left" dangerouslySetInnerHTML={{__html: `${smallbuild.description}`}}/>;
   }
   return (
     <Section
-      key="smallbuild"
-      className="smallbuild my-12 h-screen full-height"
+      className="smallbuild"
     >
-
-      <div className="lg:mx-auto bg-local relative  bggray30">
-        <div className="py-16 shadow-2xl bg-white">
-          <div className="container h-full mx-auto block__custom mt-12 ">
-            <div className="grid grid-cols-3 gap-4 ">
-              <div className="box col-span-2 ugol_b_left_top">
+      <div className="bg-local relative bggray30">
+        <div className="py-32 shadow-2xl bg-white">
+          <div className="container 2xl:container h-full mx-auto block__custom mt-12 ">
+            <div className="grid grid-cols-5 gap-4 ">
+              <div className="box col-span-3 ugol_b_left_top">
                 <span className="section__textShaddow">
                   {smallbuild.title__text}
                 </span>
                 <h2 className="section__title">{smallbuild.title}</h2>
-                <div className="block__desc ugol_s_bottom_left">
-                  <p>{smallbuild.description}</p>
-                </div>
+
+                 {inHtml() }
+
                 <div className="box py-12">
                   <div className="specs flex">
                     <div className="flex flex-1 p-4">
@@ -93,8 +94,8 @@ export default function SmallBuildSection({ smallbuild }) {
                 </div>
               </div>
 
-              <div className="image z-10 col-span-1 grid items-center">
-                <img src={img.publicUrl} className="shadow-3xl"/>
+              <div className="image z-10 col-span-2 grid items-center">
+                <img src={img.publicUrlTransformed} className="shadow-3xl"/>
               </div>
             </div>
           </div>

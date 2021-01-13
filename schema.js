@@ -179,7 +179,14 @@ const UslugiPage = {
     title: { type: Text },
     url: { type: Slug, from: 'title', isUnique: true},
     description: { type: Text, isMultiline: true },   
+    image: { type: CloudinaryImage, adapter: cloudadapter },
+    posts: {
+      type: Relationship,
+      ref: 'Uslugi',
+      many: true,    
+    }, 
   },
+  
   labelResolver: (item) => item.title,
 };
 const Uslugi = {

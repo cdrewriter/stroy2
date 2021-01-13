@@ -8,6 +8,7 @@ import Carous from "../components/Carousel/Carousel";
 import ConstructionSection from "../components/Section/Construction";
 import PortfolioSection from "../components/Section/Portfolio";
 import UslugiSection from "../components/Section/UslugiPage";
+import Layout from "../templates/layout";
 
 const Main = () => {
   const result = useGraphQL({
@@ -129,21 +130,21 @@ const Main = () => {
       allUslugis
     } = cacheValue.data;
     return (
-      <>
+      <Layout>
         <Head>
           <title>Appssss</title>
         </Head>
-        {/*<MainSection title={Main.title} titleText={Main.subtext} />
+        <MainSection title={Main.title} titleText={Main.subtext} />
         <AboutSection about={About} />
         <FeedbackSection />
         <SmallBuildSection smallbuild={SmallBuild} />
-    <Carous data={allBuildObjects} />*/}
+        <Carous data={allBuildObjects} />
         <div className="shadow-2xl  pb-24">
         <ConstructionSection data={Construction} items={allConstructionItems} />
         <PortfolioSection items={allConstructionPortfolios} />
         </div>
         <UslugiSection datas={UslugiPage} items={allUslugis} />
-     </>
+     </Layout>
     );
   }
   return loading ? "Загружается" : "";
