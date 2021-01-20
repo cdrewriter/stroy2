@@ -136,10 +136,10 @@ function Dropdown() {
 
 export default function Nav() {
   return (
-    <div className="mx-auto">
+    <div className="header">
       <div className="relative z-10 lg:w-full">
         <div className="relative px-8 sm:px-6 lg:px-8">
-          <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
+          <nav className="relative flex items-center justify-between sm:h-24 lg:justify-start">
             <div className="flex items-center">
               <div className="flex items-center justify-between">
               <Dropdown />  
@@ -167,7 +167,7 @@ export default function Nav() {
                 Объекты
               </a>
               <a
-                href="/objects"
+                href="/about"
                 className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
               >
                 Контакты

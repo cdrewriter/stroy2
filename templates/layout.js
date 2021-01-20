@@ -1,4 +1,5 @@
 import Nav from '../components/Nav/Nav'
+import Footer from "../components/Footer/Footer";
 
 
 export default function App({ children }) {
@@ -6,6 +7,7 @@ export default function App({ children }) {
     <>
     <Nav />    
     {children}
+    <Footer />
     </>
   )
 }

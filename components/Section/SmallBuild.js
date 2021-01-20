@@ -71,7 +71,7 @@ export default function SmallBuildSection({ smallbuild }) {
                         />
                       </svg>
 
-                      <span>ТОЛЬКО ДИПЛОМИРОВАННЫЕ СПЕЦИАЛИСТЫ </span>
+                      <span>Только дипломированые специалисты </span>
                     </div>
 
                     <div className="flex flex-1 p-4">

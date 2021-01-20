@@ -12,20 +12,20 @@ export default function PortfolioSection({ data, items }) {
       const image = items[i].image;
       const options = { year: "numeric", month: "long" };
       const odate = new Date(items[i].publishedDate).toLocaleDateString(
-        undefined,
-        options
+          undefined,
+          options
       );
       // console.log(items[i].image);
       constructItems.push(
-        <div className="item" key={items[i].id}>
-      
+          <div className="item" key={items[i].id}>
+
             <img className="image" src={image.publicUrlTransformed} />
-         
-          <div className="heading__portfolio">
-            <span>{odate}</span>
-            <h3>{items[i].title}</h3>
+
+            <div className="heading__portfolio">
+              <span>{odate}</span>
+              <h3>{items[i].title}</h3>
+            </div>
           </div>
-        </div>
       );
     }
   }

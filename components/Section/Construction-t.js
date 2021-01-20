@@ -84,7 +84,7 @@ export default function ConstructionSection() {
             <span>ОФИСНЫЕ ЦЕНТРЫ </span>
             <span>СКЛАДСКИЕ ТЕРМИНАЛЫ</span>
           </div>
-          <div className="py-40 bg-white">
+          <div className="py-40 bg-gray-100">
             <div className="container h-full mx-auto block__custom mt-12 ">
               <div className="grid grid-cols-2 gap-4 ">
                 <div className="box col-span-2 ugol_b_left_top">
@@ -95,9 +95,9 @@ export default function ConstructionSection() {
                   <div className="block__desc ugol_s_bottom_left">
                     {inHtml()}
                   </div>
-                  <div className="box py-12">
+                  <div className="box">
                     <div className="container md:container md:mx-auto">
-                      <div className="specs flex">
+                      <div className="specs  py-12 flex">
                         <div className="item flex flex-1 p-4">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -158,18 +158,19 @@ export default function ConstructionSection() {
                           <span>Доставим строительные материалы</span>
                         </div>
                       </div>
-                      <div className="block__desc sub__desc">
-                        <p>
-                          {" "}
-                          Все детали проектируются и производятся с учетом
-                          требований и норм государственного стандарта, что
-                          позволяет вести бизнес без претензий со стороны
-                          надзорных органов.
-                        </p>
-                      </div>
-                      <div className="items">{constructItems}</div>
+
                     </div>
                   </div>
+                  <div className="block__desc sub__desc">
+                    <p>
+                      {" "}
+                      Все детали проектируются и производятся с учетом
+                      требований и норм государственного стандарта, что
+                      позволяет вести бизнес без претензий со стороны
+                      надзорных органов.
+                    </p>
+                  </div>
+                  <div className="items">{constructItems}</div>
                 </div>
 
                 {/* Изображения<div className="image z-10 col-span-1 grid items-center">

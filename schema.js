@@ -213,6 +213,45 @@ const Uslugi = {
   },
   labelResolver: (item) => item.name,
 };
+const DefObjPage = {
+  fields: {
+    title: { type: Text },
+    url: { type: Slug, from: 'title', isUnique: true},
+    description: { type: Text, isMultiline: true },
+    image: { type: CloudinaryImage, adapter: cloudadapter },
+    posts: {
+      type: Relationship,
+      ref: 'DefObj',
+      many: true,
+    },
+  },
+
+  labelResolver: (item) => item.title,
+};
+const DefObj = {
+  fields: {
+    name: { type: Text },
+    url: { type: Slug, from: 'name', isUnique: true},
+    postCategories: {
+      type: Relationship,
+      ref: 'DefObjPage',
+      many: true,
+    },
+    description: {
+      type: Text,
+      isMultiline: true,
+    },
+    content: {
+      type: Wysiwyg,
+    },
+    image: { type: CloudinaryImage, adapter: cloudadapter },
+    images: {
+      type: KeystoneCloudinaryGallery,
+      adapter: cloudadapter,
+    }
+  },
+  labelResolver: (item) => item.name,
+};
 const Post = {
   fields: {
     title: { type: Text, isRequired: true },
@@ -314,5 +353,6 @@ module.exports = {
   ConstructionPortfolio,
   UslugiPage,
   Uslugi,
-
+  DefObj,
+  DefObjPage,
 };

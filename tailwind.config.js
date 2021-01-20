@@ -5,9 +5,23 @@ module.exports = {
   },
   purge: [],
   theme: {
+    color: {
+      primary: '#14213D',
+    },
+    fontFamily: {
+      'body': ['Montserrat', 'sans-serif'],
+    },
+
     screens: {
       '2xl': {'min': '1280px', 'max': '1920px'},
+
+        sm: '480px',
+        md: '768px',
+        lg: '976px',
+        xl: '1280px',
+
     },
+
     boxShadow: {
       xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -38,6 +52,9 @@ module.exports = {
 'feedback-pattern': "url('https://res.cloudinary.com/dpiuthi6q/image/upload/v1602290991/Group_102_yxtgmw.png')",
        
       }),
+      colors: {
+        'sorange': '#FCA311',
+      },
     },
   },
   variants: {},

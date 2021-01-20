@@ -23,7 +23,7 @@ const UslugiPage = () => {
       query: /* GraphQL */ `
       query($slug: String) {
         allUslugis(where: { url: $slug }) {
-          id
+       
           url
           name
           description
@@ -74,7 +74,17 @@ const UslugiPage = () => {
           </Container>
         </Section>
         {post ? <Fullpage post={post} /> : null}
-      
+
+
+        {/*<section className="bg-gray-100 dark:bg-gray-900 lg:py-12 lg:flex lg:justify-center">*/}
+        {/*  <div className="bg-white dark:bg-gray-800 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">*/}
+        {/*    <div className="lg:w-1/2">*/}
+        {/*      <div className="h-64 bg-cover lg:rounded-lg lg:h-full"*/}
+        {/*           style={{backgroundImage:`url(https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80)`}}></div>*/}
+        {/*    </div>*/}
+
+        {/*  </div>*/}
+        {/*</section>*/}
       </Layout>
     );
   }

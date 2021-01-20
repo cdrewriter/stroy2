@@ -5,7 +5,7 @@ import CardObject from "../Card/CardObject";
 import Section from "../Section/Section";
 
 function SampleNextArrow(props) {
-  const { className, onClick } = props;
+  const { className, styles, onClick } = props;
   return (
     <a className={className} onClick={onClick}>
       <svg
@@ -82,16 +82,16 @@ export default class SlideChangeHooks extends Component {
       dots: false,
       className: "center",
       centerMode: true,
-      infinite: true,
+      //infinite: true,
       speed: 2000,
-
+      roundLengths: true,
+      loop: true,
+      loopAdditionalSlides: 100,
       //variableWidth: true,
       slidesToShow: 1,
       arrows: false,
 
 
-      //nextArrow: <SampleNextArrow />,
-      //prevArrow: <SamplePrevArrow />,
       beforeChange: (current, next) => this.setState({ activeSlide: next }),
       afterChange: (current) => this.setState({ activeSlide2: current }),
     };
@@ -105,6 +105,7 @@ export default class SlideChangeHooks extends Component {
             ref={(c) => (this.slider = c)}
             className={styles.slider}
             {...settings}
+
           >
             {buildObjects}
           </Slider>

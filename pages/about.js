@@ -10,8 +10,9 @@ import PortfolioSection from "../components/Section/Portfolio";
 import UslugiSection from "../components/Section/UslugiPage";
 import Layout from "../templates/layout";
 import DefaultObject from "../components/Section/DefaultObjectT";
+import AboutPage from "../components/About/About";
 
-const Main = () => {
+const About = () => {
   const result = useGraphQL({
     fetchOptionsOverride(options) {
       options.url = `${process.browser ? "" : "http://localhost:3000"}/admin/api`;
@@ -103,24 +104,17 @@ const Main = () => {
         }
         allUslugis {
           id
-          url
           name
-          description
-          content
-      
-          image {
-            publicUrl
-          }
-          content
           postCategories {
             id
             title
             url
           }
-          
           description
           content
-         
+          image {
+            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+          }
         }
       }
       `,
@@ -148,15 +142,15 @@ const Main = () => {
         <Head>
           <title>Appssss</title>
         </Head>
-        <MainSection title={Main.title} titleText={Main.subtext} />
+        {/*<MainSection title={Main.title} titleText={Main.subtext} />*/}
         {/*<AboutSection about={About} />*/}
         {/*<FeedbackSection />*/}
         {/*<SmallBuildSection smallbuild={SmallBuild} />*/}
-        <Carous data={allBuildObjects} />
+        {/*<Carous data={allBuildObjects} />*/}
 
         {/*<ConstructionSection data={Construction} items={allConstructionItems} />*/}
         {/*<PortfolioSection items={allConstructionPortfolios} />*/}
-
+        <AboutPage />
         <UslugiSection datas={UslugiPage} items={allUslugis} />
         <DefaultObject defobj={DefObjPage}/>
      </Layout>
@@ -165,4 +159,4 @@ const Main = () => {
   return loading ? "Загружается" : "";
 };
 
-export default Main;
+export default About;

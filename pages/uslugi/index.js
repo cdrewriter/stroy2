@@ -6,6 +6,7 @@ import Layout from "../../templates/layoutinner";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Section from "../../components/Section/Section";
 import Container from '../../components/Container/Container';
+import Fullpage from "../../components/Fullpage/Fullpagev2";
 //import SectionUslugi from "../../components/sections/SectionUslugi";
 
 
@@ -23,12 +24,19 @@ const UslugiPage = () => {
       query: /* GraphQL */ `
       query  {
         allUslugis {
-          id
+       id
           url
           name
-         
-        }      
-      }
+          description
+          content
+      
+          image {
+            publicUrl
+          }
+          content
+        }
+        }    
+      
 
       `,
       variables: {
@@ -41,23 +49,40 @@ const UslugiPage = () => {
   });
 
   const { cacheValue } = result;
+
   if (cacheValue && cacheValue.data) {
     const { allUslugis } = cacheValue.data;
+    console.log(allUslugis.length)
     if (!allUslugis.length) {
       // When post is not found
       return "Not found";
     }
-  
-    //console.log(slug);
+    const Items = [];
+    //console.log(items.length)
+    if (allUslugis && allUslugis.length) {
+      for (let i = 0; i < allUslugis.length; ++i) {
+
+
+
+        // console.log(items[i].image);
+        Items.push(
+            <Fullpage key={allUslugis[i].id} post={allUslugis[i]} />
+        );
+      }
+    }
+
+
     return (
       <Layout catitems={allUslugis}>
-        <Section className="asidesection">
+        <Section className="section-top">
           <Container>
             <Breadcrumbs page={allUslugis} />
-          <h1>Все категории</h1>
+          <h1>Строительные услуги</h1>
           </Container>
+
+
         </Section>
-        
+        {Items}
        
       </Layout>
     );
