@@ -180,16 +180,16 @@ const Main = () => {
         <Head>
           <title>Appssss</title>
         </Head>
-        {/*<MainSection title={Main.title} titleText={Main.subtext} />*/}
-        {/*<AboutSection about={About} />*/}
-        {/*<FeedbackSection />*/}
-        {/*<SmallBuildSection smallbuild={SmallBuild} />*/}
-        {/*<Carous data={allBuildObjects} />*/}
+        <MainSection title={Main.title} titleText={Main.subtext} />
+        <AboutSection about={About} />
+        <FeedbackSection />
+        <SmallBuildSection smallbuild={SmallBuild} />
+        <Carous data={allBuildObjects} />
 
-        {/*<ConstructionSection data={Construction} items={allConstructionItems} />*/}
-        {/*<PortfolioSection items={allConstructionPortfolios} />*/}
+        <ConstructionSection data={Construction} items={allConstructionItems} />
+        <PortfolioSection items={allConstructionPortfolios} />
 
-        {/*<UslugiSection datas={UslugiPage} items={allUslugis} />*/}
+        <UslugiSection datas={UslugiPage} items={allUslugis} />
         <DefaultObject defobj={allDefObjPages}/>
      </Layout>
     );
