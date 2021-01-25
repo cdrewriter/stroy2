@@ -151,8 +151,7 @@ const About = () => {
         {/*<ConstructionSection data={Construction} items={allConstructionItems} />*/}
         {/*<PortfolioSection items={allConstructionPortfolios} />*/}
         <AboutPage />
-        <UslugiSection datas={UslugiPage} items={allUslugis} />
-        <DefaultObject defobj={DefObjPage}/>
+
      </Layout>
     );
   }

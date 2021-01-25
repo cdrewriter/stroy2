@@ -9,7 +9,7 @@ import ConstructionSection from "../components/Section/Construction";
 import PortfolioSection from "../components/Section/Portfolio";
 import UslugiSection from "../components/Section/UslugiPage";
 import Layout from "../templates/layout";
-import DefaultObject from "../components/Section/DefaultObjectT";
+import DefaultObject from "../components/Section/DefaultObject";
 
 const Main = () => {
   const result = useGraphQL({
@@ -30,7 +30,9 @@ const Main = () => {
           photos {
             images {
               image {
-                publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+                publicUrlTransformed(
+                  transformation: { transformation: "webp", fetch_format: "webp" }
+                )
               }
             }
           }
@@ -44,7 +46,9 @@ const Main = () => {
           title__text
           description
           image {
-            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+            publicUrlTransformed(
+              transformation: { transformation: "webp", fetch_format: "webp" }
+            )
           }
         }
         allBuildObjects(first: 5) {
@@ -52,29 +56,35 @@ const Main = () => {
           title
           description
           image {
-            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+            publicUrlTransformed(
+              transformation: { transformation: "webp", fetch_format: "webp" }
+            )
           }
         }
-
+      
         Construction(where: { id: "5f8bfb9c26a9e12f34c9f4cd" }) {
           id
           title
           subtext
           description
           image {
-            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+            publicUrlTransformed(
+              transformation: { transformation: "webp", fetch_format: "webp" }
+            )
           }
         }
-
-  DefObjPage(where: {id: "6000c1994f403c398ccab65e"}) {
-    title
-  }
-
+      
+        DefObjPage(where: { id: "6000c1994f403c398ccab65e" }) {
+          title
+        }
+      
         allConstructionItems {
           id
           name
           image {
-            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+            publicUrlTransformed(
+              transformation: { transformation: "webp", fetch_format: "webp" }
+            )
           }
         }
         allConstructionPortfolios(first: 4) {
@@ -83,19 +93,40 @@ const Main = () => {
           description
           title__text
           image {
-            publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+            publicUrlTransformed(
+              transformation: { transformation: "webp", fetch_format: "webp" }
+            )
           }
           publishedDate
           images {
             images {
               image {
-                publicUrlTransformed(transformation: {transformation: "webp", fetch_format: "webp"}) 
+                publicUrlTransformed(
+                  transformation: { transformation: "webp", fetch_format: "webp" }
+                )
               }
             }
           }
         }
-        UslugiPage(where: {id: "5f98c36d370fea1fd0490feb"})
-        {
+        allDefObjs {
+          url
+          name
+          content
+          postCategories {
+            url
+            title
+          }
+        }
+        allDefObjPages {
+          url
+          title
+          posts {
+            name
+            url
+            content
+          }
+        }
+        UslugiPage(where: { id: "5f98c36d370fea1fd0490feb" }) {
           id
           title
           url
@@ -117,10 +148,9 @@ const Main = () => {
             title
             url
           }
-          
+      
           description
           content
-         
         }
       }
       `,
@@ -135,6 +165,8 @@ const Main = () => {
       Main,
       About,
       SmallBuild,
+        allDefObjs,
+        allDefObjPages,
       allBuildObjects,
       allConstructionItems,
       Construction,
@@ -148,17 +180,17 @@ const Main = () => {
         <Head>
           <title>Appssss</title>
         </Head>
-        <MainSection title={Main.title} titleText={Main.subtext} />
+        {/*<MainSection title={Main.title} titleText={Main.subtext} />*/}
         {/*<AboutSection about={About} />*/}
         {/*<FeedbackSection />*/}
         {/*<SmallBuildSection smallbuild={SmallBuild} />*/}
-        <Carous data={allBuildObjects} />
+        {/*<Carous data={allBuildObjects} />*/}
 
         {/*<ConstructionSection data={Construction} items={allConstructionItems} />*/}
         {/*<PortfolioSection items={allConstructionPortfolios} />*/}
 
-        <UslugiSection datas={UslugiPage} items={allUslugis} />
-        <DefaultObject defobj={DefObjPage}/>
+        {/*<UslugiSection datas={UslugiPage} items={allUslugis} />*/}
+        <DefaultObject defobj={allDefObjPages}/>
      </Layout>
     );
   }

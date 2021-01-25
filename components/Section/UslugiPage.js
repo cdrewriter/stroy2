@@ -33,7 +33,7 @@ export default function UslugiSection({ datas, items }) {
                   <p>{datas.description}</p>
                 </div>
                 <div className="block__docs">                  
-                  <div className="short_uslugi"><div className={'build-img bg-white '}><img src='img.jpg'/></div> {priceItems}</div>
+                  <div className="short_uslugi"><div className={'build-img'}><img src='house1.png'/></div> {priceItems}</div>
                 </div>
               </div>
               

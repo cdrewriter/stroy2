@@ -1,86 +1,152 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Section from "./Section";
-
+import Container from "../Container/Container";
+import Fullpage from "../Fullpage/Fullpage";
+import Tabs from "../Tabs/Tabs";
 DefaultObject.propTypes = {
 
 };
+// function Object(data)  {
+//
+//     return(
+//     <>
+//     <li key={data.slug} onClick={() => setActiveStatus(3)} className={activeStatus == 3 ? "text-sm text-gray-800 flex flex-col justify-between border-indigo-700 pt-3 rounded-t mr-10 font-normal" : "text-sm text-gray-600 py-3 mr-10 font-normal cursor-pointer hover:text-gray-800"}>
+//         <span className="mb-3 cursor-pointer">{activeStatus == 3 ? "Active" : "Inactive"}</span>
+//         {activeStatus == 3 && <div className="w-full h-1 bg-indigo-700 rounded-t-md" />}
+//     </li>
+//     </>
+//     )
+//
+// }
 
+const Objects = ({state, category}) => {
+
+    const db = state;
+    console.log(state)
+    const itemObj = [];
+
+    if (db && db.length) {
+        for (let i = 0; i < db.length; ++i) {
+            itemObj.push(
+                <div key={db[i].url} className="py-8 flex  flex-wrap md:flex-no-wrap">
+                    <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                        <span className="font-semibold title-font text-gray-700">{db[i].name}</span>
+                        <span className="mt-1 text-gray-500 text-sm">{category}</span>
+                    </div>
+                    <div className="md:flex-grow">
+                        <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">{db[i].name} </h2>
+                        {db[i].content ? <p className="leading-relaxed" dangerouslySetInnerHTML={{__html: `${db[i].content}`}} /> : null}
+                        <a className="text-indigo-500 inline-flex items-center mt-4">Перейти к деталям
+                            <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor"
+                                 stroke-width="2" fill="none" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            )
+        }
+    }
+
+ return (
+     <div key={'objects'}>{itemObj}</div>
+ )
+// if (data && data.length) {
+//     for (i = 0; i < data.length; ++i) {
+//         items.push(
+//
+//         )
+//     }
+// }
+}
 function DefaultObject({ defobj }) {
     const { data } = defobj;
     const img = defobj.image;
-    const [activeStatus, setActiveStatus] = useState(1);
+
+    const [url, name, content, postCategories] = defobj;
+
+    const [activeStatus, setActiveStatus] = useState('');
+    const [activeCategory, setActiveCategory] = useState('');
+    const [activeTitle, setActiveTitle] = useState('');
+
+
+    const Items = [];
+    const ItemsPage = [];
+
+
+    if (defobj && defobj.length) {
+        for (let i = 0; i < defobj.length; ++i) {
+            const activePage = defobj[i].posts;
+            const activeCategory =
+            //console.log(activePage)
+
+
+            // console.log({
+            //     page:
+            //         {
+            //             activePage
+            //         }, cats:
+            //         {
+            //             activeStatus
+            //         }
+            // });
+                Items.push(
+                    <li onClick={() => (setActiveStatus(defobj[i].url), setActiveCategory(defobj[i].posts), setActiveTitle( defobj[i].title))} className={activeStatus == defobj[i].url ? "text-sm text-gray-800 flex flex-col justify-between border-indigo-700 pt-3 rounded-t mr-10 font-normal" : "text-sm text-gray-600 py-3 mr-10 font-normal cursor-pointer hover:text-gray-800"}>
+                        <span className="mb-3 cursor-pointer">{activeStatus == defobj[i].url ? defobj[i].title : defobj[i].title}</span>
+                        {activeStatus == defobj[i].url && <div className="w-full h-1 bg-indigo-700 rounded-t-md" />}
+                    </li>
+
+            );
+            ItemsPage.push(
+                <Objects data={activePage} />
+
+
+            );
+        }
+    }
+
+
     return (
-        <Section className={'def-obj'}>
-        <div className="box col-span-3 ugol_b_left_top">
-                <span className="section__textShaddow">
-                  {defobj.title__text}
-                </span>
-            <h2 className="section__title">{defobj.title}</h2>
+        <Section className={' def-obj py-40'}>
+            <div className="box container max-w-6xl mx-auto pt-12">
+                <div className="box col-span-3 ugol_b_left_top">
+                    <span className="section__textShaddow">
+                      {defobj.title__text}
+                    </span>
+                    <h2 className="section__title">Типовые решения</h2>
+
+                    <div className="box pt-12">
+                        <div className="justify-between flex-wrap hidden sm:block ">
+                            <div className="xl:w-full xl:mx-0 pl-5 pr-5">
+                                {/*<Tabs/>*/}
+                                <ul className="flex ">
+
+                                    {Items}
 
 
-
-            <div className="box py-12">
-                <div className="sm:hidden relative w-11/12 mx-auto bg-white rounded">
-                    <div className="absolute inset-0 m-auto mr-4 z-0 w-6 h-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-selector" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#A0AEC0" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <polyline points="8 9 12 5 16 9" />
-                            <polyline points="16 15 12 19 8 15" />
-                        </svg>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <select aria-label="Selected tab" className="form-select block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-10">
-                        <option className="text-sm text-gray-600">inactive </option>
-                        <option className="text-sm text-gray-600">inactive </option>
-                        <option selected className="text-sm text-gray-600">
-                            Active{" "}
-                        </option>
-                        <option className="text-sm text-gray-600">inactive </option>
-                        <option className="text-sm text-gray-600">inactive </option>
-                    </select>
-                </div>
-
-
-
-
-
-            <div class="bg-white">
-                <nav class="flex flex-col sm:flex-row">
-                    <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none text-blue-500 border-b-2 font-medium border-blue-500">
-                        Tab 1
-                    </button><button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
-                    Tab 2
-                </button><button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
-                    Tab 3
-                </button><button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
-                    Tab 4
-                </button>
-                </nav>
-            </div>
-            <div className="justify-between flex-wrap hidden sm:block bg-white rounded shadow">
-                <div className="xl:w-full xl:mx-0 pl-5 pr-5 h-12">
-                    <ul className="flex">
-                        <li onClick={() => setActiveStatus(1)} className={activeStatus == 1 ? "text-sm text-gray-800 flex flex-col justify-between border-indigo-700 pt-3 rounded-t mr-10 font-normal" : "text-sm text-gray-600 py-3 mr-10 font-normal cursor-pointer hover:text-gray-800"}>
-                            <span className="mb-3 cursor-pointer">{activeStatus == 1 ? "Active" : "Inactive"}</span>
-                            {activeStatus == 1 && <div className="w-full h-1 bg-indigo-700 rounded-t-md" />}
-                        </li>
-                        <li onClick={() => setActiveStatus(2)} className={activeStatus == 2 ? "text-sm text-gray-800 flex flex-col justify-between border-indigo-700 pt-3 rounded-t mr-10 font-normal" : "text-sm text-gray-600 py-3 mr-10 font-normal cursor-pointer hover:text-gray-800"}>
-                            <span className="mb-3 cursor-pointer">{activeStatus == 2 ? "Active" : "Inactive"}</span>
-                            {activeStatus == 2 && <div className="w-full h-1 bg-indigo-700 rounded-t-md" />}
-                        </li>
-                        <li onClick={() => setActiveStatus(3)} className={activeStatus == 3 ? "text-sm text-gray-800 flex flex-col justify-between border-indigo-700 pt-3 rounded-t mr-10 font-normal" : "text-sm text-gray-600 py-3 mr-10 font-normal cursor-pointer hover:text-gray-800"}>
-                            <span className="mb-3 cursor-pointer">{activeStatus == 3 ? "Active" : "Inactive"}</span>
-                            {activeStatus == 3 && <div className="w-full h-1 bg-indigo-700 rounded-t-md" />}
-                        </li>
-                        <li onClick={() => setActiveStatus(4)} className={activeStatus == 4 ? "text-sm text-gray-800 flex flex-col justify-between border-indigo-700 pt-3 rounded-t mr-10 font-normal" : "text-sm text-gray-600 py-3 mr-10 font-normal cursor-pointer hover:text-gray-800"}>
-                            <span className="mb-3 cursor-pointer">{activeStatus == 4 ? "Active" : "Inactive"}</span>
-                            {activeStatus == 4 && <div className="w-full h-1 bg-indigo-700 rounded-t-md" />}
-                        </li>
-                    </ul>
                 </div>
             </div>
+            <div className="bg-white">
+                <section className="text-gray-600 body-font">
+                    <div className="container px-5 py-24 mx-auto">
+                        <div className="-my-8 divide-y-2 divide-gray-100">
+
+                            {activeCategory.length ? <Objects state={activeCategory} category={activeTitle}/> : null}
+
+                        </div>
+                    </div>
+                </section>
+
+
             </div>
-        </div>
         </Section>
 
 

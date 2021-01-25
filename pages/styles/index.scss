@@ -158,6 +158,9 @@ background-color:rgba(206,206,206,0.25)
 input {
   color: $color__main;
 }
+  input, textarea {
+    background: #f9f9f9 !important;
+  }
 ::-webkit-input-placeholder { /* Chrome */
   color: $color__main;
   transition: opacity 250ms ease-in-out;
@@ -636,8 +639,8 @@ a {
 }
 
 .inner {
-  display: grid;
-  grid-template: 6rem auto auto/ 20rem 1fr 1fr 1fr;
+  //display: grid;
+  //grid-template: 6rem auto auto/ 20rem 1fr 1fr 1fr;
 }
 .header {
   grid-column: 1 / 5;
@@ -704,7 +707,7 @@ h2 {
 
 .block__desc {
   margin: 2rem auto;
-  max-width: 80%;
+  max-width: 1024px;
   @apply mt-16 mb-24;
 }
 }
@@ -713,16 +716,16 @@ hr {
   max-width: 35%;
 }
 .inner {
-  display: grid;
-  grid-template: 6rem auto auto/20rem 1fr 1fr 1fr 1fr;
-  grid-auto-flow: row;
+ // display: grid;
+ // grid-template: 6rem auto auto/20rem 1fr 1fr 1fr 1fr;
+ // grid-auto-flow: row;
 }
 .header {
-  grid-column: 1/6;
+ // grid-column: 1/6;
 //  grid-column: 1/6;
 }
 .section-top {
-  grid-column: 2/6;
+ // grid-column: 2/6;
   //grid-column: 2/6;
 }
 .short_uslugi article:nth-child(2n+1) .lg\:w-1\/4.pl-16.py-16 .bg-contain {

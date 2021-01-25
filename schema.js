@@ -202,9 +202,14 @@ const Uslugi = {
       type: Text,
       isMultiline: true,    
     },
+    price: {
+      type: Wysiwyg,
+    },
     content: {
       type: Wysiwyg,
-    },    
+
+    },
+
     image: { type: CloudinaryImage, adapter: cloudadapter },
     images: {
       type: KeystoneCloudinaryGallery,

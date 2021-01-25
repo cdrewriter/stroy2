@@ -15,7 +15,6 @@ const FullPage = ({ post }) => {
     <article className="post-detail bg-gray-100 lg:flex">
 
 
-
             <div className="dark:bg-gray-800 lg:flex  lg:rounded-lg">
                 <div className="lg:w-1/4  pl-16 py-16">
                     <div className="h-24 bg-contain bg-no-repeat lg:h-36"
@@ -23,7 +22,7 @@ const FullPage = ({ post }) => {
                 </div>
 
                 <div className="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-3/4 bg-white lg:shadow-lg">
-                    <h3 className="text-2xl text-gray-800 dark:text-white font-bold md:text-3xl">{name}</h3>
+                    <h3 className="text-2xl text-gray-800 dark:text-white font-bold md:text-xl">{name}</h3>
                     {/*<span*/}
                     {/*    className="text-gray-700 dark:gray-400">Услуги</span>*/}
                     <p className="mt-4 text-gray-600 max-h-full dark:text-gray-400" dangerouslySetInnerHTML={{
