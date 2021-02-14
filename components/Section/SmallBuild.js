@@ -27,9 +27,9 @@ export default function SmallBuildSection({ smallbuild }) {
       className="smallbuild"
     >
       <div className="bg-local relative bggray30">
-        <div className="py-32 shadow-2xl bg-white">
+        <div className="py-8 md:py-12 lg:py-16 xl:py-32 shadow-2xl bg-white">
           <div className="container 2xl:container h-full mx-auto block__custom mt-12 ">
-            <div className="grid grid-cols-5 gap-4 ">
+            <div className="xl:grid grid-cols-5 gap-4 ">
               <div className="box col-span-3 ugol_b_left_top">
                 <span className="section__textShaddow">
                   {smallbuild.title__text}
@@ -38,8 +38,8 @@ export default function SmallBuildSection({ smallbuild }) {
 
                  {inHtml() }
 
-                <div className="box py-12">
-                  <div className="specs flex">
+                <div className="box lg:py-12 flex-col md:flex-row">
+                  <div className="specs flex flex-col md:flex-row">
                     <div className="flex flex-1 p-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ export default function SmallBuildSection({ smallbuild }) {
                 </div>
               </div>
 
-              <div className="image z-10 col-span-2 grid items-center">
+              <div className="image z-10 hidden xl:block col-span-2 grid items-center">
                 <img src={img.publicUrlTransformed} className="shadow-3xl"/>
               </div>
             </div>

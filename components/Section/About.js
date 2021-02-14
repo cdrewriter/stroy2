@@ -21,17 +21,15 @@ export default function AboutSection({about}) {
         }
     }
     return (
-        <Section className="bd about p-24 relative">
-            <div className="lg:mx-auto bg-local  bggray30">
-                <div className="py-24 shadow-2xl bg-white relative z-10">
-                    <div className="container mx-auto block__custom mt-12">
-                        <div className="grid grid-cols-3 gap-4">
-                            <div className="box  grid items-stretch col-span-2">
+        <Section className="bd about p-0 md:p-12 lg:p-24 relative">
+            <div className="lg:mx-auto bg-local bggray30">
+                <div className="py-8 lg:py-24 shadow-2xl bg-white relative z-10">
+                    <div className="container mx-auto block__custom">
+                        <div className="lg:grid grid-cols-3 gap-4">
+                            <div className="box grid items-stretch col-span-2">
                                 <div className="block__title">
                                     <h2 className="section__title">{about.title}</h2>
-                                    <span className="section__textShaddow">
-                    {about.title__text}
-                  </span>
+                                    <span className="section__textShaddow">{about.title__text}</span>
                                 </div>
                                 {inHtml()}
 

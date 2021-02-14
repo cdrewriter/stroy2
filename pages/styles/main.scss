@@ -1,3 +1,12 @@
 @import "./tailwind";
-@import 'index';
+@import './index';
 
+.cardobj:hover .objimg {
+  background-blend-mode: initial;
+
+}
+
+.objimg {
+  background-blend-mode: luminosity;
+  transition: all 0.5s ease-in-out;
+}

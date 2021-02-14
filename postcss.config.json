@@ -1,0 +1,24 @@
+{
+    "plugins": [
+"tailwindcss","postcss-nested" ,
+        [
+            "postcss-preset-env",
+            {
+                "autoprefixer": {
+
+                },
+                "tailwindcss": {
+
+                },
+                "postcss-nested": {
+
+                },
+
+                "stage": 3,
+                "features": {
+                    "custom-properties": false
+                }
+            }
+        ]
+    ]
+}

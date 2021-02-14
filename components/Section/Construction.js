@@ -36,15 +36,16 @@ export default function ConstructionSection({ data, items }) {
           <span>СКЛАДСКИЕ ТЕРМИНАЛЫ</span>
         </div>
         <div className="py-40 bg-gray-100">
-          <div className="container h-full mx-auto block__custom mt-12 ">
-            <div className="box col-span-2">
-              <span className="section__textShaddow">{data.title__text}</span>
+          <div className="container 2xl:container  h-full mx-auto block__custom mt-12 ">
+            <div className="box col-span-2 ugol_b_left_top">
+
+              <span className="section__textShaddow">{data.subtext}</span>
               <h2 className="section__title">{data.title}</h2>
               {inHtml()}
               <div className="box my-12">
                 <div className="container md:container md:mx-auto">
-                  <div className="specs flex">
-                    <div className="item flex flex-1 p-4">
+                  <div className="specs">
+                    <div className="item flex items-center flex-1 p-4">
                       <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="48"
@@ -61,12 +62,11 @@ export default function ConstructionSection({ data, items }) {
                       </svg>
 
                       <span>
-                          Составим
-                          <br /> проект.
+                          Составим проект.
                         </span>
                     </div>
 
-                    <div className="flex flex-1 p-4">
+                    <div className="flex items-center  flex-1 p-4">
                       <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="42"
@@ -85,7 +85,7 @@ export default function ConstructionSection({ data, items }) {
                       <span>Изготовим металлоконструкции.</span>
                     </div>
 
-                    <div className="flex flex-1 p-4">
+                    <div className="flex items-center  flex-1 p-4">
                       <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="60"

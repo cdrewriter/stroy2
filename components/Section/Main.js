@@ -1,4 +1,5 @@
 import Section from "./Section";
+import {Chevron} from '../Icons/Chevron';
 
 export default function MainSection({title, titleText}) {
   function inHtml() {
@@ -6,11 +7,11 @@ export default function MainSection({title, titleText}) {
   }
     return (
         <Section
-        className="bd md:pr-12 pl-24 pr-24 mb-24 h-screen full-height"
+        className="bd md:px-24 px-4 mb-24 h-screen full-height"
       >
         <div className="h-full lg:mx-auto bg-local ">
-          <div className="p-4 h-full shadow bg-hero-pattern">
-            <div className="container h-full  mx-auto block__custom flex flex-col">
+          <div className="p-4 h-full shadow-inner bg-hero-pattern">
+            <div className="container h-full  mx-auto block__custom justify-evenly flex flex-col">
               <div className="block__outer">
                 <div className="z-12 heading relative shadow-2xl">
                   <h1 className="leading-normal">{title}</h1>
@@ -19,6 +20,7 @@ export default function MainSection({title, titleText}) {
                   {inHtml()}
                 </div>
               </div>
+              <a className="mx-auto flex flex-col next bloc text-center font-bold uppercase text-gray-500 tracking-wider"  href="#">Далее<Chevron clme={'-mt-2 w-16 h-16 mx-auto'} /></a>
             </div>
           </div>
         </div>

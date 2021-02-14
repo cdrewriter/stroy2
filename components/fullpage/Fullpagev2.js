@@ -21,7 +21,7 @@ const FullPage = ({ post }) => {
                          style={{backgroundImage: `url(${image.publicUrl}`}}></div>
                 </div>
 
-                <div className="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-3/4 bg-white lg:shadow-lg">
+                <div className="py-4 px-6 max-w-xl lg:max-w-5xl lg:w-3/4 bg-white lg:shadow-lg">
                     <h3 className="text-2xl text-gray-800 dark:text-white font-bold md:text-xl">{name}</h3>
                     {/*<span*/}
                     {/*    className="text-gray-700 dark:gray-400">Услуги</span>*/}

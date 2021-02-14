@@ -1,13 +1,13 @@
 .section {
     position: relative;
-    background: cover no-repeat #14213D 50% 50%;
+    //background: cover no-repeat #14213D 50% 50%;
     background-size: cover;
     padding: 3rem;
     opacity: 0.9;
     //height: calc(100vh - 12rem);
     //background-color: royalblue;
     background-repeat: no-repeat;
-    background-size: cover;
+
     &::after {
         content: '';
         background-color: #14213D;

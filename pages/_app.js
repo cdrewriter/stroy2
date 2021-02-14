@@ -1,5 +1,5 @@
 import App from "next/app";
-import "./../pages/styles/main.scss";
+// import "./../pages/styles/main.scss";
 
 import { GraphQLProvider } from "graphql-react";
 import { withGraphQLApp } from "next-graphql-react";

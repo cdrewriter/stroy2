@@ -2,7 +2,7 @@ const withFonts = require('nextjs-fonts');
 const path = require('path')
 
 module.exports = {
-  plugins: ['tailwindcss', 'postcss-preset-env'],
+  plugins: ['postcss-import','tailwindcss','postcss-nested','postcss-custom-properties', 'postcss-preset-env'],
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },

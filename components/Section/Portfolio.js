@@ -22,8 +22,8 @@ export default function PortfolioSection({ data, items }) {
             <img className="image" src={image.publicUrlTransformed} />
 
             <div className="heading__portfolio">
-              <span>{odate}</span>
-              <h3>{items[i].title}</h3>
+              <span className="text-gray-500 text-sm">{odate}</span>
+              <h3 className="text-gray-800">{items[i].title}</h3>
             </div>
           </div>
       );
@@ -38,7 +38,7 @@ export default function PortfolioSection({ data, items }) {
     <Section>
       <div className="portfolio">
         <div className="lg:mx-auto bg-local relative">
-          <div className="p-32  bg-white">
+          <div className="p-20 px-32 pr-16  bg-white">
             <div className="container h-full mx-auto block__custom mt-12 ">
               <div className="grid grid-cols-2 gap-4 ">
                 <div className="box col-span-2 ugol_b_left_top">

@@ -7,16 +7,16 @@ export default function FeedbackSection() {
       <Section key="feedback" className="feddback">
           <div className=" lg:mx-auto bg-local ">
             <div className="bg-feedback-pattern">
-              <div className="container mx-auto block__custom">
+              <div className="container mx-auto block__custom px-4">
                 <div className="flex  py-16  flex-row flex-wrap 2xl:items-center justify-between md:flex-row">
-                  <div className="box w-1/4">
-                    <div className="titlebox mb-12">
+                  <div className="box w-full flex flex-wrap lg:w-1/4">
+                    <div className="titlebox mb-6 text-center md:text-left">
                       <span className="section__textShaddow">
                         Мы открыты для диалога
                       </span>
                       <h2 className="section__title">Вопросы? Предложения? </h2>
                     </div>
-                    <div className="icons">
+                    <div className="icons justify-evenly flex-1 md:flex-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         stroke="none"
@@ -38,12 +38,13 @@ export default function FeedbackSection() {
                       </svg>
                     </div>
                   </div>
-                  <div className="box w-2/5 flex-end">
-                    <form className="mb-6 w-full inline-block form border-2 rounded border-white-300 py-2">
+                  <div className="box flex flex-1 lg:flex-none flex-col lg:w-3/5 flex-end">
+                    <form className="mb-6 w-full flex-1 inline-block hidden lg:block form border-2 rounded border-white-300 py-2">
                       <div className="flex items-center flex-end">
                         <input
+                            rows="10" cols="45"
                           className="appearance-none w-full m-auto bg-transparent input border-none  mr-3 py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
+                          type="textarea"
                           placeholder="ваше сообщение"
                           aria-label="msg"
                         />
@@ -76,7 +77,7 @@ export default function FeedbackSection() {
                       </div>
                     </form>
 
-                    <div className="phone"><span>или</span> +7 951 478 2780</div>
+                    <div className="phone flex text-center flex-col md:block"><span>или</span> +7 951 478 2780</div>
                   </div>
                 </div>
               </div>

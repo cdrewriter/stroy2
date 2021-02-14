@@ -5,7 +5,8 @@ export default function BuildObjects({ title, image, description }) {
     function inHtml() {
         return  <div className={("cardobject__desc " + styles.description)} dangerouslySetInnerHTML={{__html: `${description}`}}/>;
     }
-  return (    
+  return (
+
       <div className={("cardobject " + styles.cardobject )}>
         <div className={("cardobject__img ")}>
           <img src={image} className={styles.imgobject}/>

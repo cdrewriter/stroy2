@@ -4,7 +4,7 @@ export default function Logo() {
          
       <span className="name"><a href="/" aria-label="Home">СтройЭксперт</a></span>
       <hr />
-      <span className="slogan">строительная компания</span>
+      <span className="slogan hidden md:block">строительная компания</span>
     </div>
   );
 };

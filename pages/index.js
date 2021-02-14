@@ -108,15 +108,18 @@ const Main = () => {
             }
           }
         }
-        allDefObjs {
-          url
-          name
-          content
-          postCategories {
+         allDefObjs {
             url
-            title
+            name
+            content
+            image {
+              publicUrl
+            }
+            postCategories {
+              url
+              title
+            }
           }
-        }
         allDefObjPages {
           url
           title
@@ -124,6 +127,9 @@ const Main = () => {
             name
             url
             content
+            image {
+                publicUrl
+            } 
           }
         }
         UslugiPage(where: { id: "5f98c36d370fea1fd0490feb" }) {
@@ -137,8 +143,7 @@ const Main = () => {
           url
           name
           description
-          content
-      
+          content      
           image {
             publicUrl
           }
@@ -165,8 +170,8 @@ const Main = () => {
       Main,
       About,
       SmallBuild,
-        allDefObjs,
-        allDefObjPages,
+      allDefObjs,
+      allDefObjPages,
       allBuildObjects,
       allConstructionItems,
       Construction,
@@ -178,19 +183,17 @@ const Main = () => {
     return (
       <Layout>
         <Head>
-          <title>Appssss</title>
+          <title>Строительная компания СтройЭксперт</title>
         </Head>
-        <MainSection title={Main.title} titleText={Main.subtext} />
+        {/*<MainSection title={Main.title} titleText={Main.subtext} />*/}
         <AboutSection about={About} />
         <FeedbackSection />
         <SmallBuildSection smallbuild={SmallBuild} />
         <Carous data={allBuildObjects} />
-
         <ConstructionSection data={Construction} items={allConstructionItems} />
         <PortfolioSection items={allConstructionPortfolios} />
-
         <UslugiSection datas={UslugiPage} items={allUslugis} />
-        <DefaultObject defobj={allDefObjPages}/>
+        <DefaultObject defobj={allDefObjPages} />
      </Layout>
     );
   }
