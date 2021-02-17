@@ -2,7 +2,8 @@ import Logo from "../logo/Logo";
 
 const Footer = () => (
     <footer className="shadow-xl">
-        <div className="mt-12 relative pt-6">
+        <div className="mt-12 relative
+        ">
 
             <div className="px-24 relative z-10 mx-auto flex-wrap lg:flex justify-between px-6 pt-8 lg:pt-32 pb-6 lg:pb-28">
                 <div className="lg:w-1/4 pb-12 lg:pb-0">
@@ -21,7 +22,7 @@ const Footer = () => (
                 </div>
                 <div className="lg:w-3/5 sm:flex justify-between lg:justify-between">
                     <div className="lg:pr-24 pb-12 lg:pb-0">
-                        <h3 className="mb-6 text-lg text-white font-bold">Строительство</h3>
+                        <h3 className="mb-6 text-lg  font-bold">Строительство</h3>
                         <ul className="">
 
                             <li className="mb-3">
@@ -42,7 +43,7 @@ const Footer = () => (
                         </ul>
                     </div>
                     <div className="lg:pr-24 pb-12 lg:pb-0">
-                        <h3 className="mb-6 text-lg text-white font-bold">УСЛУГИ</h3>
+                        <h3 className="mb-6 text-lg font-bold">Услуги</h3>
                         <ul className="">
                             <li className="mb-3">
                                 <a href="">Проектирование</a>
@@ -62,7 +63,7 @@ const Footer = () => (
                         </ul>
                     </div>
                     <div>
-                        <h3 className="mb-6 text-lg text-white font-bold">О компании</h3>
+                        <h3 className="mb-6 text-lg font-bold">О компании</h3>
                         <ul className="">
                             <li className="mb-3">
                                 <a href="">Контакты</a>

@@ -8,9 +8,11 @@
   }
   h2 {
     @apply text-4xl;
+    line-height: 1em;
   }
   h3 {
     @apply text-2xl mt-2 mb-4 font-medium text-gray-900 font-medium;
+    line-height: 1em;
   }
   a {
     @apply transition duration-150 ease-in-out;
@@ -37,6 +39,7 @@
   body {
     font-family: 'Montserrat', sans-serif;
     @apply text-gray-700 bg-gray-100 font-medium;
+
   }
   aside {
     grid-row: span 5;
@@ -159,6 +162,8 @@
 .short_uslugi {
   .post-detail {
     grid-column: span 1;
+    margin: 0.25rem;
+
   }
 }
 .post-detail {

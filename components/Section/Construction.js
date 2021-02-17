@@ -35,7 +35,7 @@ export default function ConstructionSection({ data, items }) {
           <span>ОФИСНЫЕ ЦЕНТРЫ </span>
           <span>СКЛАДСКИЕ ТЕРМИНАЛЫ</span>
         </div>
-        <div className="py-40 bg-gray-100">
+        <div className="py-20 lg:py-40 bg-gray-100">
           <div className="container 2xl:container  h-full mx-auto block__custom mt-12 ">
             <div className="box col-span-2 ugol_b_left_top">
 

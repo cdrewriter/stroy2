@@ -35,10 +35,9 @@ export default function PortfolioSection({ data, items }) {
     return <div dangerouslySetInnerHTML={{ __html: `${data.description}` }} />;
   }*/
   return (
-    <Section>
-      <div className="portfolio">
+    <Section className="portfolio">
         <div className="lg:mx-auto bg-local relative">
-          <div className="p-20 px-32 pr-16  bg-white">
+          <div className="py-8 lg:p-24 xl:p-32 xl:pr-16  bg-white">
             <div className="container h-full mx-auto block__custom mt-12 ">
               <div className="grid grid-cols-2 gap-4 ">
                 <div className="box col-span-2 ugol_b_left_top">
@@ -59,7 +58,7 @@ export default function PortfolioSection({ data, items }) {
             </div>
           </div>
         </div>
-      </div>
+
       
     </Section>
   );

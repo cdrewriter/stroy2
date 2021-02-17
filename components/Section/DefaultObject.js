@@ -120,7 +120,7 @@ function DefaultObject({ defobj }) {
 
 
     return (
-        <Section className={' def-obj py-40'}>
+        <Section className={' def-obj pt-40'}>
             <div className="box container max-w-6xl mx-auto pt-12">
                 <div className="box col-span-3 ugol_b_left_top">
                     <span className="section__textShaddow">

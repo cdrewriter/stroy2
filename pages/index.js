@@ -185,7 +185,7 @@ const Main = () => {
         <Head>
           <title>Строительная компания СтройЭксперт</title>
         </Head>
-        {/*<MainSection title={Main.title} titleText={Main.subtext} />*/}
+        <MainSection title={Main.title} titleText={Main.subtext} />
         <AboutSection about={About} />
         <FeedbackSection />
         <SmallBuildSection smallbuild={SmallBuild} />
