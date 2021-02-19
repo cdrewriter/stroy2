@@ -16,7 +16,7 @@ export default function FeedbackSection() {
                       </span>
                       <h2 className="section__title">Вопросы? Предложения? </h2>
                     </div>
-                    <div className="icons justify-evenly flex-1 md:flex-0">
+                    <div className="icons justify-evenly lg:justify-start flex-1 md:flex-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         stroke="none"

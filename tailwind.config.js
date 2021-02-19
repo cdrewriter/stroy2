@@ -23,6 +23,7 @@ module.exports = {
         xl: '1280px',
     },
     fontSize: {
+      zero: '0',
       xs: '0.75rem',
       sm: '0.875rem',
       base: '1rem',

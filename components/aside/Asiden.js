@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const Item = ({ name, id, url }) => {
   return (
-      <li  key={id} className="py-1 md:my-2 hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent">
+      <li  key={id} className="py-1 md:my-2  hover:border-sorange border-l-4 lg:hover:bg-transparent border-l-4 border-transparent">
           <Link href={`/uslugi/${url}`} id={id}>
-              <a  className="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">{name}</a>
+              <a  className="block pl-4 align-middle text-gray-700 no-underline hover:text-sorange">{name}</a>
           </Link>
       </li>
 
@@ -27,8 +27,8 @@ function Asiden({ catitems }) {
     }
     return (
 
-      <div className="w-full lg:w-1/5 px-6 text-xl text-gray-800 leading-normal">
-          <p className="text-base font-bold py-2 lg:pb-6 text-gray-700">Меню</p>
+      <div className="w-full lg:w-1/4 px-l text-xl text-gray-800 leading-normal">
+
           <div className="block lg:hidden sticky inset-0">
               <button id="menu-toggle"
                       className="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-yellow-600 appearance-none focus:outline-none">
@@ -38,9 +38,9 @@ function Asiden({ catitems }) {
                   </svg>
               </button>
           </div>
-          <div
-              className="w-full sticky inset-0 hidden max-h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 my-2 lg:my-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20"
+          <div className="w-full sticky inset-0 hidden max-h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 my-2 lg:my-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20"
               style={{top:'6em'}} id="menu-content">
+              <h3 className="text-lg font-bold py-2 mt-8  text-gray-700">Меню</h3>
               <ul className="list-reset py-2 md:py-0">
                   {asideItems}
 

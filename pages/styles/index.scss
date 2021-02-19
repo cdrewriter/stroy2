@@ -395,7 +395,7 @@ $color_gray_bg: #AEAEAE;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .heading__portfolio {
@@ -523,6 +523,10 @@ $color_gray_bg: #AEAEAE;
 
 .humburger {
   margin: 0 1rem 0 0;
+  display: block;
+  @screen xl {
+    display: none;
+  }
 }
 
 nav {
@@ -548,7 +552,7 @@ nav {
   margin-right: 5%;
   background: #00000078;
   z-index: 0;
-  border: 1.5rem solid #14213D;
+  //border: 1.5rem solid #14213D;
 
   line-height: 1;
   /* margin: auto; */
@@ -558,7 +562,10 @@ nav {
 
   &::after {
     content: '';
-    display: block;
+    display: none;
+    @screen lg {
+      display: block;
+    }
     width: 7.75rem;
     position: absolute;
     height: 7.75rem;
@@ -580,7 +587,10 @@ nav {
       content: "";
     }
 
-    display: block;
+    display: none;
+    @screen lg {
+      display: block;
+    }
     width: 7.75rem;
     position: absolute;
     height: 7.75rem;
@@ -599,7 +609,10 @@ nav {
     @screen xl {
       content: "";
     }
-    display: block;
+    display: none;
+    @screen lg {
+      display: block;
+    }
     width: 4rem;
     position: absolute;
     height: 4rem;
@@ -613,15 +626,18 @@ nav {
 
 .heading {
   //background-color: #ccccccc4;
-  background-color: rgba(252, 163, 17, 0.85);
+  background-color: rgba(252, 163, 17, 1);
   z-index: 5;
 
   &:before {
     content: "";
-    display: block;
 
     position: absolute;
     width: 1.25em;
+    display: none;
+    @screen lg {
+      display: block;
+    }
     height: 1.25em;
     top: -3.5rem;
     z-index: 0;
@@ -632,7 +648,10 @@ nav {
 
   &::after {
     content: '';
-    display: block;
+    display: none;
+    @screen lg {
+      display: block;
+    }
     width: 4rem;
     position: absolute;
     height: 4rem;
@@ -707,7 +726,9 @@ nav {
 
 .slick-active.slick-center.slick-current .cardobject__desc {
   max-height: 50%;
-
+  font-size: 0.875em;
+  padding-left: 1rem;
+  line-height: 1.5;
   overflow: auto;
 }
 
@@ -774,7 +795,6 @@ nav {
   display: flex;
   position: absolute;
   flex-flow: column;
-
   bottom: 0;
   background: #fff;
   top: 0;
@@ -782,7 +802,7 @@ nav {
   left: 0;
   transform: translateY(100%);
   transition: 1s all cubic-bezier(.76, .05, .86, .06) 2s;
-  padding: 4rem;
+  padding: 2rem 3rem;
 
   .btn {
     margin-top: auto;
@@ -852,7 +872,7 @@ nav {
     text-align: left;
     padding: 0 1.2rem;
     font-size: 1em;
-    @apply mt-16 mb-24 max-w-screen-md;
+    @apply mb-24 max-w-screen-md;
   }
 }
 
@@ -892,4 +912,13 @@ hr {
   order: 1;
   padding-left: 0;
   padding-right: 1rem;
+}
+
+.menu-list {
+
+}
+.menu-list li {
+  margin: 1rem 0;
+  font-size: 0.875em;
+  line-height: 1.25;
 }

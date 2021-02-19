@@ -20,10 +20,10 @@ const Footer = () => (
                         <a className={'font-bold'} href={'mailto: ventservis74@mail.ru'}>ventservis74@mail.ru</a>
                     </div>
                 </div>
-                <div className="lg:w-3/5 sm:flex justify-between lg:justify-between">
+                <div className="lg:w-3/5 sm:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-between lg:justify-between">
                     <div className="lg:pr-24 pb-12 lg:pb-0">
                         <h3 className="mb-6 text-lg  font-bold">Строительство</h3>
-                        <ul className="">
+                        <ul className="menu-list">
 
                             <li className="mb-3">
                                 <a href="">Жилых зданий</a>
@@ -44,7 +44,7 @@ const Footer = () => (
                     </div>
                     <div className="lg:pr-24 pb-12 lg:pb-0">
                         <h3 className="mb-6 text-lg font-bold">Услуги</h3>
-                        <ul className="">
+                        <ul className="menu-list">
                             <li className="mb-3">
                                 <a href="">Проектирование</a>
                             </li>
@@ -64,7 +64,7 @@ const Footer = () => (
                     </div>
                     <div>
                         <h3 className="mb-6 text-lg font-bold">О компании</h3>
-                        <ul className="">
+                        <ul className="menu-list">
                             <li className="mb-3">
                                 <a href="">Контакты</a>
                             </li>

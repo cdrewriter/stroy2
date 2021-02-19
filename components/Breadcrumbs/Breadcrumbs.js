@@ -14,12 +14,12 @@ const BreadCrumbs = ({page}) => {
 
         <div className="text-center pt-16 md:pt-32">
             <Link href="/">
-                <a className={style.breadcrumbs  + 'text-sm md:text-xl text-sorange font-bold'}>Главная</a>
+                <a className={style.breadcrumbs  + 'text-xs md:text-sm text-gray-500 font-bold'}>Главная</a>
             </Link>
             <span
                 className="text-gray-900 text-2xl mx-8">/</span>
             <Link href={`/uslugi/`}>
-                <a className="text-sm md:text-xl text-sorange font-bold">Услуги</a>
+                <a className="text-xs md:text-sm text-gray-300 font-bold">Услуги</a>
             </Link>
 
 

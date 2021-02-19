@@ -29,7 +29,7 @@ export default function UslugiSection({datas, items}) {
                         {datas.description}
                     </div>
 
-                    <div className="short_uslugi grid  gap-12">
+                    <div className="short_uslugi grid  gap-8">
                         <div className={'build-img'}><img src='house1.png'/></div>
                         {priceItems}</div>
 

@@ -13,7 +13,7 @@ export default function BuildObjects({ title, image, description }) {
         </div>
         <div className={("cardobject__content " + styles.title)}>
           <h3>{title}</h3>
-            <hr className='px-20 mt-4 mb-12'/>
+            <hr className='px-20 mt-4 mb-8'/>
             {inHtml()}
             <a href={'#'} className={'btn'} >Подробнее</a>
         </div>

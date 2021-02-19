@@ -140,7 +140,7 @@ const About = () => {
     return (
       <Layout>
         <Head>
-          <title>Appssss</title>
+          <title>Контакты</title>
         </Head>
         {/*<MainSection title={Main.title} titleText={Main.subtext} />*/}
         {/*<AboutSection about={About} />*/}

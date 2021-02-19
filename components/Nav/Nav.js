@@ -138,8 +138,8 @@ export default function Nav() {
   return (
     <div className="header">
       <div className="relative z-10 lg:w-full">
-        <div className="relative px-0 py-4 sm:px-6 lg:px-8">
-          <nav className="relative flex items-center justify-between sm:h-24 lg:justify-start">
+        <div className="relative px-6 md:px-12 lg:px-16 py-4 ">
+          <nav className="relative flex items-center justify-between md:h-12 lg:h-16 lg:justify-start">
             <div className="flex items-center">
               <div className="flex items-center justify-between">
               <Dropdown />  
@@ -147,7 +147,7 @@ export default function Nav() {
                
               </div>
             </div>
-            <div className="hidden xl:flex lg:w-full md:pl-24 md:pr-24 pl-24 pr-8 flex-1">
+            <div className="hidden xl:flex lg:w-full text-sm md:pl-4 md:pr-4 pl-24 pr-8 flex-1">
               <a
                 href="/build"
                 className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
@@ -173,13 +173,16 @@ export default function Nav() {
                 Контакты
               </a>
              </div>
-            <div className="nav__icons ml-auto mr-2 md:mr-16">
-              <a href="tel:+79514782780" className="my-auto text-gray-800 font-bold py-2 ml-1 rounded inline-flex items-center">
-                  <svg aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24"><g fill=""><path d="M13 8a3 3 0 0 1 3 3a1 1 0 0 0 2 0a5 5 0 0 0-5-5a1 1 0 0 0 0 2z"/><path d="M13 4a7 7 0 0 1 7 7a1 1 0 0 0 2 0a9 9 0 0 0-9-9a1 1 0 0 0 0 2zm8.75 11.91a1 1 0 0 0-.72-.65l-6-1.37a1 1 0 0 0-.92.26c-.14.13-.15.14-.8 1.38a9.91 9.91 0 0 1-4.87-4.89C9.71 10 9.72 10 9.85 9.85a1 1 0 0 0 .26-.92L8.74 3a1 1 0 0 0-.65-.72a3.79 3.79 0 0 0-.72-.18A3.94 3.94 0 0 0 6.6 2A4.6 4.6 0 0 0 2 6.6A15.42 15.42 0 0 0 17.4 22a4.6 4.6 0 0 0 4.6-4.6a4.77 4.77 0 0 0-.06-.76a4.34 4.34 0 0 0-.19-.73zM17.4 20A13.41 13.41 0 0 1 4 6.6A2.61 2.61 0 0 1 6.6 4h.33L8 8.64l-.54.28c-.86.45-1.54.81-1.18 1.59a11.85 11.85 0 0 0 7.18 7.21c.84.34 1.17-.29 1.62-1.16l.29-.55L20 17.07v.33a2.61 2.61 0 0 1-2.6 2.6z"/></g></svg><span className="hidden lg:block"> +7 951 478 2780</span>
+            <div className="nav__icons ml-auto">
+              <a href="tel:+79514782780" className="my-auto text-gray-600 hover:text-gray-900  font-bold py-2 ml-1 rounded inline-flex items-center">
+                  <svg aria-hidden="true" focusable="false" width="0.75em" height="0.75em" viewBox="0 0 24 24">
+                    <g fill="currentColor"><path d="M13 8a3 3 0 0 1 3 3a1 1 0 0 0 2 0a5 5 0 0 0-5-5a1 1 0 0 0 0 2z"/><path d="M13 4a7 7 0 0 1 7 7a1 1 0 0 0 2 0a9 9 0 0 0-9-9a1 1 0 0 0 0 2zm8.75 11.91a1 1 0 0 0-.72-.65l-6-1.37a1 1 0 0 0-.92.26c-.14.13-.15.14-.8 1.38a9.91 9.91 0 0 1-4.87-4.89C9.71 10 9.72 10 9.85 9.85a1 1 0 0 0 .26-.92L8.74 3a1 1 0 0 0-.65-.72a3.79 3.79 0 0 0-.72-.18A3.94 3.94 0 0 0 6.6 2A4.6 4.6 0 0 0 2 6.6A15.42 15.42 0 0 0 17.4 22a4.6 4.6 0 0 0 4.6-4.6a4.77 4.77 0 0 0-.06-.76a4.34 4.34 0 0 0-.19-.73zM17.4 20A13.41 13.41 0 0 1 4 6.6A2.61 2.61 0 0 1 6.6 4h.33L8 8.64l-.54.28c-.86.45-1.54.81-1.18 1.59a11.85 11.85 0 0 0 7.18 7.21c.84.34 1.17-.29 1.62-1.16l.29-.55L20 17.07v.33a2.61 2.61 0 0 1-2.6 2.6z"/></g></svg>
+                <span className="hidden lg:block pl-4"> +7 951 478 2780</span>
               </a>
-              <button className="m-auto text-gray-800 font-bold my-2 ml-1 rounded inline-flex items-center">
+              <button className="m-auto text-gray-800 font-bold my-2 ml-3 rounded inline-flex items-center">
 
-                  <svg aria-hidden="true" focusable="false" width="1em" height="1em"  viewBox="0 0 24 24"><path fill="#" d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.67 2L12 10.75L5.67 6zM19 18H5a1 1 0 0 1-1-1V7.25l7.4 5.55a1 1 0 0 0 .6.2a1 1 0 0 0 .6-.2L20 7.25V17a1 1 0 0 1-1 1z"/></svg>
+                  <svg aria-hidden="true" focusable="false" width="0.75em" height="0.75em"  viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.67 2L12 10.75L5.67 6zM19 18H5a1 1 0 0 1-1-1V7.25l7.4 5.55a1 1 0 0 0 .6.2a1 1 0 0 0 .6-.2L20 7.25V17a1 1 0 0 1-1 1z"/></svg>
 
               </button>
             </div>

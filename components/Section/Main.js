@@ -7,10 +7,10 @@ export default function MainSection({title, titleText}) {
   }
     return (
         <Section
-        className="bd md:px-24 px-4 mb-24 h-screen full-height"
+        className="bd px-6 md:px-12 lg:px-16 h-screen full-height"
       >
         <div className="h-full lg:mx-auto bg-local ">
-          <div className="p-4 h-full shadow-inner bg-hero-pattern">
+          <div className="md:p-4  h-full shadow-inner bg-hero-pattern">
             <div className="container h-full  mx-auto block__custom justify-evenly flex flex-col">
               <div className="block__outer">
                 <div className="z-12 heading relative shadow-2xl">

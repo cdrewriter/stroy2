@@ -2,33 +2,70 @@
 @tailwind base;
 
 @layer base {
+  body {
 
+  }
   h1 {
     @apply text-6xl;
   }
   h2 {
-    @apply text-4xl;
+    @apply text-4xl mb-12 ;
     line-height: 1em;
+    margin-bottom: 2rem;
+
   }
   h3 {
     @apply text-2xl mt-2 mb-4 font-medium text-gray-900 font-medium;
     line-height: 1em;
   }
   a {
-    @apply transition duration-150 ease-in-out;
+    @apply transition duration-150 ease-in-out no-underline;
+  }
+  a:hover {
+    @apply text-colorPrimary;
+  }
+
+  p {
+    @apply my-4;
   }
   .btn {
-    @apply border border-gray-100 h-10 no-underline text-gray-600  block font-medium py-6 px-12 mr-2 flex items-center ;
+    @apply border-2 px-12 py-6 font-semibold h-10 no-underline no-underline block flex items-center ;
     //@apply px-24 text-gray-700 py-4 border-2 font-bold no-underline;
+    svg {
+      width: 1.5rem;
+
+    }
     max-width: fit-content;
     &:hover {
-      @apply bg-gray-700 text-white no-underline ;
+      @apply bg-colorPrimary text-white no-underline;
     }
     ;
     &.second {
       color: #FCA311;
       border-color: #FCA311;
     }
+  }
+  .btn-main {
+    @apply py-2 pl-0 border-transparent font-semibold no-underline;
+
+  }
+  .btn-icon {
+    min-width: fit-content;
+    @apply  border-2 px-3 py-2 mr-4 border-colorGraySub;
+    &:hover {
+      @apply text-white ;
+    }
+    .text {
+      display: none;
+      margin-left: 0.75em;
+      @apply pl-2;
+    }
+    .ico {
+      //@apply  text-white
+    }
+  }
+  .btn-main:hover {
+    @apply  text-current;
   }
   .btn-sec {
     @apply bg-transparent border-sorange text-gray-300;
@@ -46,11 +83,13 @@
   }
 
 }
-
+a:hover, a:focus {
+  @apply no-underline;
+}
 @tailwind components;
 @layer components {
   .block__title {
-    @apply mx-4 text-center;
+    @apply mx-4;
     @screen xl {
       @apply ml-16;
     }
@@ -71,20 +110,20 @@
     text-transform: uppercase;
     @apply text-colorGraySub;
     @screen md {
-      @apply -mt-24 -ml-8 text-5xl;
+      @apply  text-5xl;
     }
     @screen xl {
-      @apply -mt-32 -ml-8 text-6xl;
+      @apply -mb-4  text-6xl;
     }
   }
   .block__desc {
     @apply my-12 mx-4;
     @screen md {
       //max-width: 60vw;
-      @apply ml-16  text-xl;
+      @apply ml-16 ;
     }
     @screen xl {
-      @apply text-xl;
+     // @apply ;
     }
   }
   .block__docs {
