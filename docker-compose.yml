@@ -2,7 +2,7 @@ version: "3"
 
 services:
   web:
-    build:
+    build: ./dist
       context: .
       dockerfile: Dockerfile
     container_name: web
@@ -21,3 +21,4 @@ services:
       - ./data:/data/db
     ports:
       - "27017:27017"
+      -
