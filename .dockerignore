@@ -2,4 +2,3 @@
 docs/
 dist/
 .env.secret
-node_modules
