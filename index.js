@@ -12,11 +12,19 @@ const MongoStore = require('connect-mongo')(expressSession);
 const keystone = new Keystone({
   name: 'StroyExpert',
   adapter: new MongooseAdapter({ mongoUri: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority' }),
+  
   sessionStore: new MongoStore({
     url: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority',
   }),
- 
-  cookieSecret: '3VgbStDykeq36VFCZhj+eWg6DzZFnkoQ',            
+  
+  cookieSecret: '3VgbStDykeq36VFCZhj+eWg6DzZFnkoQ',
+  cookie: {
+      secure: process.env.NODE_ENV === 'production', // Defaults to true in production
+      maxAge: 1000 * 60 * 60 * 24 * 30, // 30 days
+      sameSite: false,
+  },
+  
+  
   defaultAccess: {
     list: true,
     field: true,
