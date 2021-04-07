@@ -6,4 +6,8 @@ module.exports = {
   staticPath: 'public', // The local path on disk
   distDir: 'dist',
   databaseUrl: process.env.DATABASE_URL || '',
+  email: {
+    user: 'info@stxp.ru',
+    pass: 'Derparol12'
+  }
 };

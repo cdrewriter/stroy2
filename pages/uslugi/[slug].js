@@ -1,13 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { useRouter } from "next/router";
 import { useGraphQL } from "graphql-react";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Section from "../../components/Section/Section";
-import Container from '../../components/Container/Container';
+
 import Layout from "../../templates/layoutinner";
-import Fullpage from '../../components/Fullpage/Fullpage';
-import Asiden from "../../components/aside/Asiden";
+import Fullpage from "../../components/Fullpage/FullpageArticle";
+import Asiden from "../../components/Aside/Asiden";
 
 const UslugiPage = () => {
 
@@ -17,8 +17,7 @@ const UslugiPage = () => {
   const result = useGraphQL({
     fetchOptionsOverride(options) {
       options.url = `${
-        process.browser ? "" : "http://localhost:3000"
-      }/admin/api`;
+        process.browser ? "" : process.env.BASE_URL}/admin/api`;
     },
     operation: {
       query: /* GraphQL */ `

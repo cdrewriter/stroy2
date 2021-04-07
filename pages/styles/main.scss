@@ -1,12 +1,15 @@
+//@import "./styles-fonts.css";
+
 @import "./tailwind";
-@import './index';
+@import "./buttons";
+@import "./icons";
+//@import './index';
+//@import './uikit';
 
-.cardobj:hover .objimg {
-  background-blend-mode: initial;
 
-}
-
-.objimg {
-  background-blend-mode: luminosity;
-  transition: all 0.5s ease-in-out;
-}
+//.cardobj:hover .objimg {
+//  background-blend-mode: initial;
+//}
+//
+//.objimg {
+//  bac/5kground-blend-mode: luminosity;

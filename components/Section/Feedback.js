@@ -1,89 +1,74 @@
-import Section from "./Section";
-import Flip from "../Flip/Flip";
+// import Section from "./Section";
+// import Flip from "../Flip/Flip";
+import Box from "../Box/Box";
 
 export default function FeedbackSection() {
- 
+
     return (
-      <Section key="feedback" className="feddback">
-          <div className=" lg:mx-auto bg-local ">
-            <div className="bg-feedback-pattern">
-              <div className="container mx-auto block__custom px-4">
-                <div className="flex  py-16  flex-row flex-wrap 2xl:items-center justify-between md:flex-row">
-                  <div className="box w-full flex flex-wrap lg:w-1/4">
-                    <div className="titlebox mb-6 text-center md:text-left">
-                      <span className="section__textShaddow">
-                        Мы открыты для диалога
-                      </span>
-                      <h2 className="section__title">Вопросы? Предложения? </h2>
-                    </div>
-                    <div className="icons justify-evenly lg:justify-start flex-1 md:flex-0">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        stroke="none"
-                        className="h-12 w-12"
-                        fillRule="none"
-                        fill="#fca311"
-                        width="25.708" height="48" viewBox="0 0 25.708 48"
-                      >
-                    
-                       <path className="a" d="M26.169-15,27.5-23.687H19.167v-5.637c0-2.377,1.164-4.693,4.9-4.693h3.789v-7.4A46.213,46.213,0,0,0,21.128-42C14.263-42,9.776-37.839,9.776-30.308v6.621H2.146V-15h7.63V6h9.391V-15Z" transform="translate(-2.146 42)"/>
+        <div className={'screen screen-feedback'}>
+            <Box type={'feedback'}>
+                <div className={'box_content'}>
+                    <div className={'first_col'}>
+                        <span className={'UPheading'}>Мы открыты для диалога </span>
+                        <h3>Вопросы? Предложения? </h3>
+                        <div className={'social'}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="48.111" viewBox="0 0 25 48.111">
+                                <path id="curve"
+                                      d="M7,6h9V-15h7l1-9H16v-6a4.742,4.742,0,0,1,1-3c.625-.75,1.313-1,3-1h5v-8a64.629,64.629,0,0,0-7,0,10.971,10.971,0,0,0-8,3c-2,1.969-3,4.438-3,8v7H0v9H7Z"
+                                      transform="translate(0 42.111)" fill="rgba(0,0,0,0.12)"/>
+                            </svg>
 
-                      </svg>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-12 w-12"
-                        fillRule="none"   
-                        fill="#fca311"
-                         width="42.023" height="42.014" viewBox="0 0 42.023 42.014"><path className="a" d="M21.009-28.781A10.755,10.755,0,0,0,10.238-18.009,10.755,10.755,0,0,0,21.009-7.238,10.755,10.755,0,0,0,31.781-18.009,10.755,10.755,0,0,0,21.009-28.781Zm0,17.775a7.016,7.016,0,0,1-7-7,7.01,7.01,0,0,1,7-7,7.01,7.01,0,0,1,7,7A7.016,7.016,0,0,1,21.009-11.006ZM34.734-29.222a2.513,2.513,0,0,0-2.512-2.512,2.513,2.513,0,0,0-2.512,2.512,2.507,2.507,0,0,0,2.512,2.512A2.507,2.507,0,0,0,34.734-29.222Zm7.134,2.55c-.159-3.366-.928-6.347-3.394-8.8s-5.437-3.225-8.8-3.394c-3.469-.2-13.866-.2-17.334,0-3.356.159-6.337.928-8.8,3.384S.309-30.047.141-26.681c-.2,3.469-.2,13.866,0,17.334C.3-5.981,1.069-3,3.534-.544s5.438,3.225,8.8,3.394c3.469.2,13.866.2,17.334,0,3.366-.159,6.347-.928,8.8-3.394s3.225-5.437,3.394-8.8C42.066-12.816,42.066-23.2,41.869-26.672ZM37.387-5.625a7.09,7.09,0,0,1-3.994,3.994c-2.766,1.1-9.328.844-12.384.844s-9.628.244-12.384-.844A7.09,7.09,0,0,1,4.631-5.625c-1.1-2.766-.844-9.328-.844-12.384s-.244-9.628.844-12.384a7.09,7.09,0,0,1,3.994-3.994c2.766-1.1,9.328-.844,12.384-.844s9.628-.244,12.384.844a7.09,7.09,0,0,1,3.994,3.994c1.1,2.766.844,9.328.844,12.384S38.484-8.381,37.387-5.625Z" transform="translate(0.007 39.016)"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="box flex flex-1 lg:flex-none flex-col lg:w-3/5 flex-end">
-                    <form className="mb-6 w-full flex-1 inline-block hidden lg:block form border-2 rounded border-white-300 py-2">
-                      <div className="flex items-center flex-end">
-                        <input
-                            rows="10" cols="45"
-                          className="appearance-none w-full m-auto bg-transparent input border-none  mr-3 py-1 px-2 leading-tight focus:outline-none"
-                          type="textarea"
-                          placeholder="ваше сообщение"
-                          aria-label="msg"
-                        />
-                        <button
-                          className="flex-shrink-0 bg-teal-500 hover:bg-white-700 shadow text-sm border-4 text-white py-1 px-2 rounded"
-                          type="button"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                          
-                            className="h-6 w-6"
-                            fillRule="none"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                          >
-                            <text
-                              transform="translate(0 21)"
-                              fill="#14213d"
-                              fontSize="24"
-                              fontFamily="FontAwesome5Pro-Light, 'Font Awesome 5 Pro'"
-                              fontWeight="300"
-                            >
-                              <tspan x="0" y="0">
-                                envelope
-                              </tspan>
-                            </text>
-                          </svg>
-                        </button>
-                      </div>
-                    </form>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+                                <path id="Контур_154" data-name="Контур 154"
+                                      d="M21-28.781a10.491,10.491,0,0,1,5.391,1.453,10.813,10.813,0,0,1,3.938,3.938A10.491,10.491,0,0,1,31.781-18a10.491,10.491,0,0,1-1.453,5.391,10.813,10.813,0,0,1-3.937,3.938A10.491,10.491,0,0,1,21-7.219a10.491,10.491,0,0,1-5.391-1.453,10.813,10.813,0,0,1-3.937-3.937A10.491,10.491,0,0,1,10.219-18a10.491,10.491,0,0,1,1.453-5.391,10.813,10.813,0,0,1,3.938-3.937A10.491,10.491,0,0,1,21-28.781Zm0,17.813a6.773,6.773,0,0,0,4.969-2.062A6.773,6.773,0,0,0,28.031-18a6.773,6.773,0,0,0-2.062-4.969A6.773,6.773,0,0,0,21-25.031a6.773,6.773,0,0,0-4.969,2.063A6.773,6.773,0,0,0,13.969-18a6.773,6.773,0,0,0,2.063,4.969A6.773,6.773,0,0,0,21-10.969ZM34.781-29.25a2.433,2.433,0,0,0-.75-1.781,2.433,2.433,0,0,0-1.781-.75,2.433,2.433,0,0,0-1.781.75,2.433,2.433,0,0,0-.75,1.781,2.433,2.433,0,0,0,.75,1.781,2.433,2.433,0,0,0,1.781.75,2.283,2.283,0,0,0,1.734-.75A2.921,2.921,0,0,0,34.781-29.25Zm7.125,2.531Q42-24.094,42-18t-.141,8.766a17.68,17.68,0,0,1-.8,4.641A10.927,10.927,0,0,1,38.484-.516a10.927,10.927,0,0,1-4.078,2.578,17.68,17.68,0,0,1-4.641.8Q27.094,3,21,3t-8.766-.141a15.308,15.308,0,0,1-4.641-.891A9.993,9.993,0,0,1,3.516-.516,10.927,10.927,0,0,1,.938-4.594a17.68,17.68,0,0,1-.8-4.641Q0-11.906,0-18t.141-8.766a17.68,17.68,0,0,1,.8-4.641,10.927,10.927,0,0,1,2.578-4.078,10.927,10.927,0,0,1,4.078-2.578,17.68,17.68,0,0,1,4.641-.8Q14.906-39,21-39t8.766.141a17.68,17.68,0,0,1,4.641.8,10.927,10.927,0,0,1,4.078,2.578,10.927,10.927,0,0,1,2.578,4.078A19.073,19.073,0,0,1,41.906-26.719Zm-4.5,21.094a19.739,19.739,0,0,0,.75-5.062q.094-2.062.094-5.812v-3q0-3.844-.094-5.812a18.811,18.811,0,0,0-.75-5.062,6.766,6.766,0,0,0-4.031-4.031,18.812,18.812,0,0,0-5.062-.75Q26.25-35.25,22.5-35.25h-3q-3.75,0-5.812.094a19.739,19.739,0,0,0-5.062.75,6.766,6.766,0,0,0-4.031,4.031,18.812,18.812,0,0,0-.75,5.063Q3.75-23.25,3.75-19.5v3q0,3.75.094,5.813a19.739,19.739,0,0,0,.75,5.063A7.107,7.107,0,0,0,8.625-1.594a19.739,19.739,0,0,0,5.063.75Q15.75-.75,19.5-.75h3q3.844,0,5.813-.094a18.812,18.812,0,0,0,5.063-.75A7.107,7.107,0,0,0,37.406-5.625Z"
+                                      transform="translate(0 39)" fill="rgba(0,0,0,0.12)"/>
+                            </svg>
 
-                    <div className="phone flex text-center flex-col md:block"><span>или</span> +7 951 478 2780</div>
-                  </div>
+                        </div>
+                        <div className="phone">
+                            <span>или по телефону</span> +7 951 478 2780</div>
+                    </div>
+                    <div className={'second_col'}>
+                        <form className="form">
+
+
+                            <input type={'text'} className={''} placeholder={'Ваше имя?'}/>
+                            <input rows={'3'}
+                                   type={'email'}
+                                   className={''}
+                                   placeholder="Телефон или email"
+                                   aria-label="msg"
+
+                            />
+                            <textarea rows={'3'}  className={''} placeholder={'Ваше сообщение'} />
+                            <button style={{gridColumn: 5, }} className="btn  icon-pencil  btn-only-icon_custom btn-filled" type="submit"
+                                    value="Send">
+                            </button>
+                        </form>
+
+                    </div>
+
+
+
+
+
+
+
                 </div>
-              </div>
-            </div>
-          </div>
-        </Section>
+                {/*<div className={'buttons'}>*/}
+                {/*    <button className={'btn '}>Оставить заявку</button>*/}
+                {/*    <button className={'btn btn-icon-only'}>*/}
+                {/*        <IconArrowRight/>*/}
+                {/*    </button>*/}
+                {/*    <button className={'btn btn-icon'}>*/}
+                {/*        <IconCalc/>*/}
+                {/*        Расчитать стоимость*/}
+                {/*    </button>*/}
+                {/*</div>*/}
+
+            </Box>
+        </div>
+
     );
-  };
+};
   

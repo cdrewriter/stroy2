@@ -20,7 +20,7 @@ export default function MainSection({title, titleText}) {
                   {inHtml()}
                 </div>
               </div>
-              <a className="mx-auto flex flex-col next bloc text-center font-bold uppercase text-gray-500 tracking-wider"  href="#">Далее<Chevron clme={'-mt-2 w-16 h-16 mx-auto'} /></a>
+              <a className="mx-auto flex flex-col border-0 next block transform hover:translate-y-4 duration-500 text-center font-bold uppercase text-gray-500 tracking-wider"  href="#">Далее<Chevron clme={'-mt-2 w-16 h-16 mx-auto'} /></a>
             </div>
           </div>
         </div>

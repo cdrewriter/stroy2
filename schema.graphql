@@ -1,0 +1,2620 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+" A keystone list "
+type About {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the About List config, or
+    2. As an alias to the field set on 'labelField' in the About List config, or
+    3. As an alias to a 'name' field on the About List (if one exists), or
+    4. As an alias to the 'id' field on the About List.
+    """
+    _label_: String
+    description: String
+    docs: CloudinaryImage_File
+    id: ID
+    image: CloudinaryImage_File
+    photos: CloudinaryGallery
+    title: String
+    title__text: String
+}
+
+" A keystone list "
+type BuildObject {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the BuildObject List config, or
+    2. As an alias to the field set on 'labelField' in the BuildObject List config, or
+    3. As an alias to a 'name' field on the BuildObject List (if one exists), or
+    4. As an alias to the 'id' field on the BuildObject List.
+    """
+    _label_: String
+    description: String
+    id: ID
+    image: CloudinaryImage_File
+    images: CloudinaryImage_File
+    title: String
+}
+
+type CloudinaryGallery {
+    images: [CloudinaryGalleryImage]
+}
+
+type CloudinaryGalleryImage {
+    caption: String
+    image: CloudinaryImage_File
+}
+
+type CloudinaryImage_File {
+    encoding: String
+    filename: String
+    id: ID
+    mimetype: String
+    originalFilename: String
+    path: String
+    publicUrl: String
+    publicUrlTransformed(transformation: CloudinaryImageFormat): String
+}
+
+" A keystone list "
+type Construction {
+    _itemsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionItemsBy!], where: ConstructionItemWhereInput): _QueryMeta
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the Construction List config, or
+    2. As an alias to the field set on 'labelField' in the Construction List config, or
+    3. As an alias to a 'name' field on the Construction List (if one exists), or
+    4. As an alias to the 'id' field on the Construction List.
+    """
+    _label_: String
+    description: String
+    id: ID
+    image: CloudinaryImage_File
+    images: CloudinaryImage_File
+    items(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionItemsBy!], where: ConstructionItemWhereInput): [ConstructionItem!]!
+    subtext: String
+    title: String
+    url: String
+}
+
+" A keystone list "
+type ConstructionItem {
+    _categoryMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionsBy!], where: ConstructionWhereInput): _QueryMeta
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the ConstructionItem List config, or
+    2. As an alias to the field set on 'labelField' in the ConstructionItem List config, or
+    3. As an alias to a 'name' field on the ConstructionItem List (if one exists), or
+    4. As an alias to the 'id' field on the ConstructionItem List.
+    """
+    _label_: String
+    category(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionsBy!], where: ConstructionWhereInput): [Construction!]!
+    description: String
+    id: ID
+    image: CloudinaryImage_File
+    images: CloudinaryImage_File
+    name: String
+    subtext: String
+}
+
+" A keystone list "
+type ConstructionPortfolio {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the ConstructionPortfolio List config, or
+    2. As an alias to the field set on 'labelField' in the ConstructionPortfolio List config, or
+    3. As an alias to a 'name' field on the ConstructionPortfolio List (if one exists), or
+    4. As an alias to the 'id' field on the ConstructionPortfolio List.
+    """
+    _label_: String
+    description: String
+    id: ID
+    image: CloudinaryImage_File
+    images: CloudinaryGallery
+    publishedDate: DateTime
+    title: String
+    title__text: String
+}
+
+" A keystone list "
+type DefObj {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the DefObj List config, or
+    2. As an alias to the field set on 'labelField' in the DefObj List config, or
+    3. As an alias to a 'name' field on the DefObj List (if one exists), or
+    4. As an alias to the 'id' field on the DefObj List.
+    """
+    _label_: String
+    _postCategoriesMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortDefObjPagesBy!], where: DefObjPageWhereInput): _QueryMeta
+    content: String
+    description: String
+    id: ID
+    image: CloudinaryImage_File
+    images: CloudinaryGallery
+    name: String
+    postCategories(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortDefObjPagesBy!], where: DefObjPageWhereInput): [DefObjPage!]!
+    url: String
+}
+
+" A keystone list "
+type DefObjPage {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the DefObjPage List config, or
+    2. As an alias to the field set on 'labelField' in the DefObjPage List config, or
+    3. As an alias to a 'name' field on the DefObjPage List (if one exists), or
+    4. As an alias to the 'id' field on the DefObjPage List.
+    """
+    _label_: String
+    _postsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortDefObjsBy!], where: DefObjWhereInput): _QueryMeta
+    description: String
+    id: ID
+    image: CloudinaryImage_File
+    posts(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortDefObjsBy!], where: DefObjWhereInput): [DefObj!]!
+    title: String
+    url: String
+}
+
+type File {
+    encoding: String
+    filename: String
+    id: ID
+    mimetype: String
+    originalFilename: String
+    path: String
+    publicUrl: String
+}
+
+" A keystone list "
+type Main {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the Main List config, or
+    2. As an alias to the field set on 'labelField' in the Main List config, or
+    3. As an alias to a 'name' field on the Main List (if one exists), or
+    4. As an alias to the 'id' field on the Main List.
+    """
+    _label_: String
+    id: ID
+    subtext: String
+    title: String
+}
+
+type Mutation {
+    " Authenticate and generate a token for a User with the Password Authentication Strategy. "
+    authenticateUserWithPassword(email: String, password: String): authenticateUserOutput
+    " Create a single About item. "
+    createAbout(data: AboutCreateInput): About
+    " Create multiple About items. "
+    createAbouts(data: [AboutsCreateInput]): [About]
+    " Create a single BuildObject item. "
+    createBuildObject(data: BuildObjectCreateInput): BuildObject
+    " Create multiple BuildObject items. "
+    createBuildObjects(data: [BuildObjectsCreateInput]): [BuildObject]
+    " Create a single Construction item. "
+    createConstruction(data: ConstructionCreateInput): Construction
+    " Create a single ConstructionItem item. "
+    createConstructionItem(data: ConstructionItemCreateInput): ConstructionItem
+    " Create multiple ConstructionItem items. "
+    createConstructionItems(data: [ConstructionItemsCreateInput]): [ConstructionItem]
+    " Create a single ConstructionPortfolio item. "
+    createConstructionPortfolio(data: ConstructionPortfolioCreateInput): ConstructionPortfolio
+    " Create multiple ConstructionPortfolio items. "
+    createConstructionPortfolios(data: [ConstructionPortfoliosCreateInput]): [ConstructionPortfolio]
+    " Create multiple Construction items. "
+    createConstructions(data: [ConstructionsCreateInput]): [Construction]
+    " Create a single DefObj item. "
+    createDefObj(data: DefObjCreateInput): DefObj
+    " Create a single DefObjPage item. "
+    createDefObjPage(data: DefObjPageCreateInput): DefObjPage
+    " Create multiple DefObjPage items. "
+    createDefObjPages(data: [DefObjPagesCreateInput]): [DefObjPage]
+    " Create multiple DefObj items. "
+    createDefObjs(data: [DefObjsCreateInput]): [DefObj]
+    " Create a single Main item. "
+    createMain(data: MainCreateInput): Main
+    " Create multiple Main items. "
+    createMains(data: [MainsCreateInput]): [Main]
+    " Create a single Post item. "
+    createPost(data: PostCreateInput): Post
+    " Create multiple PostCategory items. "
+    createPostCategories(data: [PostCategoriesCreateInput]): [PostCategory]
+    " Create a single PostCategory item. "
+    createPostCategory(data: PostCategoryCreateInput): PostCategory
+    " Create multiple Post items. "
+    createPosts(data: [PostsCreateInput]): [Post]
+    " Create a single SmallBuild item. "
+    createSmallBuild(data: SmallBuildCreateInput): SmallBuild
+    " Create multiple SmallBuild items. "
+    createSmallBuilds(data: [SmallBuildsCreateInput]): [SmallBuild]
+    " Create a single User item. "
+    createUser(data: UserCreateInput): User
+    " Create multiple User items. "
+    createUsers(data: [UsersCreateInput]): [User]
+    " Create a single Uslugi item. "
+    createUslugi(data: UslugiCreateInput): Uslugi
+    " Create a single UslugiPage item. "
+    createUslugiPage(data: UslugiPageCreateInput): UslugiPage
+    " Create multiple UslugiPage items. "
+    createUslugiPages(data: [UslugiPagesCreateInput]): [UslugiPage]
+    " Create multiple Uslugi items. "
+    createUslugis(data: [UslugisCreateInput]): [Uslugi]
+    " Delete a single About item by ID. "
+    deleteAbout(id: ID!): About
+    " Delete multiple About items by ID. "
+    deleteAbouts(ids: [ID!]): [About]
+    " Delete a single BuildObject item by ID. "
+    deleteBuildObject(id: ID!): BuildObject
+    " Delete multiple BuildObject items by ID. "
+    deleteBuildObjects(ids: [ID!]): [BuildObject]
+    " Delete a single Construction item by ID. "
+    deleteConstruction(id: ID!): Construction
+    " Delete a single ConstructionItem item by ID. "
+    deleteConstructionItem(id: ID!): ConstructionItem
+    " Delete multiple ConstructionItem items by ID. "
+    deleteConstructionItems(ids: [ID!]): [ConstructionItem]
+    " Delete a single ConstructionPortfolio item by ID. "
+    deleteConstructionPortfolio(id: ID!): ConstructionPortfolio
+    " Delete multiple ConstructionPortfolio items by ID. "
+    deleteConstructionPortfolios(ids: [ID!]): [ConstructionPortfolio]
+    " Delete multiple Construction items by ID. "
+    deleteConstructions(ids: [ID!]): [Construction]
+    " Delete a single DefObj item by ID. "
+    deleteDefObj(id: ID!): DefObj
+    " Delete a single DefObjPage item by ID. "
+    deleteDefObjPage(id: ID!): DefObjPage
+    " Delete multiple DefObjPage items by ID. "
+    deleteDefObjPages(ids: [ID!]): [DefObjPage]
+    " Delete multiple DefObj items by ID. "
+    deleteDefObjs(ids: [ID!]): [DefObj]
+    " Delete a single Main item by ID. "
+    deleteMain(id: ID!): Main
+    " Delete multiple Main items by ID. "
+    deleteMains(ids: [ID!]): [Main]
+    " Delete a single Post item by ID. "
+    deletePost(id: ID!): Post
+    " Delete multiple PostCategory items by ID. "
+    deletePostCategories(ids: [ID!]): [PostCategory]
+    " Delete a single PostCategory item by ID. "
+    deletePostCategory(id: ID!): PostCategory
+    " Delete multiple Post items by ID. "
+    deletePosts(ids: [ID!]): [Post]
+    " Delete a single SmallBuild item by ID. "
+    deleteSmallBuild(id: ID!): SmallBuild
+    " Delete multiple SmallBuild items by ID. "
+    deleteSmallBuilds(ids: [ID!]): [SmallBuild]
+    " Delete a single User item by ID. "
+    deleteUser(id: ID!): User
+    " Delete multiple User items by ID. "
+    deleteUsers(ids: [ID!]): [User]
+    " Delete a single Uslugi item by ID. "
+    deleteUslugi(id: ID!): Uslugi
+    " Delete a single UslugiPage item by ID. "
+    deleteUslugiPage(id: ID!): UslugiPage
+    " Delete multiple UslugiPage items by ID. "
+    deleteUslugiPages(ids: [ID!]): [UslugiPage]
+    " Delete multiple Uslugi items by ID. "
+    deleteUslugis(ids: [ID!]): [Uslugi]
+    unauthenticateUser: unauthenticateUserOutput
+    " Update a single About item by ID. "
+    updateAbout(data: AboutUpdateInput, id: ID!): About
+    " Update multiple About items by ID. "
+    updateAbouts(data: [AboutsUpdateInput]): [About]
+    updateAuthenticatedUser(data: UserUpdateInput): User
+    " Update a single BuildObject item by ID. "
+    updateBuildObject(data: BuildObjectUpdateInput, id: ID!): BuildObject
+    " Update multiple BuildObject items by ID. "
+    updateBuildObjects(data: [BuildObjectsUpdateInput]): [BuildObject]
+    " Update a single Construction item by ID. "
+    updateConstruction(data: ConstructionUpdateInput, id: ID!): Construction
+    " Update a single ConstructionItem item by ID. "
+    updateConstructionItem(data: ConstructionItemUpdateInput, id: ID!): ConstructionItem
+    " Update multiple ConstructionItem items by ID. "
+    updateConstructionItems(data: [ConstructionItemsUpdateInput]): [ConstructionItem]
+    " Update a single ConstructionPortfolio item by ID. "
+    updateConstructionPortfolio(data: ConstructionPortfolioUpdateInput, id: ID!): ConstructionPortfolio
+    " Update multiple ConstructionPortfolio items by ID. "
+    updateConstructionPortfolios(data: [ConstructionPortfoliosUpdateInput]): [ConstructionPortfolio]
+    " Update multiple Construction items by ID. "
+    updateConstructions(data: [ConstructionsUpdateInput]): [Construction]
+    " Update a single DefObj item by ID. "
+    updateDefObj(data: DefObjUpdateInput, id: ID!): DefObj
+    " Update a single DefObjPage item by ID. "
+    updateDefObjPage(data: DefObjPageUpdateInput, id: ID!): DefObjPage
+    " Update multiple DefObjPage items by ID. "
+    updateDefObjPages(data: [DefObjPagesUpdateInput]): [DefObjPage]
+    " Update multiple DefObj items by ID. "
+    updateDefObjs(data: [DefObjsUpdateInput]): [DefObj]
+    " Update a single Main item by ID. "
+    updateMain(data: MainUpdateInput, id: ID!): Main
+    " Update multiple Main items by ID. "
+    updateMains(data: [MainsUpdateInput]): [Main]
+    " Update a single Post item by ID. "
+    updatePost(data: PostUpdateInput, id: ID!): Post
+    " Update multiple PostCategory items by ID. "
+    updatePostCategories(data: [PostCategoriesUpdateInput]): [PostCategory]
+    " Update a single PostCategory item by ID. "
+    updatePostCategory(data: PostCategoryUpdateInput, id: ID!): PostCategory
+    " Update multiple Post items by ID. "
+    updatePosts(data: [PostsUpdateInput]): [Post]
+    " Update a single SmallBuild item by ID. "
+    updateSmallBuild(data: SmallBuildUpdateInput, id: ID!): SmallBuild
+    " Update multiple SmallBuild items by ID. "
+    updateSmallBuilds(data: [SmallBuildsUpdateInput]): [SmallBuild]
+    " Update a single User item by ID. "
+    updateUser(data: UserUpdateInput, id: ID!): User
+    " Update multiple User items by ID. "
+    updateUsers(data: [UsersUpdateInput]): [User]
+    " Update a single Uslugi item by ID. "
+    updateUslugi(data: UslugiUpdateInput, id: ID!): Uslugi
+    " Update a single UslugiPage item by ID. "
+    updateUslugiPage(data: UslugiPageUpdateInput, id: ID!): UslugiPage
+    " Update multiple UslugiPage items by ID. "
+    updateUslugiPages(data: [UslugiPagesUpdateInput]): [UslugiPage]
+    " Update multiple Uslugi items by ID. "
+    updateUslugis(data: [UslugisUpdateInput]): [Uslugi]
+}
+
+" A keystone list "
+type Post {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the Post List config, or
+    2. As an alias to the field set on 'labelField' in the Post List config, or
+    3. As an alias to a 'name' field on the Post List (if one exists), or
+    4. As an alias to the 'id' field on the Post List.
+    """
+    _label_: String
+    _postCategoriesMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortPostCategoriesBy!], where: PostCategoryWhereInput): _QueryMeta
+    author: User
+    content: String
+    description: String
+    id: ID
+    image: File
+    postCategories(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortPostCategoriesBy!], where: PostCategoryWhereInput): [PostCategory!]!
+    publishedDate: DateTime
+    slug: String
+    status: PostStatusType
+    title: String
+}
+
+" A keystone list "
+type PostCategory {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the PostCategory List config, or
+    2. As an alias to the field set on 'labelField' in the PostCategory List config, or
+    3. As an alias to a 'name' field on the PostCategory List (if one exists), or
+    4. As an alias to the 'id' field on the PostCategory List.
+    """
+    _label_: String
+    description: String
+    id: ID
+    name: String
+    slug: String
+}
+
+type Query {
+    " Search for the About item with the matching ID. "
+    About(where: AboutWhereUniqueInput!): About
+    " Search for the BuildObject item with the matching ID. "
+    BuildObject(where: BuildObjectWhereUniqueInput!): BuildObject
+    " Search for the Construction item with the matching ID. "
+    Construction(where: ConstructionWhereUniqueInput!): Construction
+    " Search for the ConstructionItem item with the matching ID. "
+    ConstructionItem(where: ConstructionItemWhereUniqueInput!): ConstructionItem
+    " Search for the ConstructionPortfolio item with the matching ID. "
+    ConstructionPortfolio(where: ConstructionPortfolioWhereUniqueInput!): ConstructionPortfolio
+    " Search for the DefObj item with the matching ID. "
+    DefObj(where: DefObjWhereUniqueInput!): DefObj
+    " Search for the DefObjPage item with the matching ID. "
+    DefObjPage(where: DefObjPageWhereUniqueInput!): DefObjPage
+    " Search for the Main item with the matching ID. "
+    Main(where: MainWhereUniqueInput!): Main
+    " Search for the Post item with the matching ID. "
+    Post(where: PostWhereUniqueInput!): Post
+    " Search for the PostCategory item with the matching ID. "
+    PostCategory(where: PostCategoryWhereUniqueInput!): PostCategory
+    " Search for the SmallBuild item with the matching ID. "
+    SmallBuild(where: SmallBuildWhereUniqueInput!): SmallBuild
+    " Search for the User item with the matching ID. "
+    User(where: UserWhereUniqueInput!): User
+    " Search for the Uslugi item with the matching ID. "
+    Uslugi(where: UslugiWhereUniqueInput!): Uslugi
+    " Search for the UslugiPage item with the matching ID. "
+    UslugiPage(where: UslugiPageWhereUniqueInput!): UslugiPage
+    " Retrieve the meta-data for the About list. "
+    _AboutsMeta: _ListMeta
+    " Retrieve the meta-data for the BuildObject list. "
+    _BuildObjectsMeta: _ListMeta
+    " Retrieve the meta-data for the ConstructionItem list. "
+    _ConstructionItemsMeta: _ListMeta
+    " Retrieve the meta-data for the ConstructionPortfolio list. "
+    _ConstructionPortfoliosMeta: _ListMeta
+    " Retrieve the meta-data for the Construction list. "
+    _ConstructionsMeta: _ListMeta
+    " Retrieve the meta-data for the DefObjPage list. "
+    _DefObjPagesMeta: _ListMeta
+    " Retrieve the meta-data for the DefObj list. "
+    _DefObjsMeta: _ListMeta
+    " Retrieve the meta-data for the Main list. "
+    _MainsMeta: _ListMeta
+    " Retrieve the meta-data for the PostCategory list. "
+    _PostCategoriesMeta: _ListMeta
+    " Retrieve the meta-data for the Post list. "
+    _PostsMeta: _ListMeta
+    " Retrieve the meta-data for the SmallBuild list. "
+    _SmallBuildsMeta: _ListMeta
+    " Retrieve the meta-data for the User list. "
+    _UsersMeta: _ListMeta
+    " Retrieve the meta-data for the UslugiPage list. "
+    _UslugiPagesMeta: _ListMeta
+    " Retrieve the meta-data for the Uslugi list. "
+    _UslugisMeta: _ListMeta
+    " Perform a meta-query on all About items which match the where clause. "
+    _allAboutsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortAboutsBy!], where: AboutWhereInput): _QueryMeta
+    " Perform a meta-query on all BuildObject items which match the where clause. "
+    _allBuildObjectsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortBuildObjectsBy!], where: BuildObjectWhereInput): _QueryMeta
+    " Perform a meta-query on all ConstructionItem items which match the where clause. "
+    _allConstructionItemsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionItemsBy!], where: ConstructionItemWhereInput): _QueryMeta
+    " Perform a meta-query on all ConstructionPortfolio items which match the where clause. "
+    _allConstructionPortfoliosMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionPortfoliosBy!], where: ConstructionPortfolioWhereInput): _QueryMeta
+    " Perform a meta-query on all Construction items which match the where clause. "
+    _allConstructionsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionsBy!], where: ConstructionWhereInput): _QueryMeta
+    " Perform a meta-query on all DefObjPage items which match the where clause. "
+    _allDefObjPagesMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortDefObjPagesBy!], where: DefObjPageWhereInput): _QueryMeta
+    " Perform a meta-query on all DefObj items which match the where clause. "
+    _allDefObjsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortDefObjsBy!], where: DefObjWhereInput): _QueryMeta
+    " Perform a meta-query on all Main items which match the where clause. "
+    _allMainsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortMainsBy!], where: MainWhereInput): _QueryMeta
+    " Perform a meta-query on all PostCategory items which match the where clause. "
+    _allPostCategoriesMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortPostCategoriesBy!], where: PostCategoryWhereInput): _QueryMeta
+    " Perform a meta-query on all Post items which match the where clause. "
+    _allPostsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortPostsBy!], where: PostWhereInput): _QueryMeta
+    " Perform a meta-query on all SmallBuild items which match the where clause. "
+    _allSmallBuildsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortSmallBuildsBy!], where: SmallBuildWhereInput): _QueryMeta
+    " Perform a meta-query on all User items which match the where clause. "
+    _allUsersMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUsersBy!], where: UserWhereInput): _QueryMeta
+    " Perform a meta-query on all UslugiPage items which match the where clause. "
+    _allUslugiPagesMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUslugiPagesBy!], where: UslugiPageWhereInput): _QueryMeta
+    " Perform a meta-query on all Uslugi items which match the where clause. "
+    _allUslugisMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUslugisBy!], where: UslugiWhereInput): _QueryMeta
+    " Retrieve the meta-data for all lists. "
+    _ksListsMeta(where: _ksListsMetaInput): [_ListMeta]
+    " Search for all About items which match the where clause. "
+    allAbouts(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortAboutsBy!], where: AboutWhereInput): [About]
+    " Search for all BuildObject items which match the where clause. "
+    allBuildObjects(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortBuildObjectsBy!], where: BuildObjectWhereInput): [BuildObject]
+    " Search for all ConstructionItem items which match the where clause. "
+    allConstructionItems(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionItemsBy!], where: ConstructionItemWhereInput): [ConstructionItem]
+    " Search for all ConstructionPortfolio items which match the where clause. "
+    allConstructionPortfolios(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionPortfoliosBy!], where: ConstructionPortfolioWhereInput): [ConstructionPortfolio]
+    " Search for all Construction items which match the where clause. "
+    allConstructions(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortConstructionsBy!], where: ConstructionWhereInput): [Construction]
+    " Search for all DefObjPage items which match the where clause. "
+    allDefObjPages(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortDefObjPagesBy!], where: DefObjPageWhereInput): [DefObjPage]
+    " Search for all DefObj items which match the where clause. "
+    allDefObjs(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortDefObjsBy!], where: DefObjWhereInput): [DefObj]
+    " Search for all Main items which match the where clause. "
+    allMains(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortMainsBy!], where: MainWhereInput): [Main]
+    " Search for all PostCategory items which match the where clause. "
+    allPostCategories(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortPostCategoriesBy!], where: PostCategoryWhereInput): [PostCategory]
+    " Search for all Post items which match the where clause. "
+    allPosts(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortPostsBy!], where: PostWhereInput): [Post]
+    " Search for all SmallBuild items which match the where clause. "
+    allSmallBuilds(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortSmallBuildsBy!], where: SmallBuildWhereInput): [SmallBuild]
+    " Search for all User items which match the where clause. "
+    allUsers(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUsersBy!], where: UserWhereInput): [User]
+    " Search for all UslugiPage items which match the where clause. "
+    allUslugiPages(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUslugiPagesBy!], where: UslugiPageWhereInput): [UslugiPage]
+    " Search for all Uslugi items which match the where clause. "
+    allUslugis(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUslugisBy!], where: UslugiWhereInput): [Uslugi]
+    "The version of the Keystone application serving this API."
+    appVersion: String
+    authenticatedUser: User
+}
+
+" A keystone list "
+type SmallBuild {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the SmallBuild List config, or
+    2. As an alias to the field set on 'labelField' in the SmallBuild List config, or
+    3. As an alias to a 'name' field on the SmallBuild List (if one exists), or
+    4. As an alias to the 'id' field on the SmallBuild List.
+    """
+    _label_: String
+    description: String
+    docs: CloudinaryImage_File
+    id: ID
+    image: CloudinaryImage_File
+    title: String
+    title__text: String
+}
+
+" A keystone list "
+type User {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the User List config, or
+    2. As an alias to the field set on 'labelField' in the User List config, or
+    3. As an alias to a 'name' field on the User List (if one exists), or
+    4. As an alias to the 'id' field on the User List.
+    """
+    _label_: String
+    avatar: File
+    email: String
+    id: ID
+    isAdmin: Boolean
+    name: String
+    organization: String
+    password_is_set: Boolean
+}
+
+" A keystone list "
+type Uslugi {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the Uslugi List config, or
+    2. As an alias to the field set on 'labelField' in the Uslugi List config, or
+    3. As an alias to a 'name' field on the Uslugi List (if one exists), or
+    4. As an alias to the 'id' field on the Uslugi List.
+    """
+    _label_: String
+    _postCategoriesMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUslugiPagesBy!], where: UslugiPageWhereInput): _QueryMeta
+    content: String
+    description: String
+    id: ID
+    image: CloudinaryImage_File
+    images: CloudinaryGallery
+    name: String
+    postCategories(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUslugiPagesBy!], where: UslugiPageWhereInput): [UslugiPage!]!
+    price: String
+    url: String
+}
+
+" A keystone list "
+type UslugiPage {
+    """
+
+    This virtual field will be resolved in one of the following ways (in this order):
+    1. Execution of 'labelResolver' set on the UslugiPage List config, or
+    2. As an alias to the field set on 'labelField' in the UslugiPage List config, or
+    3. As an alias to a 'name' field on the UslugiPage List (if one exists), or
+    4. As an alias to the 'id' field on the UslugiPage List.
+    """
+    _label_: String
+    _postsMeta(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUslugisBy!], where: UslugiWhereInput): _QueryMeta
+    description: String
+    id: ID
+    image: CloudinaryImage_File
+    posts(first: Int, orderBy: String, search: String, skip: Int, sortBy: [SortUslugisBy!], where: UslugiWhereInput): [Uslugi!]!
+    title: String
+    url: String
+}
+
+type _ListAccess {
+    """
+
+    Access Control settings for the currently logged in (or anonymous)
+    user when performing 'auth' operations.
+    """
+    auth: JSON
+    """
+
+    Access Control settings for the currently logged in (or anonymous)
+    user when performing 'create' operations.
+    NOTE: 'create' can only return a Boolean.
+    It is not possible to specify a declarative Where clause for this
+    operation
+    """
+    create: Boolean
+    """
+
+    Access Control settings for the currently logged in (or anonymous)
+    user when performing 'delete' operations.
+    """
+    delete: JSON
+    """
+
+    Access Control settings for the currently logged in (or anonymous)
+    user when performing 'read' operations.
+    """
+    read: JSON
+    """
+
+    Access Control settings for the currently logged in (or anonymous)
+    user when performing 'update' operations.
+    """
+    update: JSON
+}
+
+type _ListInputTypes {
+    "Create mutation input type name"
+    createInput: String
+    "Create many mutation input type name"
+    createManyInput: String
+    "Update mutation name input"
+    updateInput: String
+    "Update many mutation name input"
+    updateManyInput: String
+    "Input type for matching multiple items"
+    whereInput: String
+    "Input type for matching a unique item"
+    whereUniqueInput: String
+}
+
+type _ListMeta {
+    "Access control configuration for the currently authenticated request"
+    access: _ListAccess
+    "The list's user-facing description"
+    description: String
+    "The Keystone list key"
+    key: String
+    "The list's display name in the Admin UI"
+    label: String
+    "The Keystone List name"
+    name: String @deprecated(reason : "Use `key` instead")
+    "The list's data path"
+    path: String
+    "The list's plural display name"
+    plural: String
+    "Information on the generated GraphQL schema"
+    schema: _ListSchema
+    "The list's singular display name"
+    singular: String
+}
+
+type _ListMutations {
+    "Create mutation name"
+    create: String
+    "Create many mutation name"
+    createMany: String
+    "Delete mutation name"
+    delete: String
+    "Delete many mutation name"
+    deleteMany: String
+    "Update mutation name"
+    update: String
+    "Update many mutation name"
+    updateMany: String
+}
+
+type _ListQueries {
+    "Single-item query name"
+    item: String
+    "All-items query name"
+    list: String
+    "List metadata query name"
+    meta: String
+}
+
+type _ListSchema {
+    "Information about fields defined on this list"
+    fields(where: _ListSchemaFieldsInput): [_ListSchemaFields]
+    "Top-level GraphQL input types"
+    inputTypes: _ListInputTypes
+    "Top-level GraphQL mutation names"
+    mutations: _ListMutations
+    """
+
+    Top level GraphQL query names which either return this type, or
+    provide aggregate information about this type
+    """
+    queries: _ListQueries
+    """
+
+    Information about fields on other types which return this type, or
+    provide aggregate information about this type
+    """
+    relatedFields: [_ListSchemaRelatedFields]
+    "The typename as used in GraphQL queries"
+    type: String
+}
+
+type _ListSchemaFields {
+    "The name of the field in its list"
+    name: String @deprecated(reason : "Use `path` instead")
+    "The path of the field in its list"
+    path: String
+    "The field type (ie, Checkbox, Text, etc)"
+    type: String
+}
+
+type _ListSchemaRelatedFields {
+    "A list of GraphQL field names"
+    fields: [String]
+    "The typename as used in GraphQL queries"
+    type: String
+}
+
+type _QueryMeta {
+    count: Int
+}
+
+type authenticateUserOutput {
+    " Retrieve information on the newly authenticated User here. "
+    item: User
+    " Used to make subsequent authenticated requests by setting this token in a header: 'Authorization: Bearer <token>'. "
+    token: String
+}
+
+type unauthenticateUserOutput {
+    """
+
+    `true` when unauthentication succeeds.
+    NOTE: unauthentication always succeeds when the request has an invalid or missing authentication token.
+    """
+    success: Boolean
+}
+
+enum CacheControlScope {
+    PRIVATE
+    PUBLIC
+}
+
+enum PostStatusType {
+    draft
+    published
+}
+
+enum SortAboutsBy {
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    title_ASC
+    title_DESC
+    title__text_ASC
+    title__text_DESC
+}
+
+enum SortBuildObjectsBy {
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    title_ASC
+    title_DESC
+}
+
+enum SortConstructionItemsBy {
+    category_ASC
+    category_DESC
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    name_ASC
+    name_DESC
+    subtext_ASC
+    subtext_DESC
+}
+
+enum SortConstructionPortfoliosBy {
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    publishedDate_ASC
+    publishedDate_DESC
+    title_ASC
+    title_DESC
+    title__text_ASC
+    title__text_DESC
+}
+
+enum SortConstructionsBy {
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    items_ASC
+    items_DESC
+    subtext_ASC
+    subtext_DESC
+    title_ASC
+    title_DESC
+    url_ASC
+    url_DESC
+}
+
+enum SortDefObjPagesBy {
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    posts_ASC
+    posts_DESC
+    title_ASC
+    title_DESC
+    url_ASC
+    url_DESC
+}
+
+enum SortDefObjsBy {
+    content_ASC
+    content_DESC
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    name_ASC
+    name_DESC
+    postCategories_ASC
+    postCategories_DESC
+    url_ASC
+    url_DESC
+}
+
+enum SortMainsBy {
+    id_ASC
+    id_DESC
+    subtext_ASC
+    subtext_DESC
+    title_ASC
+    title_DESC
+}
+
+enum SortPostCategoriesBy {
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    name_ASC
+    name_DESC
+    slug_ASC
+    slug_DESC
+}
+
+enum SortPostsBy {
+    author_ASC
+    author_DESC
+    content_ASC
+    content_DESC
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    postCategories_ASC
+    postCategories_DESC
+    publishedDate_ASC
+    publishedDate_DESC
+    slug_ASC
+    slug_DESC
+    status_ASC
+    status_DESC
+    title_ASC
+    title_DESC
+}
+
+enum SortSmallBuildsBy {
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    title_ASC
+    title_DESC
+    title__text_ASC
+    title__text_DESC
+}
+
+enum SortUsersBy {
+    email_ASC
+    email_DESC
+    id_ASC
+    id_DESC
+    isAdmin_ASC
+    isAdmin_DESC
+    name_ASC
+    name_DESC
+    organization_ASC
+    organization_DESC
+}
+
+enum SortUslugiPagesBy {
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    posts_ASC
+    posts_DESC
+    title_ASC
+    title_DESC
+    url_ASC
+    url_DESC
+}
+
+enum SortUslugisBy {
+    content_ASC
+    content_DESC
+    description_ASC
+    description_DESC
+    id_ASC
+    id_DESC
+    name_ASC
+    name_DESC
+    postCategories_ASC
+    postCategories_DESC
+    price_ASC
+    price_DESC
+    url_ASC
+    url_DESC
+}
+
+input AboutCreateInput {
+    description: String
+    docs: Upload
+    image: Upload
+    photos: CloudinaryGalleryInput
+    title: String
+    title__text: String
+}
+
+input AboutUpdateInput {
+    description: String
+    docs: Upload
+    image: Upload
+    photos: CloudinaryGalleryInput
+    title: String
+    title__text: String
+}
+
+input AboutWhereInput {
+    AND: [AboutWhereInput]
+    OR: [AboutWhereInput]
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    docs: String
+    docs_in: [String]
+    docs_not: String
+    docs_not_in: [String]
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    photos: String
+    photos_contains: String
+    photos_ends_with: String
+    photos_in: [String]
+    photos_not: String
+    photos_not_contains: String
+    photos_not_ends_with: String
+    photos_not_in: [String]
+    photos_not_starts_with: String
+    photos_starts_with: String
+    title: String
+    title__text: String
+    title__text_contains: String
+    title__text_contains_i: String
+    title__text_ends_with: String
+    title__text_ends_with_i: String
+    title__text_i: String
+    title__text_in: [String]
+    title__text_not: String
+    title__text_not_contains: String
+    title__text_not_contains_i: String
+    title__text_not_ends_with: String
+    title__text_not_ends_with_i: String
+    title__text_not_i: String
+    title__text_not_in: [String]
+    title__text_not_starts_with: String
+    title__text_not_starts_with_i: String
+    title__text_starts_with: String
+    title__text_starts_with_i: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+}
+
+input AboutWhereUniqueInput {
+    id: ID!
+}
+
+input AboutsCreateInput {
+    data: AboutCreateInput
+}
+
+input AboutsUpdateInput {
+    data: AboutUpdateInput
+    id: ID!
+}
+
+input BuildObjectCreateInput {
+    description: String
+    image: Upload
+    images: Upload
+    title: String
+}
+
+input BuildObjectUpdateInput {
+    description: String
+    image: Upload
+    images: Upload
+    title: String
+}
+
+input BuildObjectWhereInput {
+    AND: [BuildObjectWhereInput]
+    OR: [BuildObjectWhereInput]
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    images: String
+    images_in: [String]
+    images_not: String
+    images_not_in: [String]
+    title: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+}
+
+input BuildObjectWhereUniqueInput {
+    id: ID!
+}
+
+input BuildObjectsCreateInput {
+    data: BuildObjectCreateInput
+}
+
+input BuildObjectsUpdateInput {
+    data: BuildObjectUpdateInput
+    id: ID!
+}
+
+input CloudinaryGalleryImageInput {
+    caption: String
+    image: Upload
+}
+
+input CloudinaryGalleryInput {
+    images: [CloudinaryGalleryImageInput]
+}
+
+"""
+
+Mirrors the formatting options [Cloudinary provides](https://cloudinary.com/documentation/image_transformation_reference).
+All options are strings as they ultimately end up in a URL.
+"""
+input CloudinaryImageFormat {
+    angle: String
+    aspect_ratio: String
+    background: String
+    border: String
+    color: String
+    color_space: String
+    crop: String
+    default_image: String
+    delay: String
+    density: String
+    dpr: String
+    effect: String
+    fetch_format: String
+    flags: String
+    format: String
+    gravity: String
+    height: String
+    opacity: String
+    overlay: String
+    page: String
+    " Rewrites the filename to be this pretty string. Do not include `/` or `.` "
+    prettyName: String
+    quality: String
+    radius: String
+    transformation: String
+    underlay: String
+    width: String
+    x: String
+    y: String
+    zoom: String
+}
+
+input ConstructionCreateInput {
+    description: String
+    image: Upload
+    images: Upload
+    items: ConstructionItemRelateToManyInput
+    subtext: String
+    title: String
+    url: String
+}
+
+input ConstructionItemCreateInput {
+    category: ConstructionRelateToManyInput
+    description: String
+    image: Upload
+    images: Upload
+    name: String
+    subtext: String
+}
+
+input ConstructionItemRelateToManyInput {
+    connect: [ConstructionItemWhereUniqueInput]
+    create: [ConstructionItemCreateInput]
+    disconnect: [ConstructionItemWhereUniqueInput]
+    disconnectAll: Boolean
+}
+
+input ConstructionItemUpdateInput {
+    category: ConstructionRelateToManyInput
+    description: String
+    image: Upload
+    images: Upload
+    name: String
+    subtext: String
+}
+
+input ConstructionItemWhereInput {
+    AND: [ConstructionItemWhereInput]
+    OR: [ConstructionItemWhereInput]
+    " condition must be true for all nodes "
+    category_every: ConstructionWhereInput
+    " condition must be false for all nodes "
+    category_none: ConstructionWhereInput
+    " condition must be true for at least 1 node "
+    category_some: ConstructionWhereInput
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    images: String
+    images_in: [String]
+    images_not: String
+    images_not_in: [String]
+    name: String
+    name_contains: String
+    name_contains_i: String
+    name_ends_with: String
+    name_ends_with_i: String
+    name_i: String
+    name_in: [String]
+    name_not: String
+    name_not_contains: String
+    name_not_contains_i: String
+    name_not_ends_with: String
+    name_not_ends_with_i: String
+    name_not_i: String
+    name_not_in: [String]
+    name_not_starts_with: String
+    name_not_starts_with_i: String
+    name_starts_with: String
+    name_starts_with_i: String
+    subtext: String
+    subtext_contains: String
+    subtext_contains_i: String
+    subtext_ends_with: String
+    subtext_ends_with_i: String
+    subtext_i: String
+    subtext_in: [String]
+    subtext_not: String
+    subtext_not_contains: String
+    subtext_not_contains_i: String
+    subtext_not_ends_with: String
+    subtext_not_ends_with_i: String
+    subtext_not_i: String
+    subtext_not_in: [String]
+    subtext_not_starts_with: String
+    subtext_not_starts_with_i: String
+    subtext_starts_with: String
+    subtext_starts_with_i: String
+}
+
+input ConstructionItemWhereUniqueInput {
+    id: ID!
+}
+
+input ConstructionItemsCreateInput {
+    data: ConstructionItemCreateInput
+}
+
+input ConstructionItemsUpdateInput {
+    data: ConstructionItemUpdateInput
+    id: ID!
+}
+
+input ConstructionPortfolioCreateInput {
+    description: String
+    image: Upload
+    images: CloudinaryGalleryInput
+    publishedDate: DateTime
+    title: String
+    title__text: String
+}
+
+input ConstructionPortfolioUpdateInput {
+    description: String
+    image: Upload
+    images: CloudinaryGalleryInput
+    publishedDate: DateTime
+    title: String
+    title__text: String
+}
+
+input ConstructionPortfolioWhereInput {
+    AND: [ConstructionPortfolioWhereInput]
+    OR: [ConstructionPortfolioWhereInput]
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    images: String
+    images_contains: String
+    images_ends_with: String
+    images_in: [String]
+    images_not: String
+    images_not_contains: String
+    images_not_ends_with: String
+    images_not_in: [String]
+    images_not_starts_with: String
+    images_starts_with: String
+    publishedDate: DateTime
+    publishedDate_gt: DateTime
+    publishedDate_gte: DateTime
+    publishedDate_in: [DateTime]
+    publishedDate_lt: DateTime
+    publishedDate_lte: DateTime
+    publishedDate_not: DateTime
+    publishedDate_not_in: [DateTime]
+    title: String
+    title__text: String
+    title__text_contains: String
+    title__text_contains_i: String
+    title__text_ends_with: String
+    title__text_ends_with_i: String
+    title__text_i: String
+    title__text_in: [String]
+    title__text_not: String
+    title__text_not_contains: String
+    title__text_not_contains_i: String
+    title__text_not_ends_with: String
+    title__text_not_ends_with_i: String
+    title__text_not_i: String
+    title__text_not_in: [String]
+    title__text_not_starts_with: String
+    title__text_not_starts_with_i: String
+    title__text_starts_with: String
+    title__text_starts_with_i: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+}
+
+input ConstructionPortfolioWhereUniqueInput {
+    id: ID!
+}
+
+input ConstructionPortfoliosCreateInput {
+    data: ConstructionPortfolioCreateInput
+}
+
+input ConstructionPortfoliosUpdateInput {
+    data: ConstructionPortfolioUpdateInput
+    id: ID!
+}
+
+input ConstructionRelateToManyInput {
+    connect: [ConstructionWhereUniqueInput]
+    create: [ConstructionCreateInput]
+    disconnect: [ConstructionWhereUniqueInput]
+    disconnectAll: Boolean
+}
+
+input ConstructionUpdateInput {
+    description: String
+    image: Upload
+    images: Upload
+    items: ConstructionItemRelateToManyInput
+    subtext: String
+    title: String
+    url: String
+}
+
+input ConstructionWhereInput {
+    AND: [ConstructionWhereInput]
+    OR: [ConstructionWhereInput]
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    images: String
+    images_in: [String]
+    images_not: String
+    images_not_in: [String]
+    " condition must be true for all nodes "
+    items_every: ConstructionItemWhereInput
+    " condition must be false for all nodes "
+    items_none: ConstructionItemWhereInput
+    " condition must be true for at least 1 node "
+    items_some: ConstructionItemWhereInput
+    subtext: String
+    subtext_contains: String
+    subtext_contains_i: String
+    subtext_ends_with: String
+    subtext_ends_with_i: String
+    subtext_i: String
+    subtext_in: [String]
+    subtext_not: String
+    subtext_not_contains: String
+    subtext_not_contains_i: String
+    subtext_not_ends_with: String
+    subtext_not_ends_with_i: String
+    subtext_not_i: String
+    subtext_not_in: [String]
+    subtext_not_starts_with: String
+    subtext_not_starts_with_i: String
+    subtext_starts_with: String
+    subtext_starts_with_i: String
+    title: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+    url: String
+    url_contains: String
+    url_contains_i: String
+    url_ends_with: String
+    url_ends_with_i: String
+    url_i: String
+    url_in: [String]
+    url_not: String
+    url_not_contains: String
+    url_not_contains_i: String
+    url_not_ends_with: String
+    url_not_ends_with_i: String
+    url_not_i: String
+    url_not_in: [String]
+    url_not_starts_with: String
+    url_not_starts_with_i: String
+    url_starts_with: String
+    url_starts_with_i: String
+}
+
+input ConstructionWhereUniqueInput {
+    id: ID!
+}
+
+input ConstructionsCreateInput {
+    data: ConstructionCreateInput
+}
+
+input ConstructionsUpdateInput {
+    data: ConstructionUpdateInput
+    id: ID!
+}
+
+input DefObjCreateInput {
+    content: String
+    description: String
+    image: Upload
+    images: CloudinaryGalleryInput
+    name: String
+    postCategories: DefObjPageRelateToManyInput
+    url: String
+}
+
+input DefObjPageCreateInput {
+    description: String
+    image: Upload
+    posts: DefObjRelateToManyInput
+    title: String
+    url: String
+}
+
+input DefObjPageRelateToManyInput {
+    connect: [DefObjPageWhereUniqueInput]
+    create: [DefObjPageCreateInput]
+    disconnect: [DefObjPageWhereUniqueInput]
+    disconnectAll: Boolean
+}
+
+input DefObjPageUpdateInput {
+    description: String
+    image: Upload
+    posts: DefObjRelateToManyInput
+    title: String
+    url: String
+}
+
+input DefObjPageWhereInput {
+    AND: [DefObjPageWhereInput]
+    OR: [DefObjPageWhereInput]
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    " condition must be true for all nodes "
+    posts_every: DefObjWhereInput
+    " condition must be false for all nodes "
+    posts_none: DefObjWhereInput
+    " condition must be true for at least 1 node "
+    posts_some: DefObjWhereInput
+    title: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+    url: String
+    url_contains: String
+    url_contains_i: String
+    url_ends_with: String
+    url_ends_with_i: String
+    url_i: String
+    url_in: [String]
+    url_not: String
+    url_not_contains: String
+    url_not_contains_i: String
+    url_not_ends_with: String
+    url_not_ends_with_i: String
+    url_not_i: String
+    url_not_in: [String]
+    url_not_starts_with: String
+    url_not_starts_with_i: String
+    url_starts_with: String
+    url_starts_with_i: String
+}
+
+input DefObjPageWhereUniqueInput {
+    id: ID!
+}
+
+input DefObjPagesCreateInput {
+    data: DefObjPageCreateInput
+}
+
+input DefObjPagesUpdateInput {
+    data: DefObjPageUpdateInput
+    id: ID!
+}
+
+input DefObjRelateToManyInput {
+    connect: [DefObjWhereUniqueInput]
+    create: [DefObjCreateInput]
+    disconnect: [DefObjWhereUniqueInput]
+    disconnectAll: Boolean
+}
+
+input DefObjUpdateInput {
+    content: String
+    description: String
+    image: Upload
+    images: CloudinaryGalleryInput
+    name: String
+    postCategories: DefObjPageRelateToManyInput
+    url: String
+}
+
+input DefObjWhereInput {
+    AND: [DefObjWhereInput]
+    OR: [DefObjWhereInput]
+    content: String
+    content_contains: String
+    content_contains_i: String
+    content_ends_with: String
+    content_ends_with_i: String
+    content_i: String
+    content_in: [String]
+    content_not: String
+    content_not_contains: String
+    content_not_contains_i: String
+    content_not_ends_with: String
+    content_not_ends_with_i: String
+    content_not_i: String
+    content_not_in: [String]
+    content_not_starts_with: String
+    content_not_starts_with_i: String
+    content_starts_with: String
+    content_starts_with_i: String
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    images: String
+    images_contains: String
+    images_ends_with: String
+    images_in: [String]
+    images_not: String
+    images_not_contains: String
+    images_not_ends_with: String
+    images_not_in: [String]
+    images_not_starts_with: String
+    images_starts_with: String
+    name: String
+    name_contains: String
+    name_contains_i: String
+    name_ends_with: String
+    name_ends_with_i: String
+    name_i: String
+    name_in: [String]
+    name_not: String
+    name_not_contains: String
+    name_not_contains_i: String
+    name_not_ends_with: String
+    name_not_ends_with_i: String
+    name_not_i: String
+    name_not_in: [String]
+    name_not_starts_with: String
+    name_not_starts_with_i: String
+    name_starts_with: String
+    name_starts_with_i: String
+    " condition must be true for all nodes "
+    postCategories_every: DefObjPageWhereInput
+    " condition must be false for all nodes "
+    postCategories_none: DefObjPageWhereInput
+    " condition must be true for at least 1 node "
+    postCategories_some: DefObjPageWhereInput
+    url: String
+    url_contains: String
+    url_contains_i: String
+    url_ends_with: String
+    url_ends_with_i: String
+    url_i: String
+    url_in: [String]
+    url_not: String
+    url_not_contains: String
+    url_not_contains_i: String
+    url_not_ends_with: String
+    url_not_ends_with_i: String
+    url_not_i: String
+    url_not_in: [String]
+    url_not_starts_with: String
+    url_not_starts_with_i: String
+    url_starts_with: String
+    url_starts_with_i: String
+}
+
+input DefObjWhereUniqueInput {
+    id: ID!
+}
+
+input DefObjsCreateInput {
+    data: DefObjCreateInput
+}
+
+input DefObjsUpdateInput {
+    data: DefObjUpdateInput
+    id: ID!
+}
+
+input MainCreateInput {
+    subtext: String
+    title: String
+}
+
+input MainUpdateInput {
+    subtext: String
+    title: String
+}
+
+input MainWhereInput {
+    AND: [MainWhereInput]
+    OR: [MainWhereInput]
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    subtext: String
+    subtext_contains: String
+    subtext_contains_i: String
+    subtext_ends_with: String
+    subtext_ends_with_i: String
+    subtext_i: String
+    subtext_in: [String]
+    subtext_not: String
+    subtext_not_contains: String
+    subtext_not_contains_i: String
+    subtext_not_ends_with: String
+    subtext_not_ends_with_i: String
+    subtext_not_i: String
+    subtext_not_in: [String]
+    subtext_not_starts_with: String
+    subtext_not_starts_with_i: String
+    subtext_starts_with: String
+    subtext_starts_with_i: String
+    title: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+}
+
+input MainWhereUniqueInput {
+    id: ID!
+}
+
+input MainsCreateInput {
+    data: MainCreateInput
+}
+
+input MainsUpdateInput {
+    data: MainUpdateInput
+    id: ID!
+}
+
+input PostCategoriesCreateInput {
+    data: PostCategoryCreateInput
+}
+
+input PostCategoriesUpdateInput {
+    data: PostCategoryUpdateInput
+    id: ID!
+}
+
+input PostCategoryCreateInput {
+    description: String
+    name: String
+    slug: String
+}
+
+input PostCategoryRelateToManyInput {
+    connect: [PostCategoryWhereUniqueInput]
+    create: [PostCategoryCreateInput]
+    disconnect: [PostCategoryWhereUniqueInput]
+    disconnectAll: Boolean
+}
+
+input PostCategoryUpdateInput {
+    description: String
+    name: String
+    slug: String
+}
+
+input PostCategoryWhereInput {
+    AND: [PostCategoryWhereInput]
+    OR: [PostCategoryWhereInput]
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    name: String
+    name_contains: String
+    name_contains_i: String
+    name_ends_with: String
+    name_ends_with_i: String
+    name_i: String
+    name_in: [String]
+    name_not: String
+    name_not_contains: String
+    name_not_contains_i: String
+    name_not_ends_with: String
+    name_not_ends_with_i: String
+    name_not_i: String
+    name_not_in: [String]
+    name_not_starts_with: String
+    name_not_starts_with_i: String
+    name_starts_with: String
+    name_starts_with_i: String
+    slug: String
+    slug_contains: String
+    slug_contains_i: String
+    slug_ends_with: String
+    slug_ends_with_i: String
+    slug_i: String
+    slug_in: [String]
+    slug_not: String
+    slug_not_contains: String
+    slug_not_contains_i: String
+    slug_not_ends_with: String
+    slug_not_ends_with_i: String
+    slug_not_i: String
+    slug_not_in: [String]
+    slug_not_starts_with: String
+    slug_not_starts_with_i: String
+    slug_starts_with: String
+    slug_starts_with_i: String
+}
+
+input PostCategoryWhereUniqueInput {
+    id: ID!
+}
+
+input PostCreateInput {
+    author: UserRelateToOneInput
+    content: String
+    description: String
+    image: Upload
+    postCategories: PostCategoryRelateToManyInput
+    publishedDate: DateTime
+    slug: String
+    status: PostStatusType
+    title: String
+}
+
+input PostUpdateInput {
+    author: UserRelateToOneInput
+    content: String
+    description: String
+    image: Upload
+    postCategories: PostCategoryRelateToManyInput
+    publishedDate: DateTime
+    slug: String
+    status: PostStatusType
+    title: String
+}
+
+input PostWhereInput {
+    AND: [PostWhereInput]
+    OR: [PostWhereInput]
+    author: UserWhereInput
+    author_is_null: Boolean
+    content: String
+    content_contains: String
+    content_contains_i: String
+    content_ends_with: String
+    content_ends_with_i: String
+    content_i: String
+    content_in: [String]
+    content_not: String
+    content_not_contains: String
+    content_not_contains_i: String
+    content_not_ends_with: String
+    content_not_ends_with_i: String
+    content_not_i: String
+    content_not_in: [String]
+    content_not_starts_with: String
+    content_not_starts_with_i: String
+    content_starts_with: String
+    content_starts_with_i: String
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    " condition must be true for all nodes "
+    postCategories_every: PostCategoryWhereInput
+    " condition must be false for all nodes "
+    postCategories_none: PostCategoryWhereInput
+    " condition must be true for at least 1 node "
+    postCategories_some: PostCategoryWhereInput
+    publishedDate: DateTime
+    publishedDate_gt: DateTime
+    publishedDate_gte: DateTime
+    publishedDate_in: [DateTime]
+    publishedDate_lt: DateTime
+    publishedDate_lte: DateTime
+    publishedDate_not: DateTime
+    publishedDate_not_in: [DateTime]
+    slug: String
+    slug_contains: String
+    slug_contains_i: String
+    slug_ends_with: String
+    slug_ends_with_i: String
+    slug_i: String
+    slug_in: [String]
+    slug_not: String
+    slug_not_contains: String
+    slug_not_contains_i: String
+    slug_not_ends_with: String
+    slug_not_ends_with_i: String
+    slug_not_i: String
+    slug_not_in: [String]
+    slug_not_starts_with: String
+    slug_not_starts_with_i: String
+    slug_starts_with: String
+    slug_starts_with_i: String
+    status: PostStatusType
+    status_in: [PostStatusType]
+    status_not: PostStatusType
+    status_not_in: [PostStatusType]
+    title: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+}
+
+input PostWhereUniqueInput {
+    id: ID!
+}
+
+input PostsCreateInput {
+    data: PostCreateInput
+}
+
+input PostsUpdateInput {
+    data: PostUpdateInput
+    id: ID!
+}
+
+input SmallBuildCreateInput {
+    description: String
+    docs: Upload
+    image: Upload
+    title: String
+    title__text: String
+}
+
+input SmallBuildUpdateInput {
+    description: String
+    docs: Upload
+    image: Upload
+    title: String
+    title__text: String
+}
+
+input SmallBuildWhereInput {
+    AND: [SmallBuildWhereInput]
+    OR: [SmallBuildWhereInput]
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    docs: String
+    docs_in: [String]
+    docs_not: String
+    docs_not_in: [String]
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    title: String
+    title__text: String
+    title__text_contains: String
+    title__text_contains_i: String
+    title__text_ends_with: String
+    title__text_ends_with_i: String
+    title__text_i: String
+    title__text_in: [String]
+    title__text_not: String
+    title__text_not_contains: String
+    title__text_not_contains_i: String
+    title__text_not_ends_with: String
+    title__text_not_ends_with_i: String
+    title__text_not_i: String
+    title__text_not_in: [String]
+    title__text_not_starts_with: String
+    title__text_not_starts_with_i: String
+    title__text_starts_with: String
+    title__text_starts_with_i: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+}
+
+input SmallBuildWhereUniqueInput {
+    id: ID!
+}
+
+input SmallBuildsCreateInput {
+    data: SmallBuildCreateInput
+}
+
+input SmallBuildsUpdateInput {
+    data: SmallBuildUpdateInput
+    id: ID!
+}
+
+input UserCreateInput {
+    avatar: Upload
+    email: String
+    isAdmin: Boolean
+    name: String
+    organization: String
+    password: String
+}
+
+input UserRelateToOneInput {
+    connect: UserWhereUniqueInput
+    create: UserCreateInput
+    disconnect: UserWhereUniqueInput
+    disconnectAll: Boolean
+}
+
+input UserUpdateInput {
+    avatar: Upload
+    email: String
+    isAdmin: Boolean
+    name: String
+    organization: String
+    password: String
+}
+
+input UserWhereInput {
+    AND: [UserWhereInput]
+    OR: [UserWhereInput]
+    avatar: String
+    avatar_in: [String]
+    avatar_not: String
+    avatar_not_in: [String]
+    email: String
+    email_contains: String
+    email_contains_i: String
+    email_ends_with: String
+    email_ends_with_i: String
+    email_i: String
+    email_in: [String]
+    email_not: String
+    email_not_contains: String
+    email_not_contains_i: String
+    email_not_ends_with: String
+    email_not_ends_with_i: String
+    email_not_i: String
+    email_not_in: [String]
+    email_not_starts_with: String
+    email_not_starts_with_i: String
+    email_starts_with: String
+    email_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    isAdmin: Boolean
+    isAdmin_not: Boolean
+    name: String
+    name_contains: String
+    name_contains_i: String
+    name_ends_with: String
+    name_ends_with_i: String
+    name_i: String
+    name_in: [String]
+    name_not: String
+    name_not_contains: String
+    name_not_contains_i: String
+    name_not_ends_with: String
+    name_not_ends_with_i: String
+    name_not_i: String
+    name_not_in: [String]
+    name_not_starts_with: String
+    name_not_starts_with_i: String
+    name_starts_with: String
+    name_starts_with_i: String
+    organization: String
+    organization_contains: String
+    organization_contains_i: String
+    organization_ends_with: String
+    organization_ends_with_i: String
+    organization_i: String
+    organization_in: [String]
+    organization_not: String
+    organization_not_contains: String
+    organization_not_contains_i: String
+    organization_not_ends_with: String
+    organization_not_ends_with_i: String
+    organization_not_i: String
+    organization_not_in: [String]
+    organization_not_starts_with: String
+    organization_not_starts_with_i: String
+    organization_starts_with: String
+    organization_starts_with_i: String
+    password_is_set: Boolean
+}
+
+input UserWhereUniqueInput {
+    id: ID!
+}
+
+input UsersCreateInput {
+    data: UserCreateInput
+}
+
+input UsersUpdateInput {
+    data: UserUpdateInput
+    id: ID!
+}
+
+input UslugiCreateInput {
+    content: String
+    description: String
+    image: Upload
+    images: CloudinaryGalleryInput
+    name: String
+    postCategories: UslugiPageRelateToManyInput
+    price: String
+    url: String
+}
+
+input UslugiPageCreateInput {
+    description: String
+    image: Upload
+    posts: UslugiRelateToManyInput
+    title: String
+    url: String
+}
+
+input UslugiPageRelateToManyInput {
+    connect: [UslugiPageWhereUniqueInput]
+    create: [UslugiPageCreateInput]
+    disconnect: [UslugiPageWhereUniqueInput]
+    disconnectAll: Boolean
+}
+
+input UslugiPageUpdateInput {
+    description: String
+    image: Upload
+    posts: UslugiRelateToManyInput
+    title: String
+    url: String
+}
+
+input UslugiPageWhereInput {
+    AND: [UslugiPageWhereInput]
+    OR: [UslugiPageWhereInput]
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    " condition must be true for all nodes "
+    posts_every: UslugiWhereInput
+    " condition must be false for all nodes "
+    posts_none: UslugiWhereInput
+    " condition must be true for at least 1 node "
+    posts_some: UslugiWhereInput
+    title: String
+    title_contains: String
+    title_contains_i: String
+    title_ends_with: String
+    title_ends_with_i: String
+    title_i: String
+    title_in: [String]
+    title_not: String
+    title_not_contains: String
+    title_not_contains_i: String
+    title_not_ends_with: String
+    title_not_ends_with_i: String
+    title_not_i: String
+    title_not_in: [String]
+    title_not_starts_with: String
+    title_not_starts_with_i: String
+    title_starts_with: String
+    title_starts_with_i: String
+    url: String
+    url_contains: String
+    url_contains_i: String
+    url_ends_with: String
+    url_ends_with_i: String
+    url_i: String
+    url_in: [String]
+    url_not: String
+    url_not_contains: String
+    url_not_contains_i: String
+    url_not_ends_with: String
+    url_not_ends_with_i: String
+    url_not_i: String
+    url_not_in: [String]
+    url_not_starts_with: String
+    url_not_starts_with_i: String
+    url_starts_with: String
+    url_starts_with_i: String
+}
+
+input UslugiPageWhereUniqueInput {
+    id: ID!
+}
+
+input UslugiPagesCreateInput {
+    data: UslugiPageCreateInput
+}
+
+input UslugiPagesUpdateInput {
+    data: UslugiPageUpdateInput
+    id: ID!
+}
+
+input UslugiRelateToManyInput {
+    connect: [UslugiWhereUniqueInput]
+    create: [UslugiCreateInput]
+    disconnect: [UslugiWhereUniqueInput]
+    disconnectAll: Boolean
+}
+
+input UslugiUpdateInput {
+    content: String
+    description: String
+    image: Upload
+    images: CloudinaryGalleryInput
+    name: String
+    postCategories: UslugiPageRelateToManyInput
+    price: String
+    url: String
+}
+
+input UslugiWhereInput {
+    AND: [UslugiWhereInput]
+    OR: [UslugiWhereInput]
+    content: String
+    content_contains: String
+    content_contains_i: String
+    content_ends_with: String
+    content_ends_with_i: String
+    content_i: String
+    content_in: [String]
+    content_not: String
+    content_not_contains: String
+    content_not_contains_i: String
+    content_not_ends_with: String
+    content_not_ends_with_i: String
+    content_not_i: String
+    content_not_in: [String]
+    content_not_starts_with: String
+    content_not_starts_with_i: String
+    content_starts_with: String
+    content_starts_with_i: String
+    description: String
+    description_contains: String
+    description_contains_i: String
+    description_ends_with: String
+    description_ends_with_i: String
+    description_i: String
+    description_in: [String]
+    description_not: String
+    description_not_contains: String
+    description_not_contains_i: String
+    description_not_ends_with: String
+    description_not_ends_with_i: String
+    description_not_i: String
+    description_not_in: [String]
+    description_not_starts_with: String
+    description_not_starts_with_i: String
+    description_starts_with: String
+    description_starts_with_i: String
+    id: ID
+    id_in: [ID]
+    id_not: ID
+    id_not_in: [ID]
+    image: String
+    image_in: [String]
+    image_not: String
+    image_not_in: [String]
+    images: String
+    images_contains: String
+    images_ends_with: String
+    images_in: [String]
+    images_not: String
+    images_not_contains: String
+    images_not_ends_with: String
+    images_not_in: [String]
+    images_not_starts_with: String
+    images_starts_with: String
+    name: String
+    name_contains: String
+    name_contains_i: String
+    name_ends_with: String
+    name_ends_with_i: String
+    name_i: String
+    name_in: [String]
+    name_not: String
+    name_not_contains: String
+    name_not_contains_i: String
+    name_not_ends_with: String
+    name_not_ends_with_i: String
+    name_not_i: String
+    name_not_in: [String]
+    name_not_starts_with: String
+    name_not_starts_with_i: String
+    name_starts_with: String
+    name_starts_with_i: String
+    " condition must be true for all nodes "
+    postCategories_every: UslugiPageWhereInput
+    " condition must be false for all nodes "
+    postCategories_none: UslugiPageWhereInput
+    " condition must be true for at least 1 node "
+    postCategories_some: UslugiPageWhereInput
+    price: String
+    price_contains: String
+    price_contains_i: String
+    price_ends_with: String
+    price_ends_with_i: String
+    price_i: String
+    price_in: [String]
+    price_not: String
+    price_not_contains: String
+    price_not_contains_i: String
+    price_not_ends_with: String
+    price_not_ends_with_i: String
+    price_not_i: String
+    price_not_in: [String]
+    price_not_starts_with: String
+    price_not_starts_with_i: String
+    price_starts_with: String
+    price_starts_with_i: String
+    url: String
+    url_contains: String
+    url_contains_i: String
+    url_ends_with: String
+    url_ends_with_i: String
+    url_i: String
+    url_in: [String]
+    url_not: String
+    url_not_contains: String
+    url_not_contains_i: String
+    url_not_ends_with: String
+    url_not_ends_with_i: String
+    url_not_i: String
+    url_not_in: [String]
+    url_not_starts_with: String
+    url_not_starts_with_i: String
+    url_starts_with: String
+    url_starts_with_i: String
+}
+
+input UslugiWhereUniqueInput {
+    id: ID!
+}
+
+input UslugisCreateInput {
+    data: UslugiCreateInput
+}
+
+input UslugisUpdateInput {
+    data: UslugiUpdateInput
+    id: ID!
+}
+
+input _ListSchemaFieldsInput {
+    type: String
+}
+
+input _ksListsMetaInput {
+    "Whether this is an auxiliary helper list"
+    auxiliary: Boolean
+    key: String
+}
+
+
+"The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
+scalar JSON
+
+"DateTime custom scalar represents an ISO 8601 datetime string"
+scalar DateTime
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload

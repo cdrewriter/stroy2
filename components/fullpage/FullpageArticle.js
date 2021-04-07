@@ -7,57 +7,61 @@ import React from 'react';
 
 //import './PostDetail.scss';
 
-const FullPage = ({ post }) => {
- // console.log(post)
-  const { id, url, name, postCategories, description, content, image } = post;
+const FullPage = ({post}) => {
+    // console.log(post)
+    const {id, url, name, postCategories, description, content, image} = post;
 
-  return (
-    <article className="post-detail divide-y-2 divide-gray-100 xl:grid-cols-none lg:my-12 lg:flex">
-        <div className="py-8 flex flex-wrap md:flex-nowrap">
-            <div className="flex flex-col">
+    return (
+        <article className="uslugi-list">
+
+            <div className="uslugi-subtitle">
                 <span className="font-semibold title-font text-gray-700">{postCategories.title}</span>
                 <span className="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
             </div>
-            <div>
-
-                <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">{name}</h2>
-                <p className="mt-4 text-gray-600 max-h-full dark:text-gray-400" dangerouslySetInnerHTML={{
-                    __html: content,
-                }}></p>
-                <a href={'#'} className="btn btn-icon mt-4 border-sorange border-0 text-sorange pr-5 py-3 font-semibold  hover:bg-sorange hover:text-white">Далее
-                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-                         fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-           
-        </div>
 
 
-            <div className="dark:bg-gray-800 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
-         
+            <h2 className="uslugi-title">{name}</h2>
+            <p className="uslugi-desc" dangerouslySetInnerHTML={{
+                __html: content,
+            }}>
 
-                <div className="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/2 bg-white ">
-                    {/*<h2 className="text-2xl text-gray-800 dark:text-white font-bold md:text-3xl">{name}</h2>*/}
-                
-                        <div className="h-32 w-32 bg-cover lg:rounded-lg lg:h-full"
-                             style={{backgroundImage: `url(${image.publicUrl}`}}></div>
-                   
-                    {/*<span*/}
-                    {/*    className="text-gray-700 dark:gray-400">Услуги</span>*/}
-          
+            </p>
+            <div className="uslugi-link">
+                <div className="uslugi-link-inner">
+                    <a href="#"
+                       className="btn btn-icon text-sm  hover:text-sorange   hover:bg-transparent font-semibold mt-auto flex-1 ">
+                        <span className="block  ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                 fill="currentColor">
+                                <path fill-rule="evenodd"
+                                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                      clip-rule="evenodd">
 
-                    {/*<div className="mt-8">*/}
-                    {/*    <a href="#" className="border-sorange border-1 text-sorange px-5 py-3 font-semibold  hover:bg-sorange hover:text-white">Далее</a>*/}
-                    {/*</div>*/}
+                                </path>
+                            </svg>
+                        </span>
+                        <span
+                            className="hidden group-hover:block pl-2 group-hover:text-colorPrimary">Подробнее</span>
+                    </a>
+                    <a href="#"
+                       className="btn btn-icon text-sm hover:border-transparent border-0  hover:text-sorange hover:bg-transparent hover:text-white font-semibold mt-auto flex-1"><span
+                        className="block ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </span>
+                        <span className="hidden group-hover:block text-colorPrimary group-hover:text-gray-700 pl-2 ">Нами построено</span></a>
                 </div>
             </div>
+            <div className="uslugi-img" style={{backgroundImage: `url(${image.publicUrl}`}}></div>
 
 
-    </article>
-  );
+        </article>
+    );
 };
 
 /*UslugiDetail.propTypes = {

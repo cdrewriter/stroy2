@@ -1,14 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { useRouter } from "next/router";
 import { useGraphQL } from "graphql-react";
 import Layout from "../../templates/layoutinner";
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
-import Section from "../../components/Section/Section";
-import Container from '../../components/Container/Container';
+
 import Fullpage from "../../components/Fullpage/FullpageArticle";
-import Asiden from "../../components/aside/Asiden";
-//import SectionUslugi from "../../components/sections/SectionUslugi";
 
 
 const UslugiPage = () => {
@@ -77,55 +73,10 @@ const UslugiPage = () => {
 
 
     return (
-      <Layout >
-        <Section className=" bd px-6 md:px-12 lg:px-16  section-top ">
-
-            <div className=" w-full bg-white bg-contain rounded"
-                 style={{backgroundImage: 'url(/img/svarka.jpg)', height: '45vh'}}>
-              <div className="text-center">
-                <Breadcrumbs page={allUslugis} />
-                <h1 className="font-bold break-normal text-white text-3xl md:text-5xl">Строительные услуги</h1>
-              </div>
-            </div>
-<div className="flex">
-          <Asiden catitems={allUslugis} />
-
-            <div className="w-full lg:w-3/4  -mt-32">
-
-              <div className="mx-0 sm:mx-6">
-
-                <div className="bg-white w-full  text-gray-800 leading-normal">
+      <Layout catitems={allUslugis}>
 
 
-                  <div className="container w-full flex flex-wrap mx-auto px-2">
-  
-                    <section className="text-gray-600 body-font overflow-hidden">
-                      <div className="container px-8  mx-auto">
-                        <div className=" divide-y-2 divide-gray-100">
                         {Items}
-                        </div>
-                         
-                        
-                       
-                      </div>
-                    </section>
-
-
-                  </div>
-
-                </div>
-
-
-
-              </div>
-
-
-            </div>
-
-</div>
-
-
-        </Section>
 
        
       </Layout>

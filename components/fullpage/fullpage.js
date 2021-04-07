@@ -7,7 +7,7 @@ import React from 'react';
 
 //import './PostDetail.scss';
 
-const FullPage = ({ post }) => {
+const Fullpage = ({ post }) => {
  // console.log(post)
   const { id, url, name, description, content, image } = post;
 
@@ -45,4 +45,4 @@ const FullPage = ({ post }) => {
   post: PropTypes.shape(postPropTypes).isRequired,
 };
 */
-export default FullPage;
+export default Fullpage;

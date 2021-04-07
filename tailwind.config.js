@@ -1,22 +1,25 @@
-
-
 module.exports = {
   future: {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  //purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    color: {
-      blue: '#14213D',
-
+    colors: {
+      black15: "rgba(0,0,0,0.15)",
+      gray1: "rgba(246,246,246,1)",
+      gray2: "rgba(206,206,206,1)",
+      gray3: "rgba(112,112,112,1)",
+      orange: "rgba(252, 163, 17, 1)",
+      darkBlue: "rgba(20, 33, 61, 1)",
+      white: 'rgba(255,255,255,1)'
     },
     fontFamily: {
-      'body': ['Montserrat', 'sans-serif'],
+      'headings': ['Code Pro', 'sans-serif'],
+      'body': ['Gilroy', 'sans-serif'],
     },
     screens: {
       '2xl': {'min': '1280px', 'max': '1920px'},
-
         sm: '480px',
         md: '768px',
         lg: '976px',
@@ -37,6 +40,7 @@ module.exports = {
       '8xl': '6rem',
     },
     boxShadow: {
+      text: '0 3px 6px 0 rgba(0, 0, 0, 0.16)',
       xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
       default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
@@ -61,27 +65,32 @@ module.exports = {
     container: {},
     extend: {
       backgroundImage: () => ({
-        
         'hero-pattern': "url('https://res.cloudinary.com/dpiuthi6q/image/upload/v1602171163/stroy2/img/slider_maaevf.png')",
-'feedback-pattern': "url('https://res.cloudinary.com/dpiuthi6q/image/upload/v1602290991/Group_102_yxtgmw.png')",
-       
+        'feedback-pattern': "url('https://res.cloudinary.com/dpiuthi6q/image/upload/v1602290991/Group_102_yxtgmw.png')",
       }),
-      colors: {
-        'sorange': '#FCA311',
-        'colorGraySub': '#CECECE38',
-        'colorPrimary': '#14213D',
-        'colorGray': '#CECECE',
-        'colorMain': '#707070',
-      },
+      // colors: {
+      //   'sorange': '#FCA311',
+      //   'colorGraySub': '#CECECE38',
+      //   'colorPrimary': '#14213d',
+      //   'colorPrimary-light': '#3e4868',
+      //   'colorPrimary-dark': '#000018',
+      //   'colorSecondary': '#ff5722',
+      //   'colorSecondary-light': '#ff8a50',
+      //   'colorSecondary-dark': '#c41c00',
+      //   'onPrimary': '#FFFFFF',
+      //   'onSecondary': '#ffffff',
+      //
+      //   'colorGray': '#E1E2E1',
+      //   'colorMain': '#212121',
+      // },
     },
   },
   variants: {
     extend: {
+      animation: ['hover', 'focus'],
       boxShadow: ['group-hover', 'hover'],
       fill: ['hover', 'focus'],
-
     },
-
     width: ['responsive', 'group-hover'],
     display: ['responsive', 'group-hover', 'hover'],
     margin: ['responsive', 'group-hover', 'hover'],
@@ -90,7 +99,11 @@ module.exports = {
     borderColor: ['responsive',  'group-hover', 'focus-within', 'hover', 'focus'],
     textColor: ['responsive',  'group-hover', 'focus-within', 'hover', 'focus'],
     divideColor: ['group-hover'],
-
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')({
+      strategy: 'class',
+
+    }),
+  ],
 };

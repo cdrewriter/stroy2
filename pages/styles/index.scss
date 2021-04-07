@@ -5,10 +5,16 @@ $color__primary: #14213D;
 $color_gray_bg: #AEAEAE;
 .bg-hero-pattern {
   @apply bg-white ;
-  background-size: 100% auto;
-  background-position: bottom;
+
   background-color: #000000b3;
   background-blend-mode: overlay;
+
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: calc(100% - 10rem);
+
 }
 
 .heading {
@@ -533,6 +539,8 @@ nav {
   .logo {
     a {
       font-size: 1.25rem;
+      text-decoration: none;
+      border-bottom: 0;
     }
   }
 }
@@ -663,7 +671,7 @@ nav {
   }
 
   .leading-normal {
-    color: #EAEAEAD9;
+    @apply text-colorPrimary;
     font-weight: 900;
     font-size: 1.0em;
   }

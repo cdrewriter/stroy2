@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from 'next/router';
-import style from './BreadCrumbs.module.scss';
-import Container from "../Container/Container";
+import style from './Breadcrumbs.module.scss';
 import React from "react";
 
 

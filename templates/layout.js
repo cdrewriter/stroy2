@@ -4,10 +4,12 @@ import Footer from "../components/Footer/Footer";
 
 export default function App({ children }) {
   return (
-    <>
-    <Nav />    
+    <div className={'main-theme'}>
+    <Nav />
+    <div className={'main'}>
     {children}
+    </div>
     <Footer />
-    </>
+    </div>
   )
 }

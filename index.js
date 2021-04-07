@@ -10,8 +10,9 @@ const MongoStore = require('connect-mongo')(expressSession);
 
 
 const keystone = new Keystone({
-  name: 'StroyExpert',
-  adapter: new MongooseAdapter({ mongoUri: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority' }),
+    name: 'StroyExpert',
+
+    adapter: new MongooseAdapter({ mongoUri: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority' }),
   
   sessionStore: new MongoStore({
     url: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority',
@@ -71,7 +72,6 @@ const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
   list: 'User',
 })
-
 module.exports = {
   
     keystone,
@@ -88,6 +88,7 @@ module.exports = {
       new AdminUIApp({
         adminPath: '/admin',
         authStrategy,
+        hooks: require.resolve('./admin/'),
         enableDefaultRoute: false,
         isAccessAllowed: userIsAdmin,
       }),

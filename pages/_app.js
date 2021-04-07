@@ -1,11 +1,11 @@
 import App from "next/app";
-// import "./../pages/styles/main.scss";
+
 
 import { GraphQLProvider } from "graphql-react";
 import { withGraphQLApp } from "next-graphql-react";
 import Head from "next/head";
 import "./styles/main.scss";
-import Section from "../components/Section/Section";
+
 import React from "react";
 
 
@@ -21,6 +21,7 @@ class MyApp extends App {
               name="viewport"
               content="minimum-scale=1, initial-scale=1, width=device-width"
             />
+                <link rel="stylesheet" href="/public/styles-fonts.css"  type="text/css" charSet="UTF-8" />
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
 
             <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 

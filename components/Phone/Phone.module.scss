@@ -1,0 +1,15 @@
+.phone {
+  display: block;
+  grid-column: span 3/-1;
+  align-self: center;
+  @apply text-2xl font-bold;
+  min-width: 12em;
+  a{
+
+  }
+  .svg_icons {
+    fill: #14213D;
+    display: inline;
+    @apply mr-6;
+  }
+}

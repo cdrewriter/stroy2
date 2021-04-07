@@ -14,7 +14,7 @@ import DefaultObject from "../components/Section/DefaultObject";
 const Main = () => {
   const result = useGraphQL({
     fetchOptionsOverride(options) {
-      options.url = `${process.browser ? "" : "http://localhost:3000"}/admin/api`;
+      options.url = `${process.browser ? "" : process.env.BASE_URL}/admin/api`;
     },
     operation: {
       query: /* GraphQL */ `

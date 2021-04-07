@@ -6,9 +6,10 @@
   "repository": "https://github.com/cdrewriter/stroy2",
   "scripts": {
     "dev": "cross-env NODE_ENV=development DISABLE_LOGGING=true keystone dev",
-    "build": "cross-env NODE_ENV=production keystone build ",
-    "start": "cross-env NODE_ENV=production keystone start",
-    "create": "keystone create-tables"
+    "build": "cross-env NODE_ENV=production  keystone build ",
+    "start": "cross-env NODE_ENV=production keystone start -p 3001",
+    "create": "keystone create-tables",
+    "server": "node server.js"
   },
   "author": "Agapov D",
   "license": "ISC",
@@ -27,17 +28,23 @@
     "@keystonejs/fields-wysiwyg-tinymce": "^5.3.6",
     "@keystonejs/file-adapters": "^7.0.3",
     "@keystonejs/keystone": "^14.0.0",
+    "@keystonejs/server-side-graphql-client": "^2.1.0",
+    "@tailwindcss/forms": "^0.3.2",
     "connect-mongo": "^3.2.0",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "graphql-hooks": "^5.0.0",
     "graphql-hooks-memcache": "^2.0.0",
     "graphql-react": "^12.0.0",
+    "mongodb": "^3.6.4",
     "next": "^9.5.4",
     "next-graphql-react": "^8.0.2",
     "nextjs": "^0.0.3",
     "nextjs-breadcrumbs": "^0.9.9",
     "nextjs-fonts": "^0.22.0",
+    "nodemailer": "^6.5.0",
     "postcss-cli": "^8.0.0",
     "postcss-custom-properties": "^11.0.0",
     "postcss-import": "^12.0.1",
@@ -49,7 +56,9 @@
     "react-number-counter": "^1.0.8",
     "react-slick": "^0.27.11",
     "react-yandex-maps": "^4.6.0",
-    "tailwindcss": "^1.8.12"
+    "swiper": "^6.5.3",
+    "tailwindcss": "^1.8.12",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

@@ -1,0 +1,26 @@
+@tailwind base;
+
+
+/*
+@tailwind components;
+
+@layer components {
+  .nav_menu {
+    @apply  hidden flex-1 mx-auto font-semibold justify-between max-w-xl;
+    @screen lg {
+      @apply w-full;
+    }
+    @screen xl {
+      @apply flex;
+    }
+    a {
+      @apply border-transparent mx-2 transition border-b-4 duration-150 ease-in-out p-4;
+      letter-spacing: 1px;
+
+      &:hover {
+        @apply border-colorPrimary;
+      }
+    }
+  }
+}
+*/

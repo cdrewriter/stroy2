@@ -4,7 +4,7 @@ export default function ConstructionSection() {
   const result = useGraphQL({
     fetchOptionsOverride(options) {
       options.url = `${
-        process.browser ? "" : "http://localhost:3000"
+        process.browser ? "" : process.env.BASE_URL
       }/admin/api`;
     },
     operation: {

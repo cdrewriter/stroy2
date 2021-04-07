@@ -38,16 +38,16 @@ const FullPage = ({post}) => {
                     <div className="flex justify-self-end ">
                         <a href="#" className="btn btn-main hover:bg-transparent text-gray-600  hover:text-gray-700  mt-auto text-sm group">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="text-transparent group-hover:text-current">
-                                <path fill-rule="evenodd"
+                                <path fillRule="evenodd"
                                       d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                      clip-rule="evenodd"/>
+                                      clipRule="evenodd"/>
                             </svg>
                             Подробнее</a>
                         <a href="#" className="btn btn-main  hover:bg-transparent text-gray-400  hover:text-gray-500 text-sm group">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="text-transparent group-hover:text-current">
-                                <path fill-rule="evenodd"
+                                <path fillRule="evenodd"
                                       d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                      clip-rule="evenodd"/>
+                                      clipRule="evenodd"/>
                             </svg>
                             Стоимость</a>
                     </div>
