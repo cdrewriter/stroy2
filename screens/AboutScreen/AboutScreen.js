@@ -3,7 +3,7 @@ import Box from "../../components/Box/Box";
 
 const AboutScreen = () => {
     return (
-        <div className={'screen'}>
+        <div className={'onescreen'}>
             <Box type={'about'}>
                 <div className={'box_content'}>
                     <h2>СТРОЙЭКСЕРТ</h2>

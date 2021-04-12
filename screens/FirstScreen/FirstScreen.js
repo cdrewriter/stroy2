@@ -3,7 +3,7 @@ import Box from "../../components/Box/Box";
 
 const FirstScreen = () => {
     return (
-    <div className={'screen'}>
+    <div className={'onescreen'}>
 
         <Box type={'firstScreen  angle-outer-left angle-outer-right'}>
             <div className={'box_content angle-inner-left angle-inner-right'}>

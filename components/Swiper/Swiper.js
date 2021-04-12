@@ -13,7 +13,7 @@ export default function SlideCategory() {
                 slidesPerView={3}
                 //loopFillGroupWithBlank={true}
                 effect="fade"
-                navigation
+
                 centeredSlides={true}
             //pagination={{ clickable: true }}
             // scrollbar={{ draggable: true }}

@@ -7,7 +7,7 @@ import {DiplomIcon, ExpIcon, ProjIcon} from "../../components/Icons/CommonIcons"
 
 const CategoryScreen = () => {
     return (
-        <div className={'screen'}>
+        <div className={'onescreen'}>
             <Box type={'category  angle-outer-left'}>
                 <div className={'box_content'}>
                     <span className={'UPheading'}>ЧАСТНОЕ / МАЛОЭТАЖНОЕ </span>
@@ -51,6 +51,7 @@ const CategoryScreen = () => {
             </Box>
             <div className={'box-image'}>
                 <SlideCategory/>
+
             </div>
         </div>
     )

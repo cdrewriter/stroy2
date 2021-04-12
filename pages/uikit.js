@@ -1,3 +1,4 @@
+import react from "react";
 import Layout from '../templates/layout';
 import FeedbackSection from "../components/Section/Feedback";
 import FirstScreen from "../screens/FirstScreen/FirstScreen";
@@ -11,15 +12,12 @@ import SwiperProjects from "../components/Swiper/SwiperProjects";
 const Uikit = () => {
     return (
         <Layout>
-
             <FirstScreen />
             <AboutScreen />
             <CategoryScreen />
-            <SlideProjectsScreen />
+            {/*<SlideProjectsScreen />*/}
             <SwiperProjects />
             <FeedbackSection />
-
-
         </Layout>
     )
 }

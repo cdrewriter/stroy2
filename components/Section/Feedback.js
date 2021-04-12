@@ -5,7 +5,7 @@ import Box from "../Box/Box";
 export default function FeedbackSection() {
 
     return (
-        <div className={'screen screen-feedback'}>
+        <div className={'onescreen screen-feedback'}>
             <Box type={'feedback'}>
                 <div className={'box_content'}>
                     <div className={'first_col'}>
