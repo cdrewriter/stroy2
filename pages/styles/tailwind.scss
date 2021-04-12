@@ -869,9 +869,35 @@
 
       }
     }
+    .galleryContents {
+      grid-column: 2/6;
+      grid-row: 1;
+    }
+    .swiper-container-thumbs {
+      grid-column: 2/6;
+      grid-row: 2;
+    }
+    .img-big {
+      grid-column: 2/5;
+      margin-bottom: 1.5rem;
+    }
     .projectcard_swiper-gallery {
       grid-column: 2/6;
     }
+  .swiper-slide:not(.swiper-slide-active) {
+    filter: grayscale(1);
+  }
+
+    .slide_img {
+      object-fit: contain;
+    }
+    .galleryContents {
+      grid-column: 2/6;
+    }
+    .projectcard_swiper-gallery {
+      grid-column: 2/6;
+    }
+
   }
 
 

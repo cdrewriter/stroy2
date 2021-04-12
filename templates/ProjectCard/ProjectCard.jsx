@@ -5,7 +5,7 @@ import SwiperProjectCard from "../../components/Swiper/SwiperProjectCard";
 const ProjectCard = () => {
     return (
         <Box>
-            <div className={'projectcard_swiper-gallery'}><SwiperProjectCard /></div>
+           <SwiperProjectCard className={'projectcard_swiper-gallery'}/>
             <div className={'projectcard-text'}>
 
                 <h3>Двухэтажный дом</h3>

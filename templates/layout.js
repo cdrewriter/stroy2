@@ -34,13 +34,13 @@ export default function App({ children, clsme, asideOn }) {
       <Nav />
 
       <div className={'main ' + `${cls}`}>
+
+        {aside == true ? <Aside /> :  null}
+        {children}
         <Box>
 
           <a onClick={() => setAside(aside == true ? false : true)} >{aside == true ? 'Вкл' : 'ВЫкл'}</a>
         </Box>
-        {aside == true ? <Aside /> :  null}
-        {children}
-
       </div>
     <Footer />
     </div>
