@@ -1,0 +1,51 @@
+.btn {
+  display: inline-flex;
+  @apply text-gray3 mx-4  m-4 ;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  min-height: 4rem;
+  min-width: 4rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  //line-height: 1;
+  align-items: center;
+  height: 4rem;
+  text-transform: uppercase;
+  padding: 1.375em 4em 1.125em;
+  svg {
+    margin: auto;
+    stroke:currentColor;
+  }
+  &:hover,&:focus {
+    @apply border-orange text-orange elevation-1;
+  }
+}
+.btn-icon-only {
+  font-size: 0;
+}
+.btn-filled {
+  @apply border-orange bg-darkBlue text-orange shadow-2xl border-opacity-0  ;
+  &:hover, &:focus {
+    @apply text-white border-white;
+  }
+}
+.btn-only-icon_custom {
+  padding: 1.75rem;
+  width: initial;
+  max-height: initial;
+  height: initial;
+  border-width: 0px;
+  align-content: center;
+  color:  rgba(20,33,61,0.8);
+  justify-content: center;
+}
+.btn-icon {
+  svg {
+    margin: auto 1em auto 0;
+    stroke: none;
+
+    path {
+      fill: currentColor;
+    }
+  }
+}
+

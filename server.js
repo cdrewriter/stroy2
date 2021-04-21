@@ -1,6 +1,6 @@
 const express = require('express');
 const {distDir} = require("./config");
-const { keystone, apps } = require('./index-serv.js');
+const { keystone, apps } = require('./index.js');
 
 keystone
     .prepare({
@@ -12,7 +12,7 @@ keystone
         await keystone.connect();
         const app = express();
 
-        app.use(middlewares).listen(3008);
+        app.use(middlewares).listen(3000);
         console.log('Server started');
 
     });

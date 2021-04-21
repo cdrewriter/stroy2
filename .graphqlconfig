@@ -4,7 +4,7 @@
   "extensions": {
     "endpoints": {
       "Default GraphQL Endpoint": {
-        "url": "http://localhost:3000/admin/api",
+        "url": "http://localhost:3000/admin/api1",
         "headers": {
           "user-agent": "JS GraphQL"
         },

@@ -3,13 +3,15 @@ const {
   File,
   Text,
   Slug,
+    Integer,
   Relationship,
   Select,
+  CalendarDay,
   Password,
   Checkbox,
   DateTime 
 } = require('@keystonejs/fields');
-
+const { LocationGoogle } = require('@keystonejs/fields-location-google');
 const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
 const { userIsAdmin, userIsAdminOrOwner } = require('./app/utils/access');
 const {
@@ -25,7 +27,10 @@ const avatarFileAdapter = new LocalFileAdapter({
   src: `${staticPath}/avatars`,
   path: `${staticRoute}/avatars`,
 });
-
+const Files = new LocalFileAdapter({
+  src: `${staticPath}/files`,
+  path: `${staticRoute}/files`,
+});
 const cloudinaryAdapter  = new CloudinaryAdapter({
   cloudName: process.env.CLOUDINARY_CLOUD_NAME,
   apiKey: process.env.CLOUDINARY_KEY,
@@ -38,6 +43,177 @@ const postImageFileAdapter = new LocalFileAdapter({
   path: `${staticRoute}/uploads`,
 });
 
+
+///new
+
+const Uslugi = {
+  fields: {
+    name: { type: Text },
+    subName: { type: Text },
+    url: { type: Slug, from: 'name', isUnique: true},
+    postCategories: {
+      type: Relationship,
+      ref: 'UslugiPage',
+      many: true,
+    },
+    description: {
+      type: Text,
+      isMultiline: true,
+    },
+    descriptionShort: {
+      type: Text,
+      isMultiline: true,
+    },
+    price: {
+      type: Integer
+    },
+    content: {
+      type: Wysiwyg,
+    },
+    features: {
+      type: Relationship,
+      ref: 'Feature',
+      many: true,
+    },
+    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
+    images: {
+      type: KeystoneCloudinaryGallery,
+      adapter: cloudinaryAdapter ,
+    }
+  },
+  labelResolver: (item) => item.name,
+};
+const Feature = {
+  fields: {
+    name: { type: Text },
+    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
+    description: {
+      type: Text,
+      isMultiline: true,
+    },
+    },
+    labelResolver: (item) => item.name,
+};
+
+
+const options = [
+  { value: 1, label: "Толщина мм 150",  },
+  { value: 2, label: "Толщина мм 200", },
+  { value: 3, label: "Толщина мм 250" },
+];
+
+const Material = {
+  fields: {
+    name: {
+      type: Text
+    },
+    subName: { type: Text },
+    image: {
+      type: CloudinaryImage,
+      adapter: cloudinaryAdapter
+    },
+    image: {
+      type: File,
+      adapter: Files,
+    },
+    descriptionShort: {
+      type: Text,
+      isMultiline: true,
+    },
+    price: {
+      type: Integer
+    },
+    matProperties:  { type: Select, options, dataType: 'integer' },
+
+
+  },
+  labelResolver: (item) => item.name,
+}
+const CategoryPage = {
+  fields: {
+    title: { type: Text },
+    subTitle: { type: Text },
+    url: { type: Slug, from: 'title', isUnique: true},
+    description: {
+      type: Text,
+      isMultiline: true
+    },
+    image: {
+      type: CloudinaryImage,
+      adapter: cloudinaryAdapter
+    },
+    images: {
+      type: KeystoneCloudinaryGallery,
+      adapter: cloudinaryAdapter ,
+    },
+    features: {
+      type: Relationship,
+      ref: 'Feature',
+      many: true,
+    },
+  },
+  labelResolver: (item) => item.title,
+}
+const Page = {
+  fields: {
+    title: { type: Text },
+    url: { type: Slug, from: 'title', isUnique: true},
+    subTitle: { type: Text },
+    description: {
+      type: Text,
+      isMultiline: true
+    },
+    image: {
+      type: CloudinaryImage,
+      adapter: cloudinaryAdapter
+    },
+    images: {
+      type: KeystoneCloudinaryGallery,
+      adapter: cloudinaryAdapter ,
+    },
+    features: {
+      type: Relationship,
+      ref: 'Feature',
+      many: true,
+    },
+    jobIsDone: {
+      type: DateTime,
+      format: 'yyyy',
+      yearRangeFrom: 1901,
+      yearRangeTo: 2018,
+      yearPickerType: 'auto',
+    },
+    posts: { type: Relationship, ref: 'CategoryPage', many: true },
+
+    type: { type: Select, options: 'main, box, contentAside, content, category, item' },
+  },
+  labelResolver: (item) => item.title,
+}
+
+
+const Contact = {
+  fields: {
+    name: { type: Text },
+    url: { type: Slug, from: 'name' },
+    email: { type: Text, isRequired: true },
+    description: { type: Text, isMultiline: true },
+    map: { type: Text, isMultiline: true },
+    adressText:  { type: Text },
+    phones: { type: Text, isMultiline: true },
+    phone: { type: Text},
+
+  },
+  labelResolver: (item) => item.name,
+  access: {
+    read: userIsAdmin,
+    update: userIsAdmin,
+    create: true,
+    delete: userIsAdmin,
+  },
+
+};
+
+///Old
 const User = {
   fields: {
     name: { type: Text },
@@ -47,6 +223,7 @@ const User = {
     },
     organization: { type: Text },
     isAdmin: { type: Checkbox },
+    phone: { type: Text},
     password: {
       type: Password,
     },
@@ -61,6 +238,11 @@ const User = {
   },
   labelResolver: (item) => `${item.name} <${item.email}>`,
 };
+
+
+
+
+
 
 const Main = {
   fields: {
@@ -88,71 +270,6 @@ const About = {
   labelResolver: (item) => item.title,
 };
 
-const SmallBuild = {
-  fields: {
-    title: { type: Text, isRequired: true },
-    title__text: { type: Text },
-    description: { type: Wysiwyg },
-    docs: {
-      type: CloudinaryImage,
-      adapter: cloudinaryAdapter ,
-    },
-
-    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
-  },
-  labelResolver: (item) => item.title,
-};
-const BuildObject = {
-  fields: {
-    title: { type: Text, isRequired: true },
-    description: { type: Wysiwyg },
-    images: {
-      type: KeystoneCloudinaryGallery,
-      adapter: cloudinaryAdapter ,
-    },
-    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
-  },
-  labelResolver: (item) => item.title,
-};
-
-const Construction = {
-  fields: {
-    title: { type: Text },
-    url: { type: Slug, from: 'title' },
-    subtext: { type: Text },
-    description: { type: Wysiwyg },
-    items: {
-      type: Relationship,
-      ref: 'ConstructionItem.category',
-      many: true,     
-    },
-    images: {
-      type: CloudinaryImage,
-      adapter: cloudinaryAdapter ,
-    },
-    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
-  },
-  labelResolver: (item) => item.title,
-};
-
-const ConstructionItem = {
-  fields: {
-    name: { type: Text },
-    subtext: { type: Text },
-    description: { type: Wysiwyg }, 
-    category: {
-      type: Relationship,
-      ref: 'Construction.items',
-      many: true,     
-    },  
-    images: {
-      type: KeystoneCloudinaryGallery,
-      adapter: cloudinaryAdapter ,
-    },   
-    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
-  },
-  labelResolver: (item) => item.name,
-};
 
 const ConstructionPortfolio = {
   fields: {
@@ -201,74 +318,7 @@ const UslugiPage = {
   
   labelResolver: (item) => item.title,
 };
-const Uslugi = {
-  fields: { 
-    name: { type: Text },
-    url: { type: Slug, from: 'name', isUnique: true},
-    postCategories: {
-      type: Relationship,
-      ref: 'UslugiPage',
-      many: true,    
-    },   
-    description: {
-      type: Text,
-      isMultiline: true,    
-    },
-    price: {
-      type: Wysiwyg,
-    },
-    content: {
-      type: Wysiwyg,
 
-    },
-
-    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
-    images: {
-      type: KeystoneCloudinaryGallery,
-      adapter: cloudinaryAdapter ,
-    }
-  },
-  labelResolver: (item) => item.name,
-};
-const DefObjPage = {
-  fields: {
-    title: { type: Text },
-    url: { type: Slug, from: 'title', isUnique: true},
-    description: { type: Text, isMultiline: true },
-    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
-    posts: {
-      type: Relationship,
-      ref: 'DefObj',
-      many: true,
-    },
-  },
-
-  labelResolver: (item) => item.title,
-};
-const DefObj = {
-  fields: {
-    name: { type: Text },
-    url: { type: Slug, from: 'name', isUnique: true},
-    postCategories: {
-      type: Relationship,
-      ref: 'DefObjPage',
-      many: true,
-    },
-    description: {
-      type: Text,
-      isMultiline: true,
-    },
-    content: {
-      type: Wysiwyg,
-    },
-    image: { type: CloudinaryImage, adapter: cloudinaryAdapter  },
-    images: {
-      type: KeystoneCloudinaryGallery,
-      adapter: cloudinaryAdapter ,
-    }
-  },
-  labelResolver: (item) => item.name,
-};
 const Post = {
   fields: {
     title: { type: Text, isRequired: true },
@@ -342,34 +392,18 @@ const PostCategory = {
   },
 };
 
-const Contact = {
-  fields: {
-    name: { type: Text },
-    email: { type: Text, isRequired: true },
-    description: { type: Text, isMultiline: true },
-  },
-  access: {
-    read: userIsAdmin,
-    update: userIsAdmin,
-    create: true,
-    delete: userIsAdmin,
-  },
-};
-
 module.exports = {
   User,
   About,
   Post,
-  SmallBuild,
   Main,
   PostCategory,
   Contact,
-  BuildObject,
-  Construction,
-  ConstructionItem,
   ConstructionPortfolio,
   UslugiPage,
   Uslugi,
-  DefObj,
-  DefObjPage,
+  Feature,
+  CategoryPage,
+  Material,
+  Page
 };

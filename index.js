@@ -13,7 +13,8 @@ const keystone = new Keystone({
     name: 'StroyExpert',
 
     adapter: new MongooseAdapter({ mongoUri: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority' }),
-  
+    //adapter: new MongooseAdapter({ mongoUri: 'mongodb://localhost:27017' }),
+
   sessionStore: new MongoStore({
     url: 'mongodb+srv://gbactakaha:Ctakan91@cluster0.nks7a.mongodb.net/stroys2?retryWrites=true&w=majority',
   }),
@@ -30,42 +31,41 @@ const keystone = new Keystone({
     list: true,
     field: true,
     custom: true,
+      authStrategy: true
   },
 });
 
-const { userIsAdmin } = require('./utils/access');
+const { userIsAdmin } = require('./app/utils/access');
 const { staticRoute, staticPath, distDir } = require('./config');
 const {
     User,
     Post,
     Main,
     About,
-    BuildObject,
-    SmallBuild,
-    Construction,
-    ConstructionItem,    
     UslugiPage,
     Uslugi,
-    DefObj,
-    DefObjPage,
+    Contact,
+    CategoryPage,
+    Feature,
+    Material,
+    Page,
     ConstructionPortfolio,
     PostCategory
-  } = require('./schema');
+  } = require('./schemaNEW');
 
 keystone.createList('User', User);
 keystone.createList('PostCategory', PostCategory);
 keystone.createList('Post', Post);
 keystone.createList('Main', Main);
 keystone.createList('About', About);
-keystone.createList('SmallBuild', SmallBuild);
-keystone.createList('BuildObject', BuildObject);
-keystone.createList('Construction', Construction);
-keystone.createList('ConstructionItem', ConstructionItem);
 keystone.createList('ConstructionPortfolio', ConstructionPortfolio);
 keystone.createList('UslugiPage', UslugiPage);
 keystone.createList('Uslugi', Uslugi);
-keystone.createList('DefObjPage', DefObjPage);
-keystone.createList('DefObj', DefObj);
+keystone.createList('Feature', Feature);
+keystone.createList('Material', Material);
+keystone.createList('Page', Page);
+keystone.createList('Contact', Contact);
+keystone.createList('CategoryPage', CategoryPage);
 
 
 const authStrategy = keystone.createAuthStrategy({
@@ -73,7 +73,6 @@ const authStrategy = keystone.createAuthStrategy({
   list: 'User',
 })
 module.exports = {
-  
     keystone,
     apps: [
       new GraphQLApp({
@@ -88,12 +87,12 @@ module.exports = {
       new AdminUIApp({
         adminPath: '/admin',
         authStrategy,
-        hooks: require.resolve('./admin/'),
+       // hooks: require.resolve('./admin/'),
         enableDefaultRoute: false,
         isAccessAllowed: userIsAdmin,
       }),
       new NextApp({
-        dir: './',
+        dir: 'app',
       }),
     ],
     distDir,
